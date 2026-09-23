@@ -1,0 +1,35 @@
+# evidence/ is never touched: fixers would change archived bytes and break their SHA-256.
+exclude: ^evidence/
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-yaml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: \.md$
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff check
+        entry: uv run ruff check --fix
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format
+        language: system
+        types: [python]
+      - id: detect-secrets
+        name: detect-secrets
+        entry: uv run detect-secrets-hook --baseline .secrets.baseline
+        language: system
+        exclude: ^(uv\.lock|registry/.*)$  # registry holds sha256 evidence hashes, not secrets
+      - id: synthetic-fixtures
+        name: tests/fixtures must be synthetic
+        entry: uv run python -m night_tape.fixture_guard
+        language: system
+        files: ^tests/fixtures/
