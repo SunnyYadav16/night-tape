@@ -216,3 +216,60 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# =============================================================================
+# night-tape project rules (why: CLAUDE.md "Data, money, secrets")
+# =============================================================================
+
+# Licensed market data (Databento OCEA/XNAS, FINRA). Raw ticks and per-trade
+# derivatives are not redistributable; they never enter git. Everything here is
+# rebuildable from the vendor + evidence/manifest.jsonl.
+/data/
+*.dbn
+*.dbn.zst
+*.parquet
+*.duckdb
+*.duckdb.wal
+*.arrow
+*.feather
+
+# Interrupted evidence writes (evidence/ itself is tracked, byte-exact)
+evidence/**/*.part
+
+# Secrets and credentials (DATABENTO_API_KEY lives in the shell only)
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.netrc
+id_rsa*
+id_ed25519*
+credentials*.json
+service-account*.json
+
+# AI assistant local state (shared project settings stay tracked)
+.claude/settings.local.json
+.claude/worktrees/
+CLAUDE.local.md
+.superpowers/
+
+# OS and editor clutter
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Scratch
+/tmp/
+/scratch/
+*.tmp
+*.bak
+*.orig
+*.rej
