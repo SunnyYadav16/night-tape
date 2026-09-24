@@ -10,9 +10,13 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from night_tape import contracts, cost
-from night_tape.evidence import edgar, fetch, verify
+from night_tape.contracts import ContractError
+from night_tape.evidence import edgar, fetch, manifest, verify
 from night_tape.evidence import render as render_mod
 from night_tape.evidence.manifest import Entry
+from night_tape.registry import claims as registry_claims
+from night_tape.registry.load import Registry, RegistryError
+from night_tape.registry.load import load as load_registry
 
 if TYPE_CHECKING:
     Subparsers = argparse._SubParsersAction[argparse.ArgumentParser]
@@ -26,6 +30,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub = parser.add_subparsers(dest="command", required=True, metavar="COMMAND")
     _add_evidence(sub)
     _add_cost(sub)
+    _add_registry(sub)
     return parser
 
 
@@ -190,6 +195,52 @@ def _report_verify(report: verify.Report) -> int:
 
 def _evidence_verify(args: argparse.Namespace) -> int:
     return _report_verify(verify.verify(args.evidence_dir))
+
+
+def _add_registry(sub: Subparsers) -> None:
+    rg = sub.add_parser("registry", help="claim register and event registry")
+    rg.add_argument("--claims", type=Path, default=Path("registry/claims.yaml"))
+    rg.add_argument("--events", type=Path, default=Path("registry/events.yaml"))
+    rgs = rg.add_subparsers(dest="registry_command", required=True, metavar="ACTION")
+
+    p = rgs.add_parser("check", help="validate both registries and their cross-references")
+    p.set_defaults(handler=_registry_check)
+
+    p = rgs.add_parser("load-bearing", help="list load-bearing claims that block the freeze")
+    p.add_argument("--evidence-dir", type=Path, default=Path("evidence"))
+    p.set_defaults(handler=_registry_load_bearing)
+
+
+def _registry_or_none(args: argparse.Namespace) -> Registry | None:
+    try:
+        return load_registry(args.claims, args.events)
+    except (ContractError, RegistryError) as exc:
+        print(exc, file=sys.stderr)
+        return None
+
+
+def _registry_check(args: argparse.Namespace) -> int:
+    reg = _registry_or_none(args)
+    if reg is None:
+        return 1
+    print(
+        f"ok: {len(reg.claims)} claims, {len(reg.events)} events, "
+        f"{len(reg.rule_versions)} rule versions"
+    )
+    return 0
+
+
+def _registry_load_bearing(args: argparse.Namespace) -> int:
+    reg = _registry_or_none(args)
+    if reg is None:
+        return 1
+    archived = {e.sha256 for e in manifest.read(args.evidence_dir)}
+    gaps = registry_claims.load_bearing_gaps(reg, archived)
+    for gap in gaps:
+        print(gap)
+    total = sum(1 for c in reg.claims.values() if c["load_bearing"])
+    print(f"{total} load-bearing claims, {len(gaps)} block the freeze", file=sys.stderr)
+    return 1 if gaps else 0
 
 
 def main(argv: Sequence[str] | None = None) -> int:

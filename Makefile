@@ -7,7 +7,7 @@ FREEZE_STEPS := evidence-load-bearing source-archive-verify test pilot-report br
 	replication-diagnostic preevent-report prereg-check freeze-archive
 RELEASE_STEPS := permissions-check attribution-check public-data-scan release-docs release-bundle
 
-STUBS := evidence-load-bearing source-archive-verify pilot-report break-report power-report \
+STUBS := source-archive-verify pilot-report break-report power-report \
 	universe-verify xnas-cost-decision manifest-verify qc-report replication-diagnostic \
 	preevent-report prereg-check freeze-archive $(RELEASE_STEPS)
 
@@ -24,6 +24,9 @@ freeze-required:
 
 release-required: freeze-required
 	@for t in $(RELEASE_STEPS); do $(MAKE) --no-print-directory $$t || exit 1; done
+
+evidence-load-bearing:
+	uv run night-tape registry load-bearing
 
 $(STUBS):
 	@echo "NOT IMPLEMENTED: $@" >&2; exit 1
