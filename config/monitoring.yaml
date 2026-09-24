@@ -1,0 +1,95 @@
+# Load-bearing primary sources archived on fetch (weekly W1 task 5; r2.1 §18; weekly §1.3).
+# `night-tape evidence sync` fetches every non-manual source. Re-run weekly (weekly §4):
+# unchanged bytes are a no-op; changed bytes become a new snapshot, never an overwrite.
+# method: http | render | edgar | manual  (manual: download by hand, then `night-tape evidence add`)
+sources:
+  # Every BOATS Form ATS-N filing and amendment, whole accession folders (not only the XSL view).
+  - source_id: boats-atsn-chain
+    source_class: SEC_FORM_ATS_N
+    method: edgar
+    cik: "1795131"
+    form_prefix: ATS-N
+
+  # r2.1 §18 — readable XSL views of the named filings (the chain above holds the filings).
+  - source_id: boats-atsn-2026-current-view
+    source_class: SEC_FORM_ATS_N
+    method: http
+    url: https://www.sec.gov/Archives/edgar/data/1795131/000090266426003296/xslATS-N_X01/primary_doc.xml
+    notes: "r2.1 §18 #1 — current Form ATS-N / material amendment (2026)"
+  - source_id: boats-atsn-2024-correcting-view
+    source_class: SEC_FORM_ATS_N
+    method: http
+    url: https://www.sec.gov/Archives/edgar/data/1795131/000179513124000022/xslATS-N_X01/primary_doc.xml
+    notes: "r2.1 §18 #2 — 2024 correcting amendment restoring price-time wording"
+  - source_id: boats-atsn-2023-broker-priority-view
+    source_class: SEC_FORM_ATS_N
+    method: http
+    url: https://www.sec.gov/Archives/edgar/data/1795131/000153949723000091/xslATS-N_X01/primary_doc.xml
+    notes: "r2.1 §18 #3 — historical 2023 ATS-N with Broker Priority"
+  - source_id: boats-atsn-2023-band-redline
+    source_class: SEC_FORM_ATS_N
+    method: http
+    url: https://www.sec.gov/Archives/edgar/data/1795131/000153949723001938/ex3redline.pdf
+    notes: "r2.1 §18 #4 — 15% band was an erroneous disclosure; correct band 20%"
+  - source_id: blue-ocean-service-status
+    source_class: ATS_SERVICE_ALERT
+    method: render
+    url: https://blueocean-tech.io/blue-ocean-ats-service-status/
+    notes: "r2.1 §18 #5 — 1 Mar / 20 Jul / 10 Sep 2026 alerts; mutable, re-fetch weekly"
+  - source_id: sec-s7-2026-20
+    source_class: SEC_RULE
+    method: http
+    url: https://www.sec.gov/rules-regulations/2026/06/s7-2026-20
+    notes: "r2.1 §18 #6 — proposed rescission of Rule 611 and Rule 610(e)"
+  - source_id: databento-tbbo
+    source_class: VENDOR_DOC
+    method: render
+    url: https://databento.com/docs/schemas-and-data-formats/tbbo
+  - source_id: databento-bbo
+    source_class: VENDOR_DOC
+    method: render
+    url: https://databento.com/docs/schemas-and-data-formats/bbo
+  - source_id: databento-mbp-1
+    source_class: VENDOR_DOC
+    method: render
+    url: https://databento.com/docs/schemas-and-data-formats/mbp-1
+  - source_id: sec-staff-memo-24h-2026-09
+    source_class: SEC_STAFF
+    method: http
+    url: https://www.sec.gov/files/2026_TM_Overnight_Trading_Roundtable_Memo_090926.pdf
+    notes: "r2.1 §18 #10 — planned SIP schedule and 8–9pm maintenance window"
+  - source_id: nysearca-sr-2026-53
+    source_class: EXCHANGE_RULE
+    method: http
+    url: https://www.sec.gov/rules-regulations/self-regulatory-organization-rulemaking/sr-nysearca-2026-53
+  - source_id: nasdaq-34-105199
+    source_class: SEC_ORDER
+    method: http
+    url: https://www.sec.gov/rule-release/34-105199
+  - source_id: nasdaq-eta-2026-46
+    source_class: EXCHANGE_NOTICE
+    method: http
+    url: https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2026-46
+
+  # weekly §1.3 — OCEA.MEMOIR dataset page and schemas the pilot depends on.
+  - source_id: databento-ocea-memoir
+    source_class: VENDOR_DOC
+    method: render
+    url: https://databento.com/docs/venues-and-datasets/ocea-memoir
+  - source_id: databento-status-schema
+    source_class: VENDOR_DOC
+    method: render
+    url: https://databento.com/docs/schemas-and-data-formats/status
+    notes: "URL unverified — fix if sync reports 404"
+  - source_id: databento-common-fields
+    source_class: VENDOR_DOC
+    method: render
+    url: https://databento.com/docs/standards-and-conventions/common-fields-enums-types
+    notes: "URL unverified — fix if sync reports 404. Fixed-point scale, UNDEF_PRICE, side values"
+
+  # Research baseline — SSRN blocks scripted downloads; fetch the pinned revision by hand.
+  - source_id: lim-ssrn-6610883-rev-2026-04-21
+    source_class: PAPER
+    method: manual
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6610883
+    notes: "Pin revision 21 Apr 2026; verify every number against its table (D-8, W4)"

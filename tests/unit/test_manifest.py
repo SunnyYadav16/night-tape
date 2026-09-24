@@ -132,6 +132,7 @@ def test_verify_clean_tampered_missing_and_orphans(tmp_path: Path) -> None:
 def test_cli_verify_exit_codes(tmp_path: Path) -> None:
     ev = tmp_path / "evidence"
     ev.mkdir()
-    assert main(["evidence", "--evidence-dir", str(ev), "verify"]) == 0
+    none = str(tmp_path / "none.yaml")
+    assert main(["evidence", "--evidence-dir", str(ev), "--sources", none, "verify"]) == 0
     (ev / "stray.bin").write_bytes(b"?")
-    assert main(["evidence", "--evidence-dir", str(ev), "verify"]) == 1
+    assert main(["evidence", "--evidence-dir", str(ev), "--sources", none, "verify"]) == 1

@@ -11,7 +11,7 @@ from typing import TYPE_CHECKING
 
 from night_tape import contracts, cost
 from night_tape.contracts import ContractError
-from night_tape.evidence import edgar, fetch, manifest, verify
+from night_tape.evidence import edgar, fetch, manifest, sources, verify
 from night_tape.evidence import render as render_mod
 from night_tape.evidence.manifest import Entry
 from night_tape.registry import claims as registry_claims
@@ -42,6 +42,7 @@ def _source_args(p: argparse.ArgumentParser) -> None:
 def _add_evidence(sub: Subparsers) -> None:
     ev = sub.add_parser("evidence", help="archive-on-fetch and verify primary sources")
     ev.add_argument("--evidence-dir", type=Path, default=Path("evidence"))
+    ev.add_argument("--sources", type=Path, default=Path("config/monitoring.yaml"))
     evs = ev.add_subparsers(dest="evidence_command", required=True, metavar="ACTION")
 
     p = evs.add_parser("fetch", help="archive the raw HTTP response for one URL")
@@ -74,6 +75,9 @@ def _add_evidence(sub: Subparsers) -> None:
     )
     _source_args(p)
     p.set_defaults(handler=_evidence_edgar)
+
+    p = evs.add_parser("sync", help="archive every source in --sources (weekly re-fetch)")
+    p.set_defaults(handler=_evidence_sync)
 
     p = evs.add_parser("verify", help="re-hash every snapshot; report missing files and orphans")
     p.set_defaults(handler=_evidence_verify)
@@ -193,8 +197,23 @@ def _report_verify(report: verify.Report) -> int:
     return 0 if report.ok else 1
 
 
+def _evidence_sync(args: argparse.Namespace) -> int:
+    srcs = sources.load_sources(args.sources)
+    with fetch.make_client() as client:
+        report = sources.sync(args.evidence_dir, srcs, client)
+    _print_stored(report.stored)
+    for source_id in report.manual_missing:
+        print(f"manual: {source_id} not archived yet — download it, then `night-tape evidence add`")
+    for source_id, error in report.failed:
+        print(f"FAILED {source_id}: {error}", file=sys.stderr)
+    return 1 if report.failed else 0
+
+
 def _evidence_verify(args: argparse.Namespace) -> int:
-    return _report_verify(verify.verify(args.evidence_dir))
+    required = (
+        [s.source_id for s in sources.load_sources(args.sources)] if args.sources.exists() else []
+    )
+    return _report_verify(verify.verify(args.evidence_dir, required))
 
 
 def _add_registry(sub: Subparsers) -> None:
