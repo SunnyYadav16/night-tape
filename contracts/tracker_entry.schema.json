@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://night-tape.invalid/contracts/tracker_entry.schema.json",
+  "title": "Public tracker entry (r2.1 §23.4): a registry event + provenance + approval; shape half of gate G6",
+  "type": "object",
+  "allOf": [{"$ref": "event_registry.schema.json#/$defs/event"}],
+  "required": ["proposed_by", "provider_version", "approved_by", "approved_at", "evidence_refs"],
+  "properties": {
+    "proposed_by": {"enum": ["manual", "structured_llm", "jev"]},
+    "provider_version": {"type": ["string", "null"]},
+    "approved_by": {"type": "string", "minLength": 1},
+    "approved_at": {"type": "string", "format": "date-time"},
+    "status": {"not": {"const": "PENDING_VERIFICATION"}},
+    "evidence_refs": {
+      "type": "array", "minItems": 1,
+      "items": {"required": ["span_id"], "properties": {"span_id": {"type": "string", "minLength": 1}}}
+    }
+  },
+  "if": {"properties": {"proposed_by": {"const": "manual"}}},
+  "then": {"properties": {"provider_version": {"type": "null"}}},
+  "else": {"properties": {"provider_version": {"type": "string", "minLength": 1}}},
+  "unevaluatedProperties": false
+}
