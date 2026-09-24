@@ -1,0 +1,51 @@
+# Stage C permissions matrix (r2.1 Stage C; v2.2 §12 Contractual).
+# Cells: PENDING | ALLOWED | ALLOWED_WITH_ATTRIBUTION | PROHIBITED | NOT_APPLICABLE
+# freeze-required may pass with PENDING cells; release-required may not (gate G5).
+questions_sent:        # ISO date each written question went out (Task 12)
+  databento: null
+  blue_ocean: null
+  nasdaq: null
+  finra: null
+permissions:
+  - output_type: aggregate_spread_statistics
+    ocea: PENDING
+    xnas: PENDING
+    finra: NOT_APPLICABLE
+    attribution: PENDING
+    survives_termination: PENDING
+    release_status: PENDING
+  - output_type: regression_coefficients
+    ocea: PENDING
+    xnas: PENDING
+    finra: NOT_APPLICABLE
+    attribution: PENDING
+    survives_termination: PENDING
+    release_status: PENDING
+  - output_type: percentiles
+    ocea: PENDING
+    xnas: PENDING
+    finra: NOT_APPLICABLE
+    attribution: PENDING
+    survives_termination: PENDING
+    release_status: PENDING
+  - output_type: figures
+    ocea: PENDING
+    xnas: PENDING
+    finra: NOT_APPLICABLE
+    attribution: PENDING
+    survives_termination: PENDING
+    release_status: PENDING
+  - output_type: venue_share_from_finra
+    ocea: NOT_APPLICABLE
+    xnas: NOT_APPLICABLE
+    finra: PENDING
+    attribution: PENDING
+    survives_termination: PENDING
+    release_status: PENDING
+  - output_type: preregistration_aggregates
+    ocea: PENDING
+    xnas: PENDING
+    finra: PENDING
+    attribution: PENDING
+    survives_termination: PENDING
+    release_status: PENDING

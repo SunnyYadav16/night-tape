@@ -1,0 +1,13 @@
+# Databento spend control. The Week 3 cost guard enforces spend_cap_usd in code, not by memory.
+vendor: databento
+credit:
+  amount_usd: 125
+  signup_date: "2026-09-23"  # recorded early: already signed up (Task 12 Step 6, done ahead)
+  expires_on: "2027-04-01"   # portal-shown expiry (claim C-DBN-CREDIT-EXPIRY)
+spend_cap_usd: 125    # = the credit until paid spend is approved (weekly §7, Week 4)
+datasets:
+  OCEA.MEMOIR:
+    schemas: [tbbo, mbp-1, bbo-1s, status]
+  XNAS.ITCH:
+    schemas: [tbbo, mbp-1]
+never_request: [mbo]  # L3 exhausts the credit (v2.2 §4)
