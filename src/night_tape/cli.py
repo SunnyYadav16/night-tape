@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from night_tape import contracts
-from night_tape.evidence import fetch, verify
+from night_tape.evidence import edgar, fetch, verify
 from night_tape.evidence import render as render_mod
 from night_tape.evidence.manifest import Entry
 
@@ -58,6 +58,16 @@ def _add_evidence(sub: Subparsers) -> None:
     _source_args(p)
     p.add_argument("--notes")
     p.set_defaults(handler=_evidence_render)
+
+    p = evs.add_parser(
+        "edgar", help="archive every file of every filing in a form family for one CIK"
+    )
+    p.add_argument("--cik", required=True)
+    p.add_argument(
+        "--form-prefix", required=True, help="e.g. ATS-N (matches ATS-N, ATS-N/MA, ATS-N/CA ...)"
+    )
+    _source_args(p)
+    p.set_defaults(handler=_evidence_edgar)
 
     p = evs.add_parser("verify", help="re-hash every snapshot; report missing files and orphans")
     p.set_defaults(handler=_evidence_verify)
@@ -113,6 +123,21 @@ def _evidence_render(args: argparse.Namespace) -> int:
             notes=args.notes,
         )
     )
+    return 0
+
+
+def _evidence_edgar(args: argparse.Namespace) -> int:
+    with fetch.make_client() as client:
+        _print_stored(
+            edgar.archive_chain(
+                args.evidence_dir,
+                client,
+                cik=args.cik,
+                form_prefix=args.form_prefix,
+                source_id=args.source_id,
+                source_class=args.source_class,
+            )
+        )
     return 0
 
 
