@@ -18,8 +18,8 @@ Give every future session a small, accurate map of night-tape: the rules the cod
 
    | Path | Role | Was |
    |---|---|---|
-   | `docs/plans/project-plan-v2.2.md` | Research design (why) | `nocturn-audit-plan.md` |
-   | `docs/plans/technical-plan-r2.1.md` | Implementation spec (what) | `techincal-docx.md` |
+   | `docs/plans/project-plan-v2.3.md` | Research design (why) | `nocturn-audit-plan.md` |
+   | `docs/plans/technical-plan-r2.2.md` | Implementation spec (what) | `techincal-docx.md` |
    | `docs/plans/weekly-build-plan.md` | Schedule, gates, decisions (when) | `nocturn-audit-weekly-build-plan.md` |
    | `docs/superpowers/specs/` | Design records like this one | — |
    | `docs/superpowers/plans/` | Executable implementation plans, one per week | — |

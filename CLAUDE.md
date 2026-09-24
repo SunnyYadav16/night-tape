@@ -12,22 +12,20 @@ Preregistered measurement of US overnight execution quality on BOATS (Blue Ocean
 | Fixture catalogue F01–F25, property tests P1–P5 | weekly App. B |
 | Decisions D-0…D-12: inputs, deadline, file path | weekly App. C |
 | Which make target should be green this week | weekly App. A |
-| Repo layout | [technical-plan-r2.1.md](docs/plans/technical-plan-r2.1.md) §5 (+ `registry/` from weekly W1 task 1) |
-| Evidence manifest and claim-register fields | r2.1 §6 |
-| Four-date and rule-version contract | r2.1 §7 |
-| Canonical trade/quote schemas | r2.1 §8 (+ `record_idx`, `trade_id` from weekly §1.3) |
-| Metric formulas, populations | r2.1 §9, §10 |
-| Reason codes | r2.1 §11 + weekly §1.4 |
-| Make targets (`freeze-required` vs `release-required`) | r2.1 §13 |
-| Primary sources to archive | r2.1 §18 + weekly W1 task 5 |
-| Gates G0–G7 | r2.1 §20 |
-| Tracker/monitor (optional lane) | r2.1 §23–25, weekly §6 |
-| Why the design is what it is; stats plan | [project-plan-v2.2.md](docs/plans/project-plan-v2.2.md) §8, §8.4 |
+| Repo layout | [technical-plan-r2.2.md](docs/plans/technical-plan-r2.2.md) §5 (+ `registry/` from weekly W1 task 1) |
+| Evidence manifest and claim-register fields | r2.2 §6 |
+| Four-date and rule-version contract | r2.2 §7 |
+| Canonical trade/quote schemas | r2.2 §8 (+ `record_idx`, `trade_id` from weekly §1.3) |
+| Metric formulas, populations | r2.2 §9, §10 |
+| Reason codes | r2.2 §11 + weekly §1.4 |
+| Make targets (`freeze-required` vs `release-required`) | r2.2 §13 |
+| Primary sources to archive | r2.2 §18 + weekly W1 task 5 |
+| Gates G0–G7 | r2.2 §20 |
+| Tracker/monitor (optional lane) | r2.2 §23–25, weekly §6 |
+| Why the design is what it is; stats plan | [project-plan-v2.3.md](docs/plans/project-plan-v2.3.md) §8, §8.4 |
 | Vendor-doc findings about OCEA.MEMOIR | weekly §1.3 |
 
-**When docs conflict:** weekly §1 beats r2.1, which beats v2.2. Stale text still in the older docs:
-- r2.1 says the freeze is 15 Oct and the ordering key is `(ts_event, sequence)`. Both are superseded (weekly §1.1, §1.3).
-- v2.2 describes Broker Priority, "limit-day orders only" and a 105-minute opening accumulation. All superseded (r2.1 §1.1, §2.1). Never put them in code, comments, fixtures or the prereg.
+**When docs conflict:** weekly §1 beats r2.2, which beats v2.3.
 
 ## Five rules (every week)
 

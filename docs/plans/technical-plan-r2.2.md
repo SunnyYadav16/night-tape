@@ -1,14 +1,15 @@
 ---
 title: "night-tape — Validated Technical Implementation Plan"
-technical_plan_version: "2026-09-22-validated-r2.1"
+technical_plan_version: "2026-09-22-validated-r2.2"
 source_project_plan: "night-tape v2.2 — 22 September 2026"
 validated_as_of: "2026-09-22"
-pre_event_freeze_target: "2026-10-15"
+pre_event_freeze_target: "2026-10-30"
 event_target_currently_monitored: "2026-12-06"
 status: "IMPLEMENTATION SPEC — factual claims remain versioned, not assumed"
 amendment_r2: "Public 23/5 tracker + AI change monitor added (§§23–25). Jev registered as a gated, non-blocking provider dependency."
 jev_dependency_status: "WAITLISTED — self-reported by the account owner on 2026-09-22; disabled until gate G7 passes"
 amendment_r2_1: "Review corrections to §§23–25: status taxonomy, atomic-change unit, evidence_refs[], holdout wording, broker scope wording, Jev status provenance."
+amendment_r2_2: "Folds weekly-build-plan §1: freeze 30 Oct; canonical core before pilot; OCEA.MEMOIR findings (record_idx, trade_id, ordering key); FEED_ANOMALY, PRE_SESSION; calendar facts."
 ---
 
 > **r2 amendment (22 September 2026).** This revision adds a public-facing layer in front of the research pipeline: a point-in-time tracker of the 23/5 transition (§23), an AI change monitor that proposes registry updates from primary sources (§24), and an evaluation protocol for that monitor (§25).
@@ -25,14 +26,14 @@ amendment_r2_1: "Review corrections to §§23–25: status taxonomy, atomic-chan
 
 This document supersedes the earlier night-tape technical-freeze draft. It incorporates only changes that survived a primary-source verification pass as of 22 September 2026.
 
-**October 15 is the internal pre-event system and preregistration freeze.** It is not the date the December market-transition study can be completed. After the freeze, the system moves into monitoring/collection mode and the research design may change only through contingencies explicitly enumerated in the preregistration.
+**October 30 is the internal pre-event system and preregistration freeze.** It is not the date the December market-transition study can be completed. After the freeze, the system moves into monitoring/collection mode and the research design may change only through contingencies explicitly enumerated in the preregistration.
 
-Two classes of updates remain possible after October 15:
+Two classes of updates remain possible after October 30:
 
 1. **Factual market-structure updates** — enter through the versioned event/rule registry with source snapshot, hash, verification timestamp and effective timestamp. They must never be implemented as silent code edits.
 2. **Pre-specified contingencies** — may activate an already-written analysis branch. New analysis branches are not added because post-event results are inconvenient.
 
-Contract/licensing work is a **release gate**, not a blocker for private technical development or the October 15 research freeze. A freeze archive may record licensing status as `PENDING`; a public release may not.
+Contract/licensing work is a **release gate**, not a blocker for private technical development or the October 30 research freeze. A freeze archive may record licensing status as `PENDING`; a public release may not.
 
 ---
 
@@ -143,6 +144,8 @@ Databento documents:
 
 Therefore the cheap wide power pull must use `tbbo` for the **primary effective-spread endpoint**. `bbo-1s` can supplement it for quote-state/staleness diagnostics but cannot replace the trade population.
 
+*OCEA.MEMOIR-specific behaviour (`side = N` for non-displayed executions, shared `sequence`, no bust/correct normalization, CMS symbols, session-scoped IDs, single venue timestamp, `status` schema): weekly-build-plan §1.3.*
+
 ## 2.5 Rule 611 / 610(e)
 
 SEC S7-2026-20 proposes rescinding:
@@ -179,9 +182,9 @@ Therefore the technical implementation of an 8–9 p.m. indicator remains justif
 
 ---
 
-# 3. October 15 definition of done
+# 3. October 30 definition of done
 
-By October 15, the project must have:
+By October 30, the project must have:
 
 1. Current primary-source registry and archive for all **load-bearing** claims.
 2. Reconciled BOATS ATS-N amendment chain over the candidate pre-period.
@@ -199,7 +202,7 @@ By October 15, the project must have:
 14. Archive bundle and source hashes.
 15. Licensing matrix whose unresolved cells are explicitly recorded.
 
-Not required for October 15:
+Not required for October 30:
 
 - final vendor legal approval for external publication;
 - optional consolidated post-transition outcome;
@@ -209,7 +212,7 @@ Not required for October 15:
 - **[r2]** the public tracker (§23), the AI change monitor (§24) or any non-manual triage provider;
 - **[r2]** Jev access, integration or evaluation. Jev is a gated dependency (§24.5, gate G7) and is never on the freeze critical path.
 
-**[r2]** The tracker may launch before October 15 because it publishes only facts already verified for the research registry (Stage B). It adds visibility, not freeze scope.
+**[r2]** The tracker may launch before October 30 because it publishes only facts already verified for the research registry (Stage B). It adds visibility, not freeze scope.
 
 ---
 
@@ -426,7 +429,7 @@ context_only
 
 Freeze rule:
 
-- `load_bearing=true` claims must be `VERIFIED` or explicitly converted into a preregistered contingency before Oct 15.
+- `load_bearing=true` claims must be `VERIFIED` or explicitly converted into a preregistered contingency before Oct 30.
 - `context_only` claims may remain `UNVERIFIED` in working notes but must not be stated as fact in the preregistration.
 - `publication` claims may be `PENDING` at research freeze but block public release.
 
@@ -458,6 +461,8 @@ BOATS_POST_2026_09_10
 
 These labels are **provisional technical names**, not claims that no other amendments occurred. The ATS-N/service-alert history scan may split them further before freeze.
 
+*Calendar facts (DST 1 Nov 2026, one-UTC-date sessions, session-defined event, holidays): weekly-build-plan §1.5.*
+
 ---
 
 # 8. Canonical schemas
@@ -465,12 +470,14 @@ These labels are **provisional technical names**, not claims that no other amend
 ## 8.1 Trade
 
 ```text
+trade_id
 symbol
 venue
 instrument_id
 ts_event
 ts_recv
 sequence
+record_idx
 price_int
 size
 side_raw
@@ -480,7 +487,7 @@ ask_px_pre_int
 wall_clock_execution_date
 venue_trade_date
 finra_reporting_date
-clearing_business_date
+nscc_clearing_business_date
 session_id
 rule_version
 source_dataset
@@ -497,6 +504,7 @@ instrument_id
 ts_event
 ts_recv
 sequence
+record_idx
 bid_px_int
 ask_px_int
 bid_sz
@@ -522,10 +530,10 @@ Do not use float equality.
 For within-venue event ordering use:
 
 ```text
-(ts_event, sequence)
+(ts_event, sequence, record_idx)
 ```
 
-not timestamp alone.
+not timestamp alone. Records normalized from one native MEMOIR message share `sequence`; `record_idx` is the record's position in its source file, assigned at normalization.
 
 ---
 
@@ -628,7 +636,11 @@ INVALID_FIXED_POINT
 SEQUENCE_GAP
 OUTSIDE_RULE_VERSION
 UNKNOWN_SESSION_DATE
+FEED_ANOMALY
+PRE_SESSION
 ```
+
+`FEED_ANOMALY`: a locked/crossed displayed BOATS BBO that the ATS-N says should not persist; investigate. `PRE_SESSION`: records before 8:00pm ET, e.g. test orders.
 
 Outputs for every stage:
 
@@ -656,7 +668,9 @@ If Rule 610(e) changes, update the regulatory-regime label for exchange/SIP diag
 
 ---
 
-# 12. Revised implementation order to October 15
+# 12. Revised implementation order to October 30
+
+*Stage dates below are r2.1's compressed schedule; the operative schedule is weekly-build-plan §2. Stages I–K are first built in Week 2 on synthetic fixtures, before the Stage E pilot; in Week 5 they are scale-up and hardening.*
 
 **[r2]** Tracker/monitor tracks T0–T4 (§23.6) run in parallel with Stages A–R. They are keyed to stage completion, not calendar dates. None of them is a prerequisite of Stage R or of `freeze-required`. If time is short, T-tracks slip; Stages A–R do not.
 
@@ -1157,7 +1171,7 @@ A failure of pre-trend assumptions changes interpretation according to preregist
 
 ---
 
-## Stage P — by Oct 13: finalize contingency decision rules
+## Stage P — by Oct 28: finalize contingency decision rules
 
 Must contain numeric/operational triggers for:
 
@@ -1177,7 +1191,7 @@ Do **not** adopt “≥5 sessions” merely because it was suggested in review. 
 
 ```yaml
 staggered_design:
-  minimum_separation_trading_sessions: TBD_BEFORE_2026_10_13
+  minimum_separation_trading_sessions: TBD_BEFORE_2026_10_28
   estimator_branch:
     - sun_abraham
     - callaway_santanna
@@ -1212,7 +1226,7 @@ Freeze:
 
 ---
 
-## Stage R — Oct 15: internal pre-event freeze
+## Stage R — Oct 30: internal pre-event freeze
 
 Tag:
 
@@ -1322,7 +1336,7 @@ Rules:
 
 ---
 
-# 14. Post-freeze monitoring: Oct 15 → event
+# 14. Post-freeze monitoring: Oct 30 → event
 
 Run once per week and additionally after any known filing/service alert.
 
@@ -1414,7 +1428,7 @@ Add this entry to the project’s internal error log:
 
 # 18. Primary-source register used for this validation
 
-These are source identifiers for the technical freeze. Archive them locally before Oct 15.
+These are source identifiers for the technical freeze. Archive them locally before Oct 30.
 
 1. **Current BOATS Form ATS-N / Material Amendment (2026)** — SEC accession `0000902664-26-003296`; current order types, price-time priority, hours, price bands, odd lots, counter-party-selection answer, Post-Only.
    - https://www.sec.gov/Archives/edgar/data/1795131/000090266426003296/xslATS-N_X01/primary_doc.xml
@@ -1498,7 +1512,7 @@ NUMERIC CONTINGENCY RULES
                 ↓
 PREREGISTRATION FINAL
                 ↓
-OCTOBER 15 INTERNAL FREEZE
+OCTOBER 30 INTERNAL FREEZE
                 ↓
 WEEKLY MARKET-STRUCTURE MONITORING
                 ↓
@@ -1568,7 +1582,7 @@ Becomes blocking only when divergence reveals a data, metric, session, signing o
 
 ## G5 — public-release permission gate
 
-Does not block October 15 private research freeze.
+Does not block October 30 private research freeze.
 
 Blocks external release of any output class whose rights remain unknown.
 
@@ -1624,7 +1638,7 @@ git status --porcelain
 # must contain no unintended changes
 
 git commit -S -m "Freeze night-tape pre-event research protocol"
-git tag -s v1.0-preregistered -m "night-tape pre-event freeze — 2026-10-15"
+git tag -s v1.0-preregistered -m "night-tape pre-event freeze — 2026-10-30"
 ```
 
 A later public release requires:
