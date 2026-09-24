@@ -33,6 +33,11 @@ select = ["E", "F", "I", "B", "UP", "SIM"]
 strict = true
 python_version = "3.12"
 
+[[tool.mypy.overrides]]
+module = ["databento", "databento.*"]
+ignore_missing_imports = true
+implicit_reexport = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q --strict-markers --import-mode=importlib"

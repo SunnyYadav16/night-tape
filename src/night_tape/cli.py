@@ -9,7 +9,7 @@ from importlib.metadata import version
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from night_tape import contracts
+from night_tape import contracts, cost
 from night_tape.evidence import edgar, fetch, verify
 from night_tape.evidence import render as render_mod
 from night_tape.evidence.manifest import Entry
@@ -25,6 +25,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--version", action="version", version=version("night-tape"))
     sub = parser.add_subparsers(dest="command", required=True, metavar="COMMAND")
     _add_evidence(sub)
+    _add_cost(sub)
     return parser
 
 
@@ -71,6 +72,39 @@ def _add_evidence(sub: Subparsers) -> None:
 
     p = evs.add_parser("verify", help="re-hash every snapshot; report missing files and orphans")
     p.set_defaults(handler=_evidence_verify)
+
+
+def _add_cost(sub: Subparsers) -> None:
+    c = sub.add_parser("cost", help="Databento cost quotes (metadata only; never downloads data)")
+    cs = c.add_subparsers(dest="cost_command", required=True, metavar="ACTION")
+    p = cs.add_parser("quote", help="save cost/size/count quotes as JSON, one file per schema")
+    p.add_argument("--dataset", required=True)
+    p.add_argument("--schemas", required=True, help="comma-separated, e.g. tbbo,mbp-1")
+    p.add_argument("--symbols", required=True, help="comma-separated raw symbols")
+    p.add_argument("--start", required=True, help="UTC ISO-8601, inclusive")
+    p.add_argument("--end", required=True, help="UTC ISO-8601, exclusive")
+    p.add_argument("--stype-in", default="raw_symbol")
+    p.add_argument("--out", type=Path, default=Path("benchmarks/cost"))
+    p.set_defaults(handler=_cost_quote)
+
+
+def _cost_quote(args: argparse.Namespace) -> int:
+    import databento as db  # imported here: only this command touches the paid API
+
+    client = db.Historical()  # reads DATABENTO_API_KEY from the environment
+    for schema in args.schemas.split(","):
+        doc = cost.quote(
+            client.metadata,
+            dataset=args.dataset,
+            schema=schema,
+            symbols=args.symbols.split(","),
+            start=args.start,
+            end=args.end,
+            stype_in=args.stype_in,
+            sdk_version=db.__version__,
+        )
+        print(f"{cost.save(doc, args.out)}  ${doc['cost_usd']:.4f}  {doc['billable_bytes']} B")
+    return 0
 
 
 def _print_stored(results: Iterable[tuple[Entry, bool]]) -> None:
