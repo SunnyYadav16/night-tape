@@ -11,6 +11,7 @@ from typing import TYPE_CHECKING
 
 from night_tape import contracts
 from night_tape.evidence import fetch, verify
+from night_tape.evidence import render as render_mod
 from night_tape.evidence.manifest import Entry
 
 if TYPE_CHECKING:
@@ -52,6 +53,12 @@ def _add_evidence(sub: Subparsers) -> None:
     p.add_argument("--notes")
     p.set_defaults(handler=_evidence_add)
 
+    p = evs.add_parser("render", help="archive a JS-rendered page as DOM HTML + printed PDF")
+    p.add_argument("url")
+    _source_args(p)
+    p.add_argument("--notes")
+    p.set_defaults(handler=_evidence_render)
+
     p = evs.add_parser("verify", help="re-hash every snapshot; report missing files and orphans")
     p.set_defaults(handler=_evidence_verify)
 
@@ -92,6 +99,19 @@ def _evidence_add(args: argparse.Namespace) -> int:
                 notes=args.notes,
             )
         ]
+    )
+    return 0
+
+
+def _evidence_render(args: argparse.Namespace) -> int:
+    _print_stored(
+        render_mod.render(
+            args.evidence_dir,
+            args.url,
+            source_id=args.source_id,
+            source_class=args.source_class,
+            notes=args.notes,
+        )
     )
     return 0
 
