@@ -1,0 +1,81 @@
+<SEC-DOCUMENT>0001795131-24-000015.txt : 20240807
+<SEC-HEADER>0001795131-24-000015.hdr.sgml : 20240807
+<ACCEPTANCE-DATETIME>20240807105557
+ACCESSION NUMBER:		0001795131-24-000015
+CONFORMED SUBMISSION TYPE:	ATS-N-W
+PUBLIC DOCUMENT COUNT:		1
+WITHDRAWN ACCESSION NUMBER: 	0001795131-24-000014
+FILED AS OF DATE:		20240807
+EFFECTIVENESS DATE:		20240807
+
+FILER:
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			BLUE OCEAN ATS, LLC
+		CENTRAL INDEX KEY:			0001795131
+		ORGANIZATION NAME:           	
+		IRS NUMBER:				843711786
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		ATS-N-W
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	013-00180
+		FILM NUMBER:		241182240
+
+	BUSINESS ADDRESS:	
+		STREET 1:		515 N. FLAGLER DR, SUITE 350
+		STREET 2:		515
+		CITY:			WEST PALM BEACH
+		STATE:			FL
+		ZIP:			33401
+		BUSINESS PHONE:		917-533-5595
+
+	MAIL ADDRESS:	
+		STREET 1:		515 N. FLAGLER DR, SUITE 350
+		STREET 2:		515
+		CITY:			WEST PALM BEACH
+		STATE:			FL
+		ZIP:			33401
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>ATS-N-W
+<SEQUENCE>1
+<FILENAME>primary_doc.xml
+<TEXT>
+<XML>
+<?xml version="1.0" encoding="UTF-8"?>
+<edgarSubmission xmlns="http://www.sec.gov/edgar/atsncw" xmlns:com="http://www.sec.gov/edgar/common" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <headerData>
+    <submissionType>ATS-N-W</submissionType>
+    <accessionNumber>0001795131-24-000014</accessionNumber>
+    <filerInfo>
+      <liveTestFlag>LIVE</liveTestFlag>
+      <filer>
+        <filerCredentials>
+          <com:cik>0001795131</com:cik>
+          <com:ccc>XXXXXXXX</com:ccc>
+        </filerCredentials>
+        <MPID>BLUE</MPID>
+        <NMSStockATSName>Blue Ocean ATS, LLC</NMSStockATSName>
+      </filer>
+      <contact>
+        <ats:contactName>Nicholas DePilla</ats:contactName>
+        <ats:contactPhoneNumber>8472541218</ats:contactPhoneNumber>
+        <ats:contactEmailAddress>nick.depilla@blueoceanats.com</ats:contactEmailAddress>
+      </contact>
+      <flags>
+        <ats:overrideInternetFlag>false</ats:overrideInternetFlag>
+        <ats:confirmingCopyFlag>false</ats:confirmingCopyFlag>
+      </flags>
+    </filerInfo>
+  </headerData>
+  <formData>
+
+  </formData>
+</edgarSubmission>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

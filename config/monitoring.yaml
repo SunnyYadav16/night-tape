@@ -93,3 +93,35 @@ sources:
     method: manual
     url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6610883
     notes: "Pin revision 21 Apr 2026; verify every number against its table (D-8, W4)"
+
+  # Task 12 Step 5 — sources located via primary-site search for previously-unlocated claims.
+  - source_id: cboe-edgx-overnight-approval
+    source_class: SEC_ORDER
+    method: http
+    url: https://www.sec.gov/files/rules/sro/cboeedgx/2026/34-105587.pdf
+    notes: "Order Granting Accelerated Approval, SR-CboeEDGX-2026-019, 23h/day 5d/week; approved 29 May 2026 (C-EDGX-APPROVAL)"
+  - source_id: 24x-overnight-trading-faq
+    source_class: EXCHANGE_NOTICE
+    method: render
+    url: https://equities.24exchange.com/overnight-trading-faqs
+    notes: "24X's own overnight-session FAQ; 9pm-4am ET session, target implementation 6 Dec 2026 (C-24X-OVERNIGHT)"
+  - source_id: sec-memx-2026-28
+    source_class: EXCHANGE_RULE
+    method: http
+    url: https://www.sec.gov/rules-regulations/self-regulatory-organization-rulemaking/sr-memx-2026-28
+    notes: "SR-MEMX-2026-28, 23h/day 5d/week (C-MEMX-FILING)"
+  - source_id: nscc-24x5-live-notice
+    source_class: NSCC_NOTICE
+    method: render
+    url: https://www.dtcc.com/news/2026/june/29/nscc-now-live-with-clearing-hours-extended
+    notes: "NSCC 24x5 clearing go-live press release, Sun 8pm-Fri 8pm ET (C-NSCC-24X5)"
+  - source_id: sec-luld-overnight-order
+    source_class: SEC_ORDER
+    method: http
+    url: https://www.sec.gov/files/rules/sro/nms/2026/34-106042.pdf
+    notes: "LULD Plan Amendment No. 27, Overnight Protections order (C-LULD-OVERNIGHT-STATIC, load_bearing: false)"
+  - source_id: finra-rule-6110
+    source_class: FINRA
+    method: http
+    url: https://www.finra.org/rules-guidance/rulebooks/finra-rules/6110
+    notes: "FINRA Rule 6110(c) ATS Transparency publication lag (C-FINRA-PUBLICATION-LAG)"

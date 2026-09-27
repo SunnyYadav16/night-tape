@@ -1,0 +1,70 @@
+<SEC-DOCUMENT>0000902664-26-003769.txt : 20260911
+<SEC-HEADER>0000902664-26-003769.hdr.sgml : 20260911
+<ACCEPTANCE-DATETIME>20260911085501
+<PRIVATE-TO-PUBLIC>
+ACCESSION NUMBER:		0000902664-26-003769
+CONFORMED SUBMISSION TYPE:	ATS-N/MA
+PUBLIC DOCUMENT COUNT:		1
+<PREVIOUS-ACCESSION-NUMBER>0000902664-26-003296
+FILED AS OF DATE:		20260909
+DATE AS OF CHANGE:		20260911
+
+FILER:
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			BLUE OCEAN ATS, LLC
+		CENTRAL INDEX KEY:			0001795131
+		ORGANIZATION NAME:           	
+		EIN:				843711786
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		ATS-N/MA
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	013-00180
+		FILM NUMBER:		261372787
+
+	BUSINESS ADDRESS:	
+		STREET 1:		515 N. FLAGLER DR, SUITE 350
+		STREET 2:		515
+		CITY:			WEST PALM BEACH
+		STATE:			FL
+		ZIP:			33401
+		BUSINESS PHONE:		917-533-5595
+
+	MAIL ADDRESS:	
+		STREET 1:		515 N. FLAGLER DR, SUITE 350
+		STREET 2:		515
+		CITY:			WEST PALM BEACH
+		STATE:			FL
+		ZIP:			33401
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>COVER PAGE
+<SEQUENCE>3
+<FILENAME>coverpage.xml
+<TEXT>
+<XML>
+<?xml version="1.0" encoding="UTF-8"?>
+<cov:edgarSubmission xmlns:cov="http://www.sec.gov/edgar/atsn/cover" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <cov:submissionType>ATS-N/MA</cov:submissionType>
+  <cov:rbOperatesPursuantToFormATS>N</cov:rbOperatesPursuantToFormATS>
+  <cov:accessionNumber>0000902664-26-003296</cov:accessionNumber>
+  <cov:filerCredentials>
+    <cov:filerCik>0001795131</cov:filerCik>
+    <cov:filerCcc>XXXXXXXX</cov:filerCcc>
+  </cov:filerCredentials>
+  <cov:fileNumber>013-00180</cov:fileNumber>
+  <cov:txNMSStockATSName>BOATS</cov:txNMSStockATSName>
+  <cov:taStatementAboutAmendment>Part III, Items 7 and 11 are amended to reflect that Subscribers and Sponsored Participants may no longer designate orders as "POST-ONLY" as the ATS will no longer support such functionality.  These changes apply to all Subscribers and to the Broker-Dealer Operator.</cov:taStatementAboutAmendment>
+  <cov:liveTestFlag>LIVE</cov:liveTestFlag>
+  <cov:flags>
+    <cov:overrideInternetFlag>false</cov:overrideInternetFlag>
+    <cov:confirmingCopyFlag>false</cov:confirmingCopyFlag>
+  </cov:flags>
+</cov:edgarSubmission>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

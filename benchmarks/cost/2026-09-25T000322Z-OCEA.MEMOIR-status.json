@@ -1,0 +1,17 @@
+{
+  "billable_bytes": 120,
+  "cost_usd": 1.788139e-06,
+  "quoted_at_utc": "2026-09-25T00:03:22Z",
+  "record_count": 3,
+  "request": {
+    "dataset": "OCEA.MEMOIR",
+    "end": "2026-09-21T08:00:00Z",
+    "schema": "status",
+    "start": "2026-09-21T00:00:00Z",
+    "stype_in": "raw_symbol",
+    "symbols": [
+      "SPY"
+    ]
+  },
+  "sdk_version": "0.87.0"
+}

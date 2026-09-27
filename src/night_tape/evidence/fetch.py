@@ -1,9 +1,12 @@
 """HTTP archive-on-fetch. Stores the bytes the server sent, never a rendering or an error page."""
 
-from __future__ import annotations
-
+import email.utils
 import mimetypes
 import os
+import sys
+import time
+from collections.abc import Callable
+from datetime import UTC, datetime
 from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
@@ -41,10 +44,70 @@ def make_client(transport: httpx.BaseTransport | None = None) -> httpx.Client:
     )
 
 
-def fetch_bytes(client: httpx.Client, url: str) -> httpx.Response:
-    resp = client.get(url)
-    resp.raise_for_status()
-    return resp
+RETRY_STATUSES = {429, 500, 502, 503, 504}
+
+
+def _retry_after(resp: httpx.Response) -> float | None:
+    val = resp.headers.get("retry-after", "").strip()
+    if not val:
+        return None
+    if val.isdigit():
+        return float(val)
+    try:
+        dt = email.utils.parsedate_to_datetime(val)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+        return max(0.0, (dt - datetime.now(UTC)).total_seconds())
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+
+def fetch_bytes(
+    client: httpx.Client,
+    url: str,
+    *,
+    max_retries: int = 8,
+    base_backoff: float = 1.0,
+    max_backoff: float = 60.0,
+    sleep: Callable[[float], None] = time.sleep,
+) -> httpx.Response:
+    for attempt in range(max_retries + 1):
+        try:
+            resp = client.get(url)
+        except httpx.TransportError as exc:
+            if attempt == max_retries:
+                raise
+            wait = min(max_backoff, base_backoff * (2**attempt))
+            print(
+                f"[fetch_bytes] {exc.__class__.__name__} on {url}; "
+                f"retrying in {wait:.1f}s (attempt {attempt + 1}/{max_retries})",
+                file=sys.stderr,
+            )
+            sleep(wait)
+            continue
+
+        if resp.status_code < 400:
+            return resp
+
+        if resp.status_code in RETRY_STATUSES or resp.status_code >= 500:
+            if attempt == max_retries:
+                resp.raise_for_status()
+            retry_after = _retry_after(resp)
+            resp.close()
+            calc_wait = min(max_backoff, base_backoff * (2**attempt))
+            wait = max(calc_wait, retry_after) if retry_after is not None else calc_wait
+            print(
+                f"[fetch_bytes] HTTP {resp.status_code} on {url}; "
+                f"retrying in {wait:.1f}s (attempt {attempt + 1}/{max_retries})",
+                file=sys.stderr,
+            )
+            sleep(wait)
+            continue
+
+        resp.raise_for_status()
+        return resp
+
+    raise RuntimeError(f"fetch_bytes failed after {max_retries} retries: {url}")
 
 
 def content_type(resp: httpx.Response) -> str:

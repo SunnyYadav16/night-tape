@@ -136,3 +136,68 @@ def test_cli_verify_exit_codes(tmp_path: Path) -> None:
     assert main(["evidence", "--evidence-dir", str(ev), "--sources", none, "verify"]) == 0
     (ev / "stray.bin").write_bytes(b"?")
     assert main(["evidence", "--evidence-dir", str(ev), "--sources", none, "verify"]) == 1
+
+
+def test_fetch_bytes_retries_on_503_and_succeeds() -> None:
+    calls = 0
+    sleeps: list[float] = []
+
+    def handler(r: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        if calls < 3:
+            return httpx.Response(503, text="Service Unavailable")
+        return httpx.Response(200, text="OK")
+
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    resp = fetch.fetch_bytes(client, "https://example.org/test", sleep=sleeps.append)
+    assert resp.status_code == 200
+    assert calls == 3
+    assert len(sleeps) == 2
+    assert sleeps[0] == 1.0
+    assert sleeps[1] == 2.0
+
+
+def test_fetch_bytes_respects_retry_after() -> None:
+    calls = 0
+    sleeps: list[float] = []
+
+    def handler(r: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        if calls == 1:
+            return httpx.Response(429, headers={"Retry-After": "42"})
+        return httpx.Response(200, text="OK")
+
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    resp = fetch.fetch_bytes(client, "https://example.org/rate-limited", sleep=sleeps.append)
+    assert resp.status_code == 200
+    assert calls == 2
+    assert sleeps == [42.0]
+
+
+def test_fetch_bytes_retries_on_transport_error() -> None:
+    calls = 0
+    sleeps: list[float] = []
+
+    def handler(r: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        if calls == 1:
+            raise httpx.ConnectTimeout("connection timed out")
+        return httpx.Response(200, text="OK")
+
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    resp = fetch.fetch_bytes(client, "https://example.org/flaky", sleep=sleeps.append)
+    assert resp.status_code == 200
+    assert calls == 2
+    assert len(sleeps) == 1
+
+
+def test_fetch_bytes_exhausts_retries_and_raises() -> None:
+    sleeps: list[float] = []
+    client = httpx.Client(transport=httpx.MockTransport(lambda r: httpx.Response(503)))
+    with pytest.raises(httpx.HTTPStatusError) as exc:
+        fetch.fetch_bytes(client, "https://example.org/down", max_retries=3, sleep=sleeps.append)
+    assert exc.value.response.status_code == 503
+    assert len(sleeps) == 3

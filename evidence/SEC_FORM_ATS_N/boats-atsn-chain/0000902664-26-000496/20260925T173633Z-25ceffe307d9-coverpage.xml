@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cov:edgarSubmission xmlns:cov="http://www.sec.gov/edgar/atsn/cover" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <cov:submissionType>ATS-N/MA</cov:submissionType>
+  <cov:rbOperatesPursuantToFormATS>N</cov:rbOperatesPursuantToFormATS>
+  <cov:accessionNumber>0000902664-26-000442</cov:accessionNumber>
+  <cov:filerCredentials>
+    <cov:filerCik>0001795131</cov:filerCik>
+    <cov:filerCcc>XXXXXXXX</cov:filerCcc>
+  </cov:filerCredentials>
+  <cov:fileNumber>013-00180</cov:fileNumber>
+  <cov:txNMSStockATSName>BOATS</cov:txNMSStockATSName>
+  <cov:taStatementAboutAmendment>Part III, Items 7 and 11 are amended to reflect that the ATS will reject sell orders priced greater than the upper limit of the Reference Price Band for the applicable security and buy orders priced less than the lower limit of the applicable Reference Price Band (i.e., Passive Orders). Part III, Item 15 is amended to clarify that, because the ATS no longer accepts Passive Orders, such orders will no longer be included in the BOATS ATS Market Data.  These changes, which will become effective in the ATS trading session beginning at 8:00 PM ET on March 1, 2026, apply to all subscribers and to the Broker-Dealer Operator.</cov:taStatementAboutAmendment>
+  <cov:liveTestFlag>LIVE</cov:liveTestFlag>
+  <cov:flags>
+    <cov:overrideInternetFlag>false</cov:overrideInternetFlag>
+    <cov:confirmingCopyFlag>false</cov:confirmingCopyFlag>
+  </cov:flags>
+</cov:edgarSubmission>

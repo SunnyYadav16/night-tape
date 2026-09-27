@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cov:edgarSubmission xmlns:cov="http://www.sec.gov/edgar/atsn/cover" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <cov:submissionType>ATS-N/MA</cov:submissionType>
+  <cov:rbOperatesPursuantToFormATS>N</cov:rbOperatesPursuantToFormATS>
+  <cov:accessionNumber>0000902664-26-002746</cov:accessionNumber>
+  <cov:filerCredentials>
+    <cov:filerCik>0001795131</cov:filerCik>
+    <cov:filerCcc>XXXXXXXX</cov:filerCcc>
+  </cov:filerCredentials>
+  <cov:fileNumber>013-00180</cov:fileNumber>
+  <cov:txNMSStockATSName>BOATS</cov:txNMSStockATSName>
+  <cov:taStatementAboutAmendment>Part III, Items 2(b), 3(a), 5(a), 7(a), 8(a), 10(a), and 11(a) and (c) are amended to reflect that BOATS permits its Subscribers to provide sponsored access to the ATS to their underlying customers.
+Part III, Items 7(a), 11(c), and 15(b) are amended to reflect that passive orders priced outside the applicable Reference Price Band (i.e., buy orders priced below the lower Reference Price Band and sell orders priced above the upper Reference Price Band) are accepted by the BOATS ATS, but such orders are not eligible for execution and are not disseminated through the BOATS ATS Market Data feeds.
+These changes apply to all subscribers and to the Broker-Dealer Operator.</cov:taStatementAboutAmendment>
+  <cov:liveTestFlag>LIVE</cov:liveTestFlag>
+  <cov:flags>
+    <cov:overrideInternetFlag>false</cov:overrideInternetFlag>
+    <cov:confirmingCopyFlag>false</cov:confirmingCopyFlag>
+  </cov:flags>
+</cov:edgarSubmission>
