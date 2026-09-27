@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cov:edgarSubmission xmlns:cov="http://www.sec.gov/edgar/atsn/cover" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <cov:submissionType>ATS-N/MA</cov:submissionType>
+  <cov:rbOperatesPursuantToFormATS>N</cov:rbOperatesPursuantToFormATS>
+  <cov:accessionNumber>0001539497-23-001938</cov:accessionNumber>
+  <cov:filerCredentials>
+    <cov:filerCik>0001795131</cov:filerCik>
+    <cov:filerCcc>XXXXXXXX</cov:filerCcc>
+  </cov:filerCredentials>
+  <cov:fileNumber>013-00180</cov:fileNumber>
+  <cov:txNMSStockATSName>BLUE OCEAN ATS, LLC</cov:txNMSStockATSName>
+  <cov:taStatementAboutAmendment>Material amendments to the BOATS ATS-N relating to the technology and operations services provided by MEMX Technologies, LLC "MEMX", including:
+
+1.	Part II, Item 6 (adding MEMX as a service provider to the BDO)
+2.	Part II, Item 7 (supplementing the protections on how the BDO and MEMX protect Subscriber CTI)
+3.	Part III, Item 5 (BOATS and MEMX support FIX 5.0 and Simple Binary Encoding)
+4.	Part III, Item 6 (MEMX and BOATS technology are co-located but segregated)
+5.	Part III, Item 11 (BOT licensing agreement with MEMX, technology shared with BOATS)
+6.	Part III. Item 11 (Confirming BOATS operating hours are 8:00 p.m. ET to 4:00 a.m. ET)
+7.	Part III, Item 15 (Updating the data feeds BOT and MEMX make available to recipients)
+8.	Part III, Item 20 (supplemental reasons for suspended trading, including MEMX issues)
+9.	Part III, Item 21 (MEMX reports ATS trades and establishes connection to trade reporting facility)
+10.	Part III, Item 23 (MEMX provides last print data)
+
+The changes apply to all Subscribers and the Broker Dealer Operator.
+</cov:taStatementAboutAmendment>
+  <cov:liveTestFlag>LIVE</cov:liveTestFlag>
+  <cov:flags>
+    <cov:overrideInternetFlag>false</cov:overrideInternetFlag>
+    <cov:confirmingCopyFlag>false</cov:confirmingCopyFlag>
+  </cov:flags>
+</cov:edgarSubmission>

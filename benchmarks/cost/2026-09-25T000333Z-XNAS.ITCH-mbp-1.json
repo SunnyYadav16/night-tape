@@ -1,0 +1,17 @@
+{
+  "billable_bytes": 129522320,
+  "cost_usd": 0.144752472639,
+  "quoted_at_utc": "2026-09-25T00:03:33Z",
+  "record_count": 1619029,
+  "request": {
+    "dataset": "XNAS.ITCH",
+    "end": "2026-09-21T20:00:00Z",
+    "schema": "mbp-1",
+    "start": "2026-09-21T13:30:00Z",
+    "stype_in": "raw_symbol",
+    "symbols": [
+      "SPY"
+    ]
+  },
+  "sdk_version": "0.87.0"
+}

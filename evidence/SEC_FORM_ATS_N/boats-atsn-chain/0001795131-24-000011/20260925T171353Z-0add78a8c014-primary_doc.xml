@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edgarSubmission xmlns="http://www.sec.gov/edgar/atsncw" xmlns:com="http://www.sec.gov/edgar/common" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <headerData>
+    <submissionType>ATS-N-W</submissionType>
+    <accessionNumber>0001795131-24-000010</accessionNumber>
+    <filerInfo>
+      <liveTestFlag>LIVE</liveTestFlag>
+      <filer>
+        <filerCredentials>
+          <com:cik>0001795131</com:cik>
+          <com:ccc>XXXXXXXX</com:ccc>
+        </filerCredentials>
+        <MPID>BLUE</MPID>
+        <NMSStockATSName>Blue Ocean ATS, LLC</NMSStockATSName>
+      </filer>
+      <contact>
+        <ats:contactName>Nicholas DePilla</ats:contactName>
+        <ats:contactPhoneNumber>8472541218</ats:contactPhoneNumber>
+        <ats:contactEmailAddress>nick.depilla@blueoceanats.com</ats:contactEmailAddress>
+      </contact>
+      <flags>
+        <ats:overrideInternetFlag>false</ats:overrideInternetFlag>
+        <ats:confirmingCopyFlag>false</ats:confirmingCopyFlag>
+      </flags>
+    </filerInfo>
+  </headerData>
+  <formData>
+
+  </formData>
+</edgarSubmission>

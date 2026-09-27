@@ -1,0 +1,301 @@
+# Market-structure event registry (v2.2 §8.3; r2.1 §7, §23.3). One registry for research and tracker.
+# Seeded Week 1. Verification status lives on the linked claims (registry/claims.yaml).
+events:
+  # --- BOATS ----------------------------------------------------------------------------------
+  - event_id: E-BOATS-SESSION-HOURS
+    entity: BOATS
+    field: session_hours
+    value: {open: "20:00", close: "04:00", tz: America/New_York, days: [SUN, MON, TUE, WED, THU], test_orders_from: "18:15"}
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-BOATS-SESSION-HOURS, C-BOATS-OPERATING-DAYS]
+    load_bearing: true
+  - event_id: E-BOATS-TRADE-DATE-RULE
+    entity: BOATS
+    field: trade_date_rule
+    value: "Executions from 20:00 to midnight ET belong to the next trading day"
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-BOATS-TRADE-DATE]
+    load_bearing: true
+  - event_id: E-BOATS-ORDER-TYPES-2023-BROKER-PRIORITY
+    entity: BOATS
+    field: order_types
+    value: {aspect: broker_priority_election, present: true}
+    status: SUPERSEDED
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-BOATS-BROKER-PRIORITY-SUPERSEDED]
+    load_bearing: true
+    notes: "Historical only; effective interval from the amendment chain (Stage B, W2)."
+  - event_id: E-BOATS-ORDER-TYPES-CURRENT
+    entity: BOATS
+    field: order_types
+    value:
+      aspect: order_types
+      types: [LIMIT]
+      time_in_force: [DAY, IOC]
+      display: [DISPLAYED, NON_DISPLAYED]
+      instructions: [POST_ONLY]
+      unsupported: [MARKET, PEGGED]
+      priority: price_time
+      counterparty_selection: false
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    supersedes: E-BOATS-ORDER-TYPES-2023-BROKER-PRIORITY
+    claim_ids: [C-BOATS-ORDER-TYPES, C-BOATS-BROKER-PRIORITY-SUPERSEDED]
+    load_bearing: false
+  - event_id: E-BOATS-2025-IOC-DISPLAY
+    entity: BOATS
+    field: order_types
+    value: {aspect: ioc_and_display_directions_introduced}
+    status: PENDING_VERIFICATION
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-BOATS-2025-IOC-DISPLAY]
+    load_bearing: true
+    notes: "Stage B (W2). If unresolved by Wed 30 Sep, carry as UNKNOWN_EFFECTIVE into W3 break diagnostics."
+  - event_id: E-BOATS-BAND-15PCT-2023
+    entity: BOATS
+    field: price_band_rule
+    value: {aspect: band_width, band_pct: 15}
+    status: ERRONEOUS_DISCLOSURE
+    effective_granularity: never
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-BOATS-BAND-15PCT-ERRONEOUS]
+    load_bearing: true
+  - event_id: E-BOATS-BAND-20PCT
+    entity: BOATS
+    field: price_band_rule
+    value: {aspect: band_width, band_pct: 20, reference: "last national-exchange print reported to the SIP as of 19:30 ET", static_for_session: true}
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    correction_of: E-BOATS-BAND-15PCT-2023
+    claim_ids: [C-BOATS-BAND-20PCT, C-BOATS-BAND-15PCT-ERRONEOUS]
+    load_bearing: true
+  - event_id: E-BOATS-OOB-REJECT-2026-03-01
+    entity: BOATS
+    field: price_band_rule
+    value: {aspect: out_of_band_passive_handling, action: REJECT_AT_ENTRY}
+    status: SUPERSEDED
+    effective_granularity: day
+    effective_from: 2026-03-01
+    effective_to: 2026-07-20
+    claim_ids: [C-BOATS-2026-03-01-OOB-REJECT]
+    load_bearing: true
+  - event_id: E-BOATS-OOB-NONDISPLAYED-2026-07-20
+    entity: BOATS
+    field: price_band_rule
+    value: {aspect: out_of_band_passive_handling, action: ACCEPT_NON_DISPLAYED_NOT_EXECUTABLE, in_market_data: false}
+    status: CURRENT
+    effective_granularity: day
+    effective_from: 2026-07-20
+    effective_to: null
+    supersedes: E-BOATS-OOB-REJECT-2026-03-01
+    claim_ids: [C-BOATS-2026-07-20-OOB-NONDISPLAYED]
+    load_bearing: true
+  - event_id: E-BOATS-FAIR-ACCESS-HALTS-END-2026-09-10
+    entity: BOATS
+    field: halt_rule
+    value: {aspect: rule_301b5_fair_access_halts, action: NONE}
+    status: CURRENT
+    effective_granularity: day
+    effective_from: 2026-09-10
+    effective_to: null
+    claim_ids: [C-BOATS-2026-09-10-FAIR-ACCESS]
+    load_bearing: true
+  - event_id: E-BOATS-NO-LOCKED-BOOK
+    entity: BOATS
+    field: market_data_status
+    value: {aspect: locked_or_crossed_displayed_bbo, expected: never, on_observation: FEED_ANOMALY}
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-BOATS-NO-LOCKED-BOOK]
+    load_bearing: true
+
+  # --- Exchanges ------------------------------------------------------------------------------
+  - event_id: E-NASDAQ-NIGHT-SESSION-HOURS
+    entity: NASDAQ
+    field: session_hours
+    value: {session: Night, open: "21:00", close: "04:00", tz: America/New_York}
+    status: APPROVED_NOT_EFFECTIVE
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-NASDAQ-NIGHT-SESSION]
+    load_bearing: true
+  - event_id: E-NASDAQ-GO-LIVE-TARGET
+    entity: NASDAQ
+    field: go_live_target
+    value: 2026-12-06
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-NASDAQ-NIGHT-SESSION]
+    load_bearing: true
+  - event_id: E-ARCA-OVERNIGHT-SESSION-HOURS
+    entity: NYSE_ARCA
+    field: session_hours
+    value: {session: Overnight, open: "21:00", close: "04:00", tz: America/New_York, opening_auction: false}
+    status: APPROVED_NOT_EFFECTIVE
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-ARCA-OVERNIGHT-SESSION]
+    load_bearing: true
+  - event_id: E-ARCA-GO-LIVE-TARGET
+    entity: NYSE_ARCA
+    field: go_live_target
+    value: 2026-12-06
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-ARCA-OVERNIGHT-SESSION]
+    load_bearing: true
+  - event_id: E-EDGX-REG-STATUS
+    entity: CBOE_EDGX
+    field: reg_status
+    value: {approval: accelerated, approved_on: 2026-05-29, framework: overnight trading}
+    status: APPROVED_NOT_EFFECTIVE
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-EDGX-APPROVAL]
+    load_bearing: true
+  - event_id: E-24X-OVERNIGHT-SESSION-HOURS
+    entity: 24X
+    field: session_hours
+    value: {open: "21:00", close: "04:00", tz: America/New_York}
+    status: PENDING_VERIFICATION
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-24X-OVERNIGHT]
+    load_bearing: true
+    notes: "Approval status not yet established."
+  - event_id: E-24X-GO-LIVE-TARGET
+    entity: 24X
+    field: go_live_target
+    value: 2026-12-06
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-24X-OVERNIGHT]
+    load_bearing: true
+  - event_id: E-MEMX-REG-STATUS
+    entity: MEMX
+    field: reg_status
+    value: {filing: SR-MEMX-2026-28, filed_on: 2026-09-09, framework: 23-hour trading}
+    status: PROPOSED
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-MEMX-FILING]
+    load_bearing: true
+
+  # --- Infrastructure and regulation ----------------------------------------------------------
+  - event_id: E-SIP-HOURS-23X5
+    entity: SIP
+    field: session_hours
+    value: {open: "SUN 21:00", close: "FRI 20:00", maintenance_pause: "MON-THU 20:00-21:00", tz: America/New_York}
+    status: APPROVED_NOT_EFFECTIVE
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-SIP-HOURS]
+    load_bearing: true
+  - event_id: E-SIP-GO-LIVE-TARGET
+    entity: SIP
+    field: go_live_target
+    value: 2026-12-06
+    status: CURRENT
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-SIP-HOURS]
+    load_bearing: true
+  - event_id: E-NSCC-CLEARING-24X5
+    entity: NSCC
+    field: clearing_hours
+    value: {open: "SUN 20:00", close: "FRI 20:00", tz: America/New_York}
+    status: CURRENT
+    effective_granularity: day
+    effective_from: 2026-06-29
+    effective_to: null
+    claim_ids: [C-NSCC-24X5]
+    load_bearing: true
+  - event_id: E-REGNMS-611-610E-PROPOSAL
+    entity: REG_NMS
+    field: reg_status
+    value: {file_number: S7-2026-20, release_number: 34-105655, sec_issue_date: 2026-06-11, comment_due: 2026-08-17, proposal: "rescind Rule 611 and Rule 610(e)"}
+    status: PROPOSED
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-REGNMS-611-610E-PROPOSED]
+    load_bearing: true
+  - event_id: E-LULD-OVERNIGHT-STATIC-BANDS
+    entity: LULD
+    field: price_band_rule
+    value: {aspect: overnight_bands, published_at: "21:00", cleared_at: "04:00", static: true}
+    status: APPROVED_NOT_EFFECTIVE
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    claim_ids: [C-LULD-OVERNIGHT-STATIC]
+    load_bearing: false
+
+# Provisional BOATS rule versions (r2.1 §7). Stage B (W2) may split them; labels are technical names.
+rule_versions:
+  - rule_version: BOATS_2025_IOC_DISPLAY_TBD
+    venue: BOATS
+    effective_granularity: unknown
+    effective_from: null
+    effective_to: null
+    basis_event_ids: [E-BOATS-2025-IOC-DISPLAY]
+    provisional: true
+    notes: "Placeholder: Stage B sets the interval and may split BOATS_PRE_2026_03_01."
+  - rule_version: BOATS_PRE_2026_03_01
+    venue: BOATS
+    effective_granularity: day
+    effective_from: null
+    effective_to: 2026-03-01
+    basis_event_ids: [E-BOATS-OOB-REJECT-2026-03-01]
+    provisional: true
+  - rule_version: BOATS_2026_03_01_TO_2026_07_19
+    venue: BOATS
+    effective_granularity: day
+    effective_from: 2026-03-01
+    effective_to: 2026-07-20
+    basis_event_ids: [E-BOATS-OOB-REJECT-2026-03-01, E-BOATS-OOB-NONDISPLAYED-2026-07-20]
+    provisional: true
+  - rule_version: BOATS_2026_07_20_TO_2026_09_09
+    venue: BOATS
+    effective_granularity: day
+    effective_from: 2026-07-20
+    effective_to: 2026-09-10
+    basis_event_ids: [E-BOATS-OOB-NONDISPLAYED-2026-07-20, E-BOATS-FAIR-ACCESS-HALTS-END-2026-09-10]
+    provisional: true
+  - rule_version: BOATS_POST_2026_09_10
+    venue: BOATS
+    effective_granularity: day
+    effective_from: 2026-09-10
+    effective_to: null
+    basis_event_ids: [E-BOATS-FAIR-ACCESS-HALTS-END-2026-09-10]
+    provisional: true

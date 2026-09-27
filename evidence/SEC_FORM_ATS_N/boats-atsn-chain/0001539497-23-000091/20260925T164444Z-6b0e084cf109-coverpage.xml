@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cov:edgarSubmission xmlns:cov="http://www.sec.gov/edgar/atsn/cover" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <cov:submissionType>ATS-N/MA</cov:submissionType>
+  <cov:rbOperatesPursuantToFormATS>N</cov:rbOperatesPursuantToFormATS>
+  <cov:accessionNumber>0001539497-22-001576</cov:accessionNumber>
+  <cov:filerCredentials>
+    <cov:filerCik>0001795131</cov:filerCik>
+    <cov:filerCcc>XXXXXXXX</cov:filerCcc>
+  </cov:filerCredentials>
+  <cov:fileNumber>013-00180</cov:fileNumber>
+  <cov:txNMSStockATSName>BLUE OCEAN ATS, LLC</cov:txNMSStockATSName>
+  <cov:taStatementAboutAmendment>This is a Material Amendment to the ATS-N filed for the Blue Ocean ATS ("BOATS") in relation to the change in clearing firms from Velox Clearing LLC (NSCC#3856) to RQD* Clearing, LLC (NSCC#4305). This Material Amendment reflects changes to Part II Item 6b, Part III Item 2b, Part III Item 22a. These changes apply to all Subscribers and to the broker-dealer operator.</cov:taStatementAboutAmendment>
+  <cov:liveTestFlag>LIVE</cov:liveTestFlag>
+  <cov:flags>
+    <cov:overrideInternetFlag>false</cov:overrideInternetFlag>
+    <cov:confirmingCopyFlag>false</cov:confirmingCopyFlag>
+  </cov:flags>
+</cov:edgarSubmission>

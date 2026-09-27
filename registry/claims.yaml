@@ -1,0 +1,424 @@
+# Claim register (r2.1 §6.2). Seeded Week 1 from project-plan v2.2, technical-plan r2.1 and
+# weekly-build-plan §1.3. source_id = the config/monitoring.yaml source expected to verify it.
+claims:
+  # --- Databento schema semantics -------------------------------------------------------------
+  - claim_id: C-DBN-TBBO-PRETRADE-BBO
+    claim_text: "tbbo emits one record per trade carrying the BBO immediately before that trade's effect."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [primary_endpoint, metric_semantics]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-tbbo
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:07Z"
+    retrieved_at: "2026-09-25T16:28:07Z"
+    sha256: "f48830836005838526efe7b5686503390d2536b06c6b20e3d191624233ae1a04"
+  - claim_id: C-DBN-FIXED-POINT-1E-9
+    claim_text: "Price fields are int64 fixed-point with 1 unit = 1e-9 USD; UNDEF_PRICE is the int64 maximum."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [metric_semantics]
+    status: UNVERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-common-fields
+    notes: "Every archived render (12 snapshots, 25 Sep 2026) of this page cuts off mid-sentence ('...clocks on independent order gateways are often not properly synchronized to the same clock source Since we do not') before reaching the Prices/UNDEF_PRICE section that the tbbo/bbo/mbp-1 pages cross-reference as 'See Prices'. The archived snapshot neither states nor contradicts the claim -- it simply doesn't reach that part of the page. Needs a re-fetch that captures the full scrolled page (or a screenshot-mode fix), then re-verify."
+  - claim_id: C-DBN-BBO1S-NOT-DENSE
+    claim_text: "bbo-1s emits no record for an interval with neither a trade nor a BBO update."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [metric_semantics]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-bbo
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:09Z"
+    retrieved_at: "2026-09-25T16:28:09Z"
+    sha256: "a0d620427076bd3a4de463f1a57dc4eb8f5b5522bc81aaa152fedc21893ac49f"
+  - claim_id: C-DBN-MBP1-EVENT-SPACE
+    claim_text: "mbp-1 contains every top-of-book-changing event."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [metric_semantics]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-mbp-1
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:11Z"
+    retrieved_at: "2026-09-25T16:28:11Z"
+    sha256: "13825b48436477f45198e782afa95a38ea011a6df23d653100ad9e44da798194"
+  - claim_id: C-DBN-CREDIT-EXPIRY
+    claim_text: "The $125 Databento signup credit expires six months after signup."
+    claim_type: statistic
+    load_bearing: true
+    affects: [cost]
+    status: CONTINGENCY
+    notes: "config/datasets.yaml records signup_date 2026-09-23 and portal-shown expires_on 2027-04-01 -- an actual gap of about 6 months + 9 days, not exactly 6 months; the portal's shown value is the recorded fact, so this is not REFUTED. Status is CONTINGENCY rather than VERIFIED: this fact comes from the user's own account/portal record in config/datasets.yaml, not an archived web snapshot, so there is no real sha256/source_id to fill without fabricating one (the claim_registry schema requires source_class+source_id+retrieved_at+sha256 for VERIFIED). CONTINGENCY is in registry.claims.OK_STATUSES alongside VERIFIED, so this does not appear as a load-bearing gap."
+
+  # --- OCEA.MEMOIR dataset (weekly §1.3) ------------------------------------------------------
+  - claim_id: C-OCEA-SIDE-N-NONDISPLAYED
+    claim_text: "Trades from the MEMOIR Trade message (non-displayed executions) carry side = N; trades from Order Executed carry the aggressor side."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [primary_endpoint, metric_semantics]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:16Z"
+    retrieved_at: "2026-09-25T16:28:16Z"
+    sha256: "5091cc7c5b25057a5f97a3233b40842b8597cf4f7216f0f4166fc2c1026a3312"
+    recheck_trigger: "Week 3 pilot non-displayed check; D-1 signed W4 Mon"
+  - claim_id: C-OCEA-SHARED-SEQUENCE
+    claim_text: "Records normalized from one native MEMOIR message share the same sequence."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [metric_semantics]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:16Z"
+    retrieved_at: "2026-09-25T16:28:16Z"
+    sha256: "5091cc7c5b25057a5f97a3233b40842b8597cf4f7216f0f4166fc2c1026a3312"
+  - claim_id: C-OCEA-NO-BUST-CORRECT
+    claim_text: "MEMOIR Broken Trade and Corrected Trade messages are not normalized."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [data_quality, publication]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:16Z"
+    retrieved_at: "2026-09-25T16:28:16Z"
+    sha256: "5091cc7c5b25057a5f97a3233b40842b8597cf4f7216f0f4166fc2c1026a3312"
+  - claim_id: C-OCEA-CMS-SYMBOLS
+    claim_text: "OCEA raw symbols use the CMS convention (e.g. 'BRK B')."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [sample]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:16Z"
+    retrieved_at: "2026-09-25T16:28:16Z"
+    sha256: "5091cc7c5b25057a5f97a3233b40842b8597cf4f7216f0f4166fc2c1026a3312"
+  - claim_id: C-OCEA-SESSION-SCOPED-ID
+    claim_text: "The native SecurityID (raw_instrument_id) is session-scoped."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [metric_semantics]
+    status: UNVERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    notes: "The archived OCEA.MEMOIR dataset page (full page, ends at the site footer, not truncated) never mentions 'SecurityID', 'raw_instrument_id', or session-scoping anywhere in its text. This specific fact is not covered by this source_id; it likely needs Databento's general symbology docs or a direct API check instead."
+  - claim_id: C-OCEA-TIMESTAMPS
+    claim_text: "OCEA has one venue timestamp: only ts_event and ts_recv exist; ts_in_delta = 0."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [metric_semantics]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:16Z"
+    retrieved_at: "2026-09-25T16:28:16Z"
+    sha256: "5091cc7c5b25057a5f97a3233b40842b8597cf4f7216f0f4166fc2c1026a3312"
+  - claim_id: C-OCEA-STATUS-SCHEMA
+    claim_text: "The status schema exposes security trading status (halt, pause, quoting, trading) and session status."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [data_quality, session_logic]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-status-schema
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:18Z"
+    retrieved_at: "2026-09-25T16:28:18Z"
+    sha256: "cb026fe31049202502988a410f2a0b10435adc535767daa5f2f41b0019a010e2"
+    notes: "Judgment call: the doc exposes a single 'action' enum with trading-status values (Trading, Halt, Pause, Suspend, Quoting) interleaved with session-phase values (Pre-open, Pre-cross, Cross, Rotation, Pre-close, Close, Post-close), not two separately named fields called 'security trading status' and 'session status'. Treated as satisfying the claim in substance."
+  - claim_id: C-OCEA-HISTORY-START
+    claim_text: "OCEA.MEMOIR history begins 24 Aug 2025."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [sample]
+    status: UNVERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    notes: "The archived dataset page does not state any start date. Confirms the recheck_trigger below is still the only path to verifying this: metadata.get_dataset_range in the Week 3 pilot."
+    recheck_trigger: "metadata.get_dataset_range in the Week 3 pilot"
+  - claim_id: C-OCEA-COVERAGE-HOURS
+    claim_text: "OCEA.MEMOIR covers the Blue Ocean Session, 8pm-4am ET, Sunday-Thursday."
+    claim_type: schedule
+    load_bearing: true
+    affects: [session_logic]
+    status: VERIFIED
+    source_class: VENDOR_DOC
+    source_id: databento-ocea-memoir
+    source_version_or_accession: "render snapshot 2026-09-25T16:28:16Z"
+    retrieved_at: "2026-09-25T16:28:16Z"
+    sha256: "5091cc7c5b25057a5f97a3233b40842b8597cf4f7216f0f4166fc2c1026a3312"
+
+  # --- BOATS mechanics (current Form ATS-N + amendment chain; r2.1 §2) -----------------------
+  - claim_id: C-BOATS-SESSION-HOURS
+    claim_text: "BOATS session is 8:00pm-4:00am ET; bona-fide orders accepted from 8:00pm; 6:15pm is for test orders only."
+    claim_type: schedule
+    load_bearing: true
+    affects: [session_logic]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2026-current-view
+    source_version_or_accession: "0000902664-26-003296"
+    retrieved_at: "2026-09-25T16:27:50Z"
+    sha256: "fa3d2a9437083f61f98e7479d0533a3ecc33fee0decd6bee11fd4deb03c831b8"
+  - claim_id: C-BOATS-TRADE-DATE
+    claim_text: "BOATS assigns 8:00pm-midnight executions to the following trading day."
+    claim_type: schedule
+    load_bearing: true
+    affects: [date_logic]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2026-current-view
+    source_version_or_accession: "0000902664-26-003296"
+    retrieved_at: "2026-09-25T16:27:50Z"
+    sha256: "fa3d2a9437083f61f98e7479d0533a3ecc33fee0decd6bee11fd4deb03c831b8"
+    notes: "Not FAQ-only: stated in the filing itself (Item 4(a) and Item 21), e.g. 'for a trading session that operates from 8:00 p.m. ET Sunday through 4:00 a.m. ET Monday, trades effected during that trading session are reported by 4:15 a.m. ET Monday'."
+  - claim_id: C-BOATS-OPERATING-DAYS
+    claim_text: "BOATS operates only on days when the NYSE TRF is open the following morning; trades settle T+1."
+    claim_type: schedule
+    load_bearing: true
+    affects: [session_logic, date_logic]
+    status: REFUTED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2026-current-view
+    notes: "PARTIAL CONTRADICTION. The TRF-availability half is confirmed by Item 4(a): 'BOATS operating session is overnight from 8:00 p.m. ET to 4:00 a.m. ET, dependent on the availability of the NYSE Trade Reporting Facility (TRF) to report trades the following trading day' (with the Friday/Saturday and Christmas examples). But Item 22 (Clearance and Settlement) directly contradicts the T+1 half: 'Settlement of trades executed on the ATS occurs through the Continuous Net Settlement (CNS) system operated by DTC and generally settle on the second day after the trade' -- that is T+2, not T+1. Marking the whole compound claim REFUTED because one of its two assertions is contradicted by the primary source; the claim likely needs to be split so the verified TRF-days assertion isn't dragged down by the settlement-cycle error. Flagged prominently in the report -- this has four-date/nscc_clearing_business_date implications."
+  - claim_id: C-BOATS-ORDER-TYPES
+    claim_text: "BOATS supports one LIMIT order type, DAY or IOC, displayed or non-displayed, POST-ONLY (DAY only); no MARKET or PEGGED; price-time priority; no counter-party selection."
+    claim_type: venue_mechanics
+    load_bearing: false
+    affects: [context_only]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2026-current-view
+    source_version_or_accession: "0000902664-26-003296"
+    retrieved_at: "2026-09-25T16:27:50Z"
+    sha256: "fa3d2a9437083f61f98e7479d0533a3ecc33fee0decd6bee11fd4deb03c831b8"
+    notes: "'No counter-party selection' verified from the raw XSL-rendered XHTML (Item 14): the 'No' radio is rendered with radio-checked.jpg and 'Yes' with radio-unchecked.jpg -- this level of detail is invisible in plain-text extraction of the file and required inspecting the raw markup directly."
+  - claim_id: C-BOATS-NO-LOCKED-BOOK
+    claim_text: "Internal marketable contra orders execute rather than leaving a locked or crossed BOATS book."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [data_quality]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2026-current-view
+    source_version_or_accession: "0000902664-26-003296"
+    retrieved_at: "2026-09-25T16:27:50Z"
+    sha256: "fa3d2a9437083f61f98e7479d0533a3ecc33fee0decd6bee11fd4deb03c831b8"
+  - claim_id: C-BOATS-BAND-20PCT
+    claim_text: "BOATS uses a static 20% reference band per session, referenced to the last national-exchange print reported to the SIP as of 7:30pm ET."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [data_quality]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2026-current-view
+    source_version_or_accession: "0000902664-26-003296"
+    retrieved_at: "2026-09-25T16:27:50Z"
+    sha256: "fa3d2a9437083f61f98e7479d0533a3ecc33fee0decd6bee11fd4deb03c831b8"
+  - claim_id: C-BOATS-BAND-15PCT-ERRONEOUS
+    claim_text: "The 2023 correcting redline states the 15% band was incorrectly disclosed and the band was 20%; no band-width break exists."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2023-band-redline
+    source_version_or_accession: "0001539497-23-001938"
+    retrieved_at: "2026-09-25T16:28:00Z"
+    sha256: "58df7da968cbe165c899939d7412cd3386accf846ad34e7b21af4fedf7671564"
+  - claim_id: C-BOATS-BROKER-PRIORITY-SUPERSEDED
+    claim_text: "Broker Priority (2023 ATS-N) was superseded by the 2024 correcting amendment restoring price-time wording."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-2024-correcting-view
+    source_version_or_accession: "0001795131-24-000022"
+    retrieved_at: "2026-09-25T16:27:58Z"
+    sha256: "7e71ccabbc26074452105b27afa10b2e4f40fa96ab150667bdf89d215d29dbd0"
+    notes: "Effective interval of Broker Priority to be established from the amendment chain (Stage B, W2). Confirmed via the amendment's own preamble: 'Blue Ocean ATS is filing a Correcting Amendment to restore language previously found in the August 2023 ATS-N, including ... Part III Item 11(c) how the ATS matches on a price-time priority basis'; cross-checked against the archived 2023 broker-priority-view filing, which describes 'price/broker/time priority' as an actual elected feature."
+  - claim_id: C-BOATS-2025-IOC-DISPLAY
+    claim_text: "2025 ATS-N amendments introduced IOC and displayed/non-displayed directions; effective dates not yet established."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: SEC_FORM_ATS_N
+    source_id: boats-atsn-chain
+    source_version_or_accession: "0001795131-25-000025 (filed 2025-08-26)"
+    retrieved_at: "2026-09-25T17:34:22Z"
+    sha256: "2e658f3993092e286b2847bb8d364e820dff9f2e7387389d274c68d63d250fea"
+    notes: "Found by scanning the accession chain for 2025 ATS-N/MA filings. Accession 0001795131-25-000025 (filed 26 Aug 2025) cover statement: 'Material amendment to Part III, Item 7 and Part III, Item 15 of the BOATS ATS-N disclosing that the ATS is accepting orders with additional directions, including: 1) Orders may be entered with Time-in-Force (TIF) instructions of DAY, or Immediate-or-Cancel (IOC). 2) Orders may be designated with a DISPLAYED, or NON-DISPLAYED, direction.' The immediately preceding MA (0001795131-25-000021, 8 Jul 2025) still shows 'The only time-in-force instruction accepted by the ATS is DAY' with no displayed/non-displayed direction, confirming the Aug 2025 filing is the one that introduced both."
+  - claim_id: C-BOATS-2026-03-01-OOB-REJECT
+    claim_text: "From 1 Mar 2026 BOATS rejected passive orders priced outside the 20% band at entry."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [identification, sample]
+    status: UNVERIFIED
+    source_class: ATS_SERVICE_ALERT
+    source_id: blue-ocean-service-status
+    notes: "The archived blue-ocean-service-status snapshot is a live/rolling alert table filtered to the fetch date ('Alerts for Overnight Session Dates: 09-25-2026 TO 09-26-2026', 'No data available in table'); no historical-archive link exists on the page. None of the 24 archived render attempts (25 Sep 2026) capture the 1 Mar 2026 alert. Needs a Wayback Machine capture of blueocean-tech.io from around 1 Mar 2026, or a direct request to the vendor for their alert history."
+  - claim_id: C-BOATS-2026-07-20-OOB-NONDISPLAYED
+    claim_text: "From 20 Jul 2026 out-of-band passive orders are accepted non-displayed, non-executable and excluded from market data until repriced inside the band."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [identification, metric_semantics]
+    status: UNVERIFIED
+    source_class: ATS_SERVICE_ALERT
+    source_id: blue-ocean-service-status
+    notes: "Same gap as C-BOATS-2026-03-01-OOB-REJECT: the archived snapshot is a rolling table showing only the fetch-date window, with no data for 20 Jul 2026. Needs a historical capture from around that date."
+  - claim_id: C-BOATS-2026-09-10-FAIR-ACCESS
+    claim_text: "From 10 Sep 2026 BOATS stopped halting symbols for Rule 301(b)(5) Fair Access reasons."
+    claim_type: venue_mechanics
+    load_bearing: true
+    affects: [identification, data_quality]
+    status: UNVERIFIED
+    source_class: ATS_SERVICE_ALERT
+    source_id: blue-ocean-service-status
+    notes: "Same gap as the other two blue-ocean-service-status claims: the archived snapshot is a rolling table showing only the fetch-date window (25-26 Sep 2026), with no data for 10 Sep 2026. Needs a historical capture from around that date."
+
+  # --- Transition schedule and regulation -----------------------------------------------------
+  - claim_id: C-NASDAQ-NIGHT-SESSION
+    claim_text: "Nasdaq's 23-hour framework (34-105199) introduces a new 9:00pm-4:00am ET trading session, targeted for 6 Dec 2026 (Equity Trader Alert 2026-46)."
+    claim_type: schedule
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: EXCHANGE_NOTICE
+    source_id: nasdaq-eta-2026-46
+    source_version_or_accession: "render/http snapshot 2026-09-25T16:28:14Z"
+    retrieved_at: "2026-09-25T16:28:14Z"
+    sha256: "2d9cd39e1eb4bd90e511c4ea617712cce9cbb0319e4dec20fe95efb47dc24f2f"
+    notes: "Approval side: nasdaq-34-105199 (SEC Release No. 34-105199, 'Order Granting Accelerated Approval ... to Extend the Exchange's Trading Hours to 23 Hours a Day, Five Days a Week', archived and cross-checked). claim_text corrected: ETA 2026-46 never calls it a 'Night Session' by that name -- it just says 'Nasdaq will introduce a new trading session from 9 p.m. to 4 a.m. ET' as part of 'nearly continuous trading 23 hours a day, 5 days a week'; that wording is now used instead."
+  - claim_id: C-ARCA-OVERNIGHT-SESSION
+    claim_text: "NYSE Arca's Overnight Session runs 9:00pm-4:00am ET, targeted for 6 Dec 2026."
+    claim_type: schedule
+    load_bearing: true
+    affects: [identification]
+    status: UNVERIFIED
+    source_class: EXCHANGE_RULE
+    source_id: nysearca-sr-2026-53
+    notes: "The archived snapshot is only the SEC rulemaking index/landing page for SR-NYSEARCA-2026-53, not the operative rule text. It confirms the filing exists and is titled 'Notice of Filing and Immediate Effectiveness of Proposed Rule Change to Amend Temporary Rule 7.34-E(T) to Provide for an Overnight Trading Session...' (File No. SR-NYSEARCA-2026-53, Release No. 34-105532, SEC Issue Date 21 May 2026), but the specific 9pm-4am hours and the 6 Dec 2026 target date live in the linked 'Notice Rule: SEC Issued Version (pdf)' exhibit, which was not archived under this source_id. Needs that PDF archived (add its direct URL to config/monitoring.yaml) before this can move to VERIFIED."
+  - claim_id: C-EDGX-APPROVAL
+    claim_text: "Cboe EDGX received accelerated approval for extended overnight trading on 29 May 2026."
+    claim_type: regulatory_status
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: SEC_ORDER
+    source_id: cboe-edgx-overnight-approval
+    source_version_or_accession: "Release No. 34-105587; File No. SR-CboeEDGX-2026-019"
+    retrieved_at: "2026-09-26T20:05:52Z"
+    sha256: "12bd436d8ba1f92f7a7825efd184bbf6a0aa5af3095dcc35dbed11851fe98930"
+    notes: "Located via primary-site search (sec.gov), added to config/monitoring.yaml as cboe-edgx-overnight-approval, archived via evidence sync. Order text: 'Notice of Filing of Amendment No. 1 and Order Granting Accelerated Approval of a Proposed Rule Change, as Amended by Amendment No. 1, to Extend the Exchange's Trading Hours to 23 Hours Per Day, Five Days Per Week' dated 'May 29, 2026.'"
+  - claim_id: C-24X-OVERNIGHT
+    claim_text: "24X Exchange publishes a 9:00pm-4:00am overnight session targeted for 6 Dec 2026."
+    claim_type: schedule
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: EXCHANGE_NOTICE
+    source_id: 24x-overnight-trading-faq
+    source_version_or_accession: "render snapshot 2026-09-26T20:05:57Z"
+    retrieved_at: "2026-09-26T20:05:57Z"
+    sha256: "6f93420ae5603af310f3a97ab0bef80a7e14fa6e2edbb0ea581f2e1d7d4752cc"
+    notes: "Located 24X's own overnight-trading FAQ (equities.24exchange.com/overnight-trading-faqs), added to config/monitoring.yaml, archived via evidence sync (render method; the html render captured the FAQ body, the pdf render of the same page did not -- both are archived, cite the html). Quote: 'Pending SEC approval, 24X will introduce a new fourth trading session, the 24X Market Session, which will begin at 9:00 PM and end at 4:00 AM the following day.' and 'The target implementation date is Sunday December 06, 2026.'"
+  - claim_id: C-MEMX-FILING
+    claim_text: "MEMX filed for 23-hour trading on 9 Sep 2026 (SR-MEMX-2026-28)."
+    claim_type: regulatory_status
+    load_bearing: true
+    affects: [identification]
+    status: VERIFIED
+    source_class: EXCHANGE_RULE
+    source_id: sec-memx-2026-28
+    source_version_or_accession: "Release No. 34-106310; File No. SR-MEMX-2026-28"
+    retrieved_at: "2026-09-26T20:05:57Z"
+    sha256: "2b5040c975c5976cc614803c70167a32a492c8b132c131aee959537b71d31a5f"
+    notes: "Release number now confirmed: 34-106310 (previously 'unverified, v2.2 §12'). SEC rulemaking page: title 'Notice of Filing and Immediate Effectiveness of a Proposed Rule Change to Amend its Rules to Permit Trading 23 Hours per Day, Five Days per Week', File Number SR-MEMX-2026-28, SEC Issue Date Sept. 9, 2026 -- matches the claim's date exactly."
+  - claim_id: C-SIP-HOURS
+    claim_text: "From 6 Dec 2026 the equities SIPs run 9:00pm ET Sunday to 8:00pm ET Friday with an 8-9pm maintenance pause Monday-Thursday."
+    claim_type: schedule
+    load_bearing: true
+    affects: [identification, session_logic]
+    status: VERIFIED
+    source_class: SEC_STAFF
+    source_id: sec-staff-memo-24h-2026-09
+    source_version_or_accession: "2026_TM_Overnight_Trading_Roundtable_Memo_090926.pdf"
+    retrieved_at: "2026-09-25T16:28:12Z"
+    sha256: "afadc1b541a6a13cc13c8699da1946a0b3bd23cb07ed4b07d6c3ae27ef189c19"
+    notes: "Exact match, footnote 5: 'The Operating Committees of the Equity Data Plans expect that on December 6, 2026, the Securities Information Processors (CTA and UTP SIPs) will operate from 9:00 p.m. ET Sunday through 8:00 p.m. ET Friday, pausing daily Monday through Thursday from 8:00 p.m. to 9:00 p.m. ET for technical maintenance.'"
+  - claim_id: C-NSCC-24X5
+    claim_text: "NSCC 24x5 clearing went live 29 Jun 2026, running Sunday 8:00pm ET to Friday 8:00pm ET."
+    claim_type: schedule
+    load_bearing: true
+    affects: [date_logic]
+    status: VERIFIED
+    source_class: NSCC_NOTICE
+    source_id: nscc-24x5-live-notice
+    source_version_or_accession: "DTCC press release, render snapshot 2026-09-26T20:06:02Z"
+    retrieved_at: "2026-09-26T20:06:02Z"
+    sha256: "e789ed3815856b869781849447a74e2dc5ca8cb636cd825d52257fb84d8425db"
+    notes: "Located NSCC's own go-live press release on dtcc.com (dtcc.com/news/2026/june/29/nscc-now-live-with-clearing-hours-extended), added to config/monitoring.yaml, archived. Quote: 'New York/London/Hong Kong/Singapore/Sydney, June 29, 2026 -- ... National Securities Clearing Corporation (NSCC), has extended its clearing hours to 24x5 availability, from Sundays at 8:00 PM ET to Fridays at 8:00 PM ET, supporting overnight trading activity from Alternative Trading Systems...'"
+  - claim_id: C-REGNMS-611-610E-PROPOSED
+    claim_text: "SEC S7-2026-20 (Release 34-105655, 11 Jun 2026) proposes rescinding Rule 611 and Rule 610(e); status proposed."
+    claim_type: regulatory_status
+    load_bearing: true
+    affects: [data_quality, identification]
+    status: VERIFIED
+    source_class: SEC_RULE
+    source_id: sec-s7-2026-20
+    source_version_or_accession: "Release No. 34-105655; File No. S7-2026-20"
+    retrieved_at: "2026-09-25T16:28:05Z"
+    sha256: "8c749a462f32aadbf8ddffb2e9806944319acb26394da23b7829d941b8d263d2"
+    recheck_trigger: weekly
+  - claim_id: C-LULD-OVERNIGHT-STATIC
+    claim_text: "Overnight LULD bands are published once at 9:00pm, stay static, and are cleared at 4:00am; approved 5 Aug 2026."
+    claim_type: regulatory_status
+    load_bearing: false
+    affects: [context_only]
+    status: VERIFIED
+    source_class: SEC_ORDER
+    source_id: sec-luld-overnight-order
+    source_version_or_accession: "Release No. 34-106042; File No. 4-631 (LULD Plan Amendment No. 27)"
+    retrieved_at: "2026-09-26T20:06:02Z"
+    sha256: "9896f8978281f99f6c11ba8c397b88099ec0903567a9fff3446d7c6340683cd3"
+    notes: "Located via primary-site search (sec.gov), added to config/monitoring.yaml, archived. Order dated 'August 5, 2026.' Confirms the 9pm-4am window ('Overnight Protected Hours (defined as 9:00 p.m. Eastern Time on Sunday through Thursday to 4:00 a.m. Eastern Time on the next calendar day)'), bands calculated once from pre-9pm reference prices and applied through the session ('the Overnight Percentage Parameter ... to align with the 20% static band protections'), and termination at 4:00 a.m. Low priority per load_bearing: false, so this lighter match was accepted without chasing every nuance of 'published' vs 'cleared' wording."
+  - claim_id: C-FINRA-PUBLICATION-LAG
+    claim_text: "FINRA ATS Transparency data is delayed at least two weeks for Tier 1 and at least four weeks for other NMS stocks."
+    claim_type: data_semantics
+    load_bearing: true
+    affects: [sample]
+    status: VERIFIED
+    source_class: FINRA
+    source_id: finra-rule-6110
+    source_version_or_accession: "FINRA Rule 6110(c), render snapshot 2026-09-26T20:06:03Z"
+    retrieved_at: "2026-09-26T20:06:03Z"
+    sha256: "fda6346759eecbf9db8d16a39f036f35c7c9bc61845372e72c29b420aa686278"
+    notes: "FINRA Rule 6110(c); rule text archived from finra.org/rules-guidance/rulebooks/finra-rules/6110, added to config/monitoring.yaml. Exact text: '(A) no earlier than two weeks following the end of the ATS Trading Information week, aggregate weekly ATS Trading Information regarding NMS stocks in Tier 1 ...; and (B) no earlier than four weeks following the end of the ATS Trading Information week, aggregate weekly ATS Trading Information regarding NMS stocks that are subject to FINRA trade reporting requirements and are not in Tier 1...'"
+
+  # --- Research baseline and citations --------------------------------------------------------
+  - claim_id: C-LIM-BASELINE
+    claim_text: "Lim (SSRN 6610883, rev. 21 Apr 2026): 30 symbols, 24 matched sessions, Sep 2025-Mar 2026; overnight ES about 7c/share and 10s PI about 2.4c/share above Nasdaq RTH."
+    claim_type: statistic
+    load_bearing: true
+    affects: [metric_semantics]
+    status: VERIFIED
+    source_class: PAPER
+    source_id: lim-ssrn-6610883-rev-2026-04-21
+    source_version_or_accession: "This draft: 21 April 2026"
+    retrieved_at: "2026-09-25T17:09:43Z"
+    sha256: "270a15c3d3427c2703918d061f811fbf538c5b80a6c965259d8da70eb426efc7"
+    notes: "Verified against the paper's actual regression tables, not just the abstract. Table 2 (line ~290): 'The effective spread on BOATS is 7.0 cents per share higher than on NASDAQ for the same stock on the same day, with a clustered t-statistic of 4.18. The 10-second price impact is 2.4 cents...' Sample description (line ~159): '30 symbols x 24 sessions = 720 symbol-sessions per venue', matched-session window 'August 2025 to 30 March 2026' (abstract/intro say 'September 2025 through March 2026' -- consistent, the matched-session subsample starts within the Sep 2025-Mar 2026 window claimed)."
+    recheck_trigger: "Verify every number against its table before D-8 (W4)"
+  - claim_id: C-SEC-RELEASE-NUMBERS
+    claim_text: "The SEC release numbers cited in project-plan v2.2 §12 are correct."
+    claim_type: citation
+    load_bearing: false
+    affects: [publication]
+    status: UNVERIFIED
+    notes: "Open each on sec.gov before publication. Explicitly out of scope for this verification pass (Task 12 Step 5): it's a meta-claim about a whole document section rather than one archived source, so it needs its own dedicated cross-check pass rather than a single source_id verification."

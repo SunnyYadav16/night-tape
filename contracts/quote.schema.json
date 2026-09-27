@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://night-tape.invalid/contracts/quote.schema.json",
+  "title": "Canonical quote-state row (r2.1 §8.2 + weekly §1.3 record_idx)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "symbol", "venue", "instrument_id", "ts_event", "ts_recv", "sequence", "record_idx",
+    "bid_px_int", "ask_px_int", "bid_sz", "ask_sz", "midpoint_x2_int", "quote_age_ns",
+    "book_state", "session_id", "rule_version", "source_dataset", "source_schema", "manifest_id"
+  ],
+  "properties": {
+    "symbol": {"type": "string", "minLength": 1},
+    "venue": {"type": "string", "minLength": 1},
+    "instrument_id": {"$ref": "#/$defs/nonneg_int64"},
+    "ts_event": {"$ref": "#/$defs/nonneg_int64"},
+    "ts_recv": {"$ref": "#/$defs/nonneg_int64"},
+    "sequence": {"$ref": "#/$defs/nonneg_int64"},
+    "record_idx": {"$ref": "#/$defs/nonneg_int64"},
+    "bid_px_int": {"anyOf": [{"$ref": "#/$defs/px"}, {"type": "null"}]},
+    "ask_px_int": {"anyOf": [{"$ref": "#/$defs/px"}, {"type": "null"}]},
+    "bid_sz": {"$ref": "#/$defs/nonneg_int64"},
+    "ask_sz": {"$ref": "#/$defs/nonneg_int64"},
+    "midpoint_x2_int": {"type": ["integer", "null"], "description": "bid + ask; set only when bid < ask"},
+    "quote_age_ns": {"anyOf": [{"$ref": "#/$defs/nonneg_int64"}, {"type": "null"}]},
+    "book_state": {"enum": ["EMPTY", "ONE_SIDED", "LOCKED", "CROSSED", "TWO_SIDED"]},
+    "session_id": {"type": "string", "minLength": 1},
+    "rule_version": {"type": "string", "minLength": 1},
+    "source_dataset": {"type": "string", "minLength": 1},
+    "source_schema": {"type": "string", "minLength": 1},
+    "manifest_id": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"book_state": {"const": "EMPTY"}}},
+      "then": {"properties": {"bid_px_int": {"type": "null"}, "ask_px_int": {"type": "null"}}}
+    },
+    {
+      "if": {"properties": {"book_state": {"const": "ONE_SIDED"}}},
+      "then": {"oneOf": [
+        {"properties": {"bid_px_int": {"type": "null"}, "ask_px_int": {"$ref": "#/$defs/px"}}},
+        {"properties": {"bid_px_int": {"$ref": "#/$defs/px"}, "ask_px_int": {"type": "null"}}}
+      ]}
+    },
+    {
+      "if": {"properties": {"book_state": {"enum": ["LOCKED", "CROSSED", "TWO_SIDED"]}}},
+      "then": {"properties": {"bid_px_int": {"$ref": "#/$defs/px"}, "ask_px_int": {"$ref": "#/$defs/px"}}}
+    },
+    {
+      "if": {"properties": {"book_state": {"const": "TWO_SIDED"}}},
+      "then": {"properties": {"midpoint_x2_int": {"type": "integer"}}},
+      "else": {"properties": {"midpoint_x2_int": {"type": "null"}}}
+    }
+  ],
+  "$defs": {
+    "nonneg_int64": {"type": "integer", "minimum": 0, "maximum": 9223372036854775807},
+    "px": {"type": "integer", "minimum": -9223372036854775808, "exclusiveMaximum": 9223372036854775807}
+  }
+}

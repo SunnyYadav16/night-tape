@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:m1="http://www.sec.gov/edgar/atsn" xmlns:com="http://www.sec.gov/edgar/common" xmlns:acom="http://www.sec.gov/edgar/atsncommon"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="/css/ATSN_print.css"></head><body lang="en-US" text="#000000" bgcolor="#ffffff"><div class="contentwrapper"><table role="presentation" id="header"><tr><div class="boxed">
+                           THE SECURITIES AND EXCHANGE COMMISSION HAS NOT PASSED UPON THE MERITS OR ACCURACY OF<br> THE DISCLOSURES IN THIS FILING.
+                        </div></tr><tr><td class="title">Form ATS-N Filer Information</td><td rowspan="2" class="center">
+                        United States Securities and Exchange Commission
+                        <br>
+                        Washington, DC
+                        <br>
+                        FORM ATS-N
+                        <br>
+                        Intentional Misstatements or Omissions of Facts May Constitute
+                        <br>
+                        Criminal Violations
+                        <br>
+                        See 18 U.S.C.1001 and 15 U.S.C. 78ff(a)
+                  </td><td class="title">OMB APPROVAL</td></tr><tr><td class="side" style="text-align: center;"><p><br>ATS-N/MA<br><br>
+                         Material Amendment (Rule 304(a)(2)(i)(A))
+                    </p></td><td class="side" style="text-align: center;"><p>OMB Number:  3235-0763</p><hr><p>Estimated average burden hours per response: 127.4</p><hr><p>Estimated average burden hours per amendment: 9</p><hr><p>Estimated average burden hours per cessation: 2</p><hr><p>OMB Expiration Date: 09/30/2021</p></td></tr></table></div><h2>Contents</h2><ul style="padding-left:0px;"><ul><li><a href="#FilerInformation">Filer Information</a></li><li><a href="#partI">Part I: Identifying Information</a></li><li><a href="#partII">Part II: Activities of the Broker-Dealer Operator and its Affiliates</a><ul><li><a href="#partIIitem1">Item 1: <u>Broker-Dealer Operator Trading Activities on the ATS</u></a></li><li><a href="#partIIitem2">Item 2: <u>Affiliates Trading Activities on the ATS</u></a></li><li><a href="#partIIitem3">Item 3: <u>Order Interaction with Broker-Dealer Operator; Affiliates</u></a></li><li><a href="#partIIitem4">Item 4: <u>Arrangements with Trading Centers</u></a></li><li><a href="#partIIitem5">Item 5: <u>Other Products and Services</u></a></li><li><a href="#partIIitem6">Item 6: <u>Activities of Service Providers</u></a></li><li><a href="#partIIitem7">Item 7: <u>Protection of Confidential Trading Information</u></a></li></ul></li><li><a href="#partIII">Part III: Manner of Operations</a><ul><li><a href="#partIIIitem1">Item 1: <u>Types of ATS Subscribers</u></a></li><li><a href="#partIIIitem2">Item 2: <u>Eligibility for ATS Services</u></a></li><li><a href="#partIIIitem3">Item 3: <u>Exclusion from ATS Services</u></a></li><li><a href="#partIIIitem4">Item 4: <u>Hours of Operations</u></a></li><li><a href="#partIIIitem5">Item 5: <u>Means of Entry</u></a></li><li><a href="#partIIIitem6">Item 6: <u>Connectivity and Co-location</u></a></li><li><a href="#partIIIitem7">Item 7: <u>Order Types and Attributes</u></a></li><li><a href="#partIIIitem8">Item 8: <u>Order Sizes</u></a></li><li><a href="#partIIIitem9">Item 9: <u>Conditional Orders and Indications of Interest</u></a></li><li><a href="#partIIIitem10">Item 10: <u>Opening and Reopening</u></a></li><li><a href="#partIIIitem11">Item 11: <u>Trading Services, Facilities and Rules</u></a></li><li><a href="#partIIIitem12">Item 12: <u>Liquidity Providers</u></a></li><li><a href="#partIIIitem13">Item 13: <u>Segmentation; Notice</u></a></li><li><a href="#partIIIitem14">Item 14: <u>Counter-Party Selection</u></a></li><li><a href="#partIIIitem15">Item 15: <u>Display</u></a></li><li><a href="#partIIIitem16">Item 16: <u>Routing</u></a></li><li><a href="#partIIIitem17">Item 17: <u>Closing</u></a></li><li><a href="#partIIIitem18">Item 18: <u>Trading Outside of Regular Trading Hours</u></a></li><li><a href="#partIIIitem19">Item 19: <u>Fees</u></a></li><li><a href="#partIIIitem20">Item 20: <u>Suspension of Trading</u></a></li><li><a href="#partIIIitem21">Item 21: <u>Trade Reporting</u></a></li><li><a href="#partIIIitem22">Item 22: <u>Clearance and Settlement</u></a></li><li><a href="#partIIIitem23">Item 23: <u>Market Data</u></a></li><li><a href="#partIIIitem24">Item 24: <u>Order Display and Execution Access</u></a></li><li><a href="#partIIIitem25">Item 25: <u>Fair Access</u></a></li><li><a href="#partIIIitem26">Item 26: <u>Aggregate Platform Data</u></a></li></ul></li><li><a href="#partIV">Part IV: Contact Information, Signature Block, and Consent to Service</a></li></ul></ul><hr><div id="info"><div class="contentwrapper"><div class="content"><a name="FilerInformation"><h1>ATS-N/MA: Filer Information</h1></a><table role="presentation"><tr><td class="label">Filer CIK</td><td><div class="fakeBox2">0001795131<span> </span></div></td></tr><tr><td class="label">Filer CCC</td><td><div class="fakeBox2">
+								           
+										     ********
+								     	  <span> </span></div></td></tr><tr><td class="label">File No:</td><td><div class="fakeBox2">013-00180<span> </span></div></td></tr></table><table role="presentation"><tr><td colspan="2"><table style="table-layout: auto;"><tr><td style="white-space: nowrap;"><span class="fakeBox4">BOATS</span></td><td style="width:100%"><span>is making this filing pursuant to the Rule 304 under the Securities Exchange Act of 1934</span></td></tr></table></td></tr></table><table role="presentation"><tr><td class="label">Statement about the Form ATS-N Amendment pursuant to Instruction A.7 (g) of this form.</td><td><div class="fakeBox">Part III, Items 7 and 11 are amended to reflect that Subscribers and Sponsored Participants may designate orders as "POST-ONLY." Except in limited circumstances, POST-ONLY orders will be rejected by the BOATS ATS if, at the time of receipt, the POST-ONLY order is marketable against resting contraside interest.  These changes apply to all Subscribers and to the Broker-Dealer Operator.<span> </span></div></td></tr></table></div></div></div>
+  <div id="info"><div class="contentwrapper"><div class="content"><table role="presentation"><tr><td class="label">
+							            	Is this a LIVE or TEST Filing?
+					          </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+													                LIVE
+													            <img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+												                	TEST
+												           </span></td></tr><tr><td class="label">
+	                              Is this an electronic copy of an official filing submitted in paper format in connection with a hardship exemption?
+	                         </td><td><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked"></td></tr></table><table role="presentation"><tr><h4>Submission Contact Information</h4></tr><tr><td class="label">Name</td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">Phone Number</td><td><div class="fakeBox2"><span> </span></div></td></tr><tr><td class="label">E-Mail Address</td><td><div class="fakeBox"><span> </span></div></td></tr></table><table role="presentation"><tr><h4>Notification Information</h4></tr><tr><td class="label">
+								Notify via Filing Website only?
+						   </td><td><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked"></td></tr></table></div></div></div>
+  <div class="content"><div class="label"><a name="partI"><h1>ATS-N/MA: Part I: Identifying Information</h1></a><div class="form1"><h3>
+			Identifying Information
+
+		</h3><table role="presentation"><tr><table role="presentation"><tr><td class="label">1. Is the organization, association, Person, group of Persons, or system filing the Form ATS-N a broker-dealer registered with the Commission?
+				 </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table></tr><tr><table role="presentation"><tr><td class="label">2. Full name of registered broker-dealer of the NMS Stock ATS ("Broker-Dealer Operator") as stated on Form BD:
+				 </td><td><p><div class="fakeBox">BLUE OCEAN ATS, LLC<span> </span></div></p></td></tr></table></tr><tr>
+			
+			      3. Full name(s) of NMS Stock ATS under which business is conducted, if different:
+			      <br><br><table role="presentation"><tr><td class="label">
+				            
+				                    NMS Stock ATS Full Name Record: 1</td><td><div class="fakeBox">BOATS<span> </span></div></td></tr></table></tr><tr>
+			
+			   
+					4. Provide the SEC file number and CRD number of the Broker-Dealer Operator:
+				 <br><br><table role="presentation"><tr><td class="label">a. SEC File No.:
+				 </td><td><p><div class="fakeBox2">008-70452<span> </span></div></p></td></tr><tr><td class="label">b. CRD No.:
+				 </td><td><p><div class="fakeBox2">000306512<span> </span></div></p></td></tr></table></tr><tr>
+			
+			    
+					5. Provide the full name of the national securities association of the Broker-Dealer Operator, the effective date of the Broker-Dealer Operator's membership with the national securities association, and Market Participant Identifier ("MPID") of the NMS Stock ATS: 
+				   <br><br><table role="presentation"><tr><td class="label">a. National Securities Association:
+				 </td><td><p><div class="fakeBox">Financial Industry Regulatory Authority<span> </span></div></p></td></tr><tr><td class="label">b. Effective Date of Membership:
+				 </td><td><p><div class="fakeBox2">10/13/2020<span> </span></div></p></td></tr><tr><td class="label">c. MPID of the NMS Stock ATS:
+				 </td><td><p><div class="fakeBox2">BLUE<span> </span></div></p></td></tr></table></tr><tr>
+				
+				
+					6. Provide, if any, the website URL of the NMS Stock ATS:
+				      <br><table role="presentation"><tr><td><p><div class="fakeBox">www.blueoceanats.com<span> </span></div></p></td></tr></table></tr><tr>
+			
+			 
+					7. Provide the primary, and if any, secondary, physical street address(es) of the NMS Stock ATS matching system:
+			   
+		      <br><table role="presentation"><tr><br>
+				  
+					Primary Address
+				
+			</tr><tr><table role="presentation"><tr><td class="label">Street 1 </td><td><div class="fakeBox">Equinix NY4<span> </span></div></td></tr><tr><td class="label">Street 2 </td><td><div class="fakeBox">755 Secaucus Rd.<span> </span></div></td></tr><tr><td class="label">City </td><td><div class="fakeBox">Secaucus<span> </span></div></td></tr><tr><td class="label">Zip</td><td><div align="left"><div class="fakeBox2">07094<span> </span></div></div></td></tr><tr><td class="label">State</td><td><div class="fakeBox">
+				NEW JERSEY
+			<span> </span></div></td></tr></table></tr><tr>
+				
+					Secondary Address
+				    <br><br></tr></table></tr><tr>
+				
+					8. Attach as Exhibit 1, the most recently filed or amended Schedule A of Form BD for the Broker-Dealer Operator disclosing information related to direct owners and executive officers.
+				
+		</tr><tr><td><p>
+			            Attach / Remove / View Exhibit 1
+			        </p></td></tr><tr><td><img src="/Images/box-checked.jpg" alt="Checkbox checked"></td><td>
+								Select if, in lieu of filing, BOATS<span> </span> certifies that the information requested under this Exhibit is available at the website above and is accurate as of the date of this filing.
+						   </td><br><br></tr><tr>
+				
+					 9. Attach as Exhibit 2, the most recently filed or amended Schedule B of Form BD for the Broker-Dealer Operator disclosing information related to indirect owners.
+				
+		  </tr><tr><td><p>
+			            Attach / Remove / View Exhibit 2
+			        </p></td></tr><tr><td><img src="/Images/box-checked.jpg" alt="Checkbox checked"></td><td>
+								Select if, in lieu of filing, BOATS<span> </span> certifies that the information requested under this Exhibit is available at the website above and is accurate as of the date of this filing.
+						   </td><br><br></tr><tr>
+				
+					 10. For filings made pursuant to Rule 304(a)(2)(i)(A) through (D) (<u>i.e.,</u> Form ATS-N Amendments), attach as Exhibit 3 a document marked to indicate changes to "yes" or "no" answers or additions to or deletions from any Item in Part I, II, and Part III, as applicable.  Do not include in Exhibit 3 Items that are not changing.
+				
+			</tr><tr><td><p>
+			            Attach / Remove / View Exhibit 3
+			        </p></td></tr></table></div><a name="partII"><h1>ATS-N/MA: Part II: Activities of the Broker-Dealer Operator and its Affiliates</h1></a><div class="form1"><br><a name="partIIitem1"><h4>Item 1: <u>Broker-Dealer Operator Trading Activities on the ATS</u></h4></a><table role="presentation"><tr><td class="label">
+	                  a. Are business units of the Broker-Dealer Operator permitted to enter or direct the entry of orders and trading interest (e.g., quotes, conditional orders, or indications of interest) into the NMS Stock ATS?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+					        d. Can orders and trading interest in the NMS Stock ATS be routed to a Trading Center operated or controlled by the Broker-Dealer Operator?
+				 </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIitem2"><h4>Item 2: <u>Affiliates Trading Activities on the ATS</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Are Affiliates of the Broker-Dealer Operator permitted to enter or direct the entry of orders and trading interest into the NMS Stock ATS?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+					        d. Can orders and trading interest in the NMS Stock ATS be routed to a Trading Center operated or controlled by an Affiliate of the Broker-Dealer Operator?
+				 </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIitem3"><h4>Item 3: <u>Order Interaction with Broker-Dealer Operator; Affiliates</u></h4></a><table role="presentation"><tr><td class="label">
+	                  a. Can any Subscriber opt out from interacting with orders and trading interest of the Broker-Dealer Operator in the NMS Stock ATS?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                  b. Can any Subscriber opt out from interacting with the orders and trading interest of an Affiliate of the Broker-Dealer Operator in the NMS Stock ATS?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIitem4"><h4>Item 4: <u>Arrangements with Trading Centers</u></h4></a><table role="presentation"><tr><td class="label">
+	                  a. Are there any formal or informal arrangements (<u>e.g.,</u> mutual, reciprocal, or preferential access arrangements) between the Broker-Dealer Operator and a Trading Center to access the NMS Stock ATS services (<u>e.g.,</u> arrangements to effect transactions or to submit, disseminate, or display orders and trading interest in the ATS)?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIitem5"><h4>Item 5: <u>Other Products and Services</u></h4></a><table role="presentation"><tr><td class="label">
+	                  a. Does the Broker-Dealer Operator offer Subscribers any products or services for the purpose of effecting transactions or submitting, disseminating, or displaying orders and trading interest in the NMS Stock ATS (<u>e.g.,</u> algorithmic trading products that send orders to the ATS, order management or order execution systems, data feeds regarding orders and trading interest in, or executions occurring on, the ATS)?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, identify the products or services offered, provide a summary of the terms and conditions for use, and list here the applicable Item number in Part III of this form where the use of the product or service is explained. If there is no applicable Item in Part III, explain the use of the product or service with the ATS here.
+				  </td><td><div class="fakeBox3">Blue Ocean ATS, LLC ("BOATS"), the broker-dealer operator ("BDO"), provides all anonymized market data only to Blue Ocean Technologies, LLC ("BOT") the parent company of the BDO. BOATS is responsible for the creation and anonymization of market data, and BOT manages and distributes market data to recipients. BOT distributes and disseminates real-time market data and does not offer any delayed market data services<br><br>BOT enters into the same Master Data Agreement, with the same material terms and fee schedule, with all recipients. Marketdata recipients ("Recipients") include ATS Subscribers, non-Subscribers, and Third-Party Distributors. Fees are discussed in more detail in Part III, Item 19.<br><br>Third-Party Distributors who take market data from BOT include vendors, service bureaus, and service providers that consume or redistribute market data. Third-Party Distributors who redistribute market data are subject to the Master Data Agreement regarding any display or usage standards (i.e., Third-Party Distributors can not dilute quality and must transmit all three market data feeds: Top of Book, Last Sale, and Full Depth of Book). Organizations who receive market data from a Third-Party Distributor ("Receivers") are subject to the same material terms of the Market Data Agreement to which the Third-Party Distributors are also subject. Third-Party Distributors are not permitted to assess additional fees for the BOT market data feeds, outside of the fees outlined in the Master Data Agreement, as described in Part III, Item 19.<br><br>Receivers may choose to take market data from a Third-Party Distributor due to the Receiver's preference (e.g. technology format). Receivers may experience latency (i.e. third party technological requirements may impact market data delivery speeds) compared to taking market data directly from BOT.<br><br>As described in Part III, Item 15(b), BOT distributes Top of Book, Last Sale, and Full Depth of Book market data feeds for all symbols traded on the ATS during operation hours. Recipients and Receivers get all three types of market data feeds, as described in Part III, Item 15. Market data feeds does not include CTI, which is anonymized before distribution.<span> </span></div></td></tr><tr><td class="label">
+							b. If yes to Item 5(a), are the terms and conditions of the services or products required to be identified in Item 5(a) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+							c. Does any Affiliate of the Broker-Dealer Operator offer Subscribers, the Broker-Dealer Operator, or both, any products or services for the purpose of effecting transactions or submitting, disseminating, or displaying orders or trading interest in the NMS Stock ATS?  
+				  </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIitem6"><h4>Item 6: <u>Activities of Service Providers</u></h4></a><table role="presentation"><tr><td class="label">
+	                  a. Does any employee of the Broker-Dealer Operator or its Affiliate that services both the operations of the NMS Stock ATS and any other business unit or any Affiliate of the Broker-Dealer Operator ("shared employee") have access to confidential trading information on the NMS Stock ATS?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, identify the business unit, Affiliate, or both that the shared employee services, and provide a summary of the role and responsibilities of the shared employee at the ATS and the business unit, Affiliate, or both that the shared employee services.
+				  </td><td><div class="fakeBox3">Blue Ocean Technologies, LLC is the sole-shareholder and parent company of Blue Ocean ATS, LLC.<br><br>BOATS and BOT share personnel, including the Compliance, Technology, and Trade Operations teams. These shared personnel will have access to BOATS real-time and post-trade confidential trading information ("CTI"), including Subscriber and Sponsored Participants order and execution related information and analytics. BOATS CTI does not include aggregated data resulting from the combination of historical data associated with BOATS Subscribers.<br><br>Employees of the BOT Market Data Team have access to post-trade CTI (i.e. billing reports) for the approved distribution of anonymized market data, as described in Part II, Item 5, Part III, Item 15 and Part III, Item 19, but do not have access to the ATS matching engine.<span> </span></div></td></tr><tr><td class="label">
+	                   b. Does any entity, other than the Broker-Dealer Operator, support the services or functionalities of the NMS Stock ATS ("service provider") that are required to be explained in Part III of this form?
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, both identify the service provider and provide a summary of the role and responsibilities of the service provider in response to the applicable Item number in Part III of this form, as required. List the applicable Item number here.  If there are services or functionalities that are not applicable to Part III, identify the service provider, the services and functionalities, and also provide a summary of the role and responsibilities of the service provider here.
+				  </td><td><div class="fakeBox3">As part of granting Subscribers equal access to the services of the ATS, BOATS contractually prohibits service providers from limiting or denying services to any Subscriber in an unfair discriminatory manner.<br><br>Equinix NY4 is the outsourced data center for BOATS' matching engines. Equinix provides a secure space for the BOATS servers, as well as cross-connects, power, space, and professional services. Further information on Equinix is contained in Part III, Item 6.<br><br>MEMX Technologies, LLC ("MEMX") is a technology and service provider to BOATS who provides technology and operations support. MEMX technology and operations personnel will have access to real-time and post-trade CTI to support the ATS, including support to the ATS matching technology, as described in Part III, Item 11(a). MEMX technology and operations personnel provide services to the ATS as described in Part III, Items 5, 6, 11, 15, 20, 21, and 23.<br><br>As described in Part III, Item 22, BOATS has entered into a clearing agreement with RQD* Clearing, LLC (NSCC # 4305), a FINRA member firm and a member of the National Securities Clearing Corporation, to provide for clearance and settlement of transactions executed on the ATS.<span> </span></div></td></tr><tr><td class="label">
+							c. If yes to Item 6(b), does the service provider, or any of its Affiliates, use the NMS Stock ATS services?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, identify the service provider, or the Affiliate as applicable, and the ATS services that the service provider or its Affiliates use.
+				  </td><td><div class="fakeBox3">RQD* Clearing LLC is a BOATS Subscriber and user of ATS services.<span> </span></div></td></tr><tr><td class="label">
+							d. If yes to Item 6(c), are the services that the NMS Stock ATS offers and provides to the entity required to be identified in Item 6(c) the same for all Subscribers?  
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIitem7"><h4>Item 7: <u>Protection of Confidential Trading Information</u></h4></a><table role="presentation"><tr><td class="label">
+	                  a. Describe the written safeguards and written procedures to protect the confidential trading information of Subscribers to the NMS Stock ATS, including:
+	              
+	              <br><br>
+	              
+	                  i. written standards controlling employees of the ATS that trade for employees' accounts; and
+	              <br><br>
+	                  ii. written oversight procedures to ensure that the safeguards and procedures described above are implemented and followed.
+	            
+	            </td><td><div class="fakeBox3">BOATS considers Subscribers' and Sponsored Participants' order and execution-related information and data or analytics related to a Subscriber's and Sponsored Participants' transactions to be confidential trading information.<br><br>Access to CTI:<br><br>The CCO authorizes access to the BOATS real-time CTI when it is necessary to support the ATS. Authorized individuals include employees of the BDO, the parent company, and third-party service providers. Those seeking access to CTI must submit a request including which technology, system, or database along with justification to the CCO and senior management. The CCO and senior management review the level of access requested along with the roles and responsibilities prior to approval. Authorized individuals access CTI only in manner of the roles and responsibilities to support the ATS. All authorized individuals and access requests are subject to annual, or additionally necessary, review by the CCO and senior management, with authorized individual's CTI access being terminated if no longer necessary.<br><br>Employee Trading:<br><br>BOATS has detailed WSPs to monitor to supervise employee personal trading. The Firm's trading policy requires: (i)employees to obtain approval prior to established personal trading accounts, (ii) attend an annual training, including on the Firm's trading policy, (iii) annually attest to all personal trading accounts are disclosed and abide by the Firm's trading policy,(iv) Employees are prohibited from participating on the Blue Ocean ATS. Additionally, the CCO or qualified designee review duplicate trade confirms and statements for manipulative activity which include insider trading and anti-money laundering violations.<br><br>Service Providers:<br><br>MEMX is a technology and operations service provider to BOATS, as described in Part II, Item 6(b). MEMX technology and operations personnel have access to Subscriber CTI, including real-time and post-trade information, which can include details regarding individual orders and executions, and the names of Subscribers. MEMX has policies and procedures to permission access to the Blue Ocean ATS; including (i) MEMX personnel who support BOATS must complete CTI training specific to the Blue Ocean ATS, (ii) MEMX technology and operational personnel must request and receive approval from MEMX management before receiving access to the BOATS managed platform, (iii) BOATS systems access is based on the MEMX personnel designated role and responsibilities, (iv) MEMX personnel with approved access must complete annual compliance CTI trainings. BOATS requires MEMX to also perform annual, or additionally necessary, reviews to confirm system access or entitlements remain accurate and terminate systems access or entitlements that are no longer necessary. Additionally, MEMX personnel are subject to the MEMX Personal Dealings Policy, which includes personal trading, and are prohibited from sharing BOATS CTI in any unauthorized fashion.<br><br>MEMX also conducts electronic communications reviews annually, or additionally necessary, for potential policy violations, including non-compliance with the referenced policies and procedure and will promptly notify BOATS senior management of any actual or suspected unauthorized disclosure of Subscriber CTI. BOATS has the right to audit MEMX's operation of the ATS matching engine, including access to and use of Subscriber CTI, either through audits by BOATS or a third-party auditor.<br><br>Separation of Systems and Personnel:<br><br>The Blue Ocean ATS matching engine is hosted and operated by MEMX, whose technology is located in the Equinix NY4data center but is segregated and does not comingle with BOATS technology, as described in Part III, Item 6(a).<br><br>MEMX technology and operations personnel assigned to support the Blue Ocean ATS are prohibited from discussing or sharing BOATS,  Subscriber, or Sponsored Participant CTI with unauthorized MEMX personnel.<br><br>Additional Protections:<br><br>Shared personnel between the BDO and the parent company, as outlined in Part II, Item 6(a) have access to real-time and post-trade CTI according to their roles and responsibilities to support the operations of the ATS. During annual, or additionally necessary, CTI access reviews, the CCO and senior management confirm personnel of the parent company only have access to post-trade CTI for the approved distribution of anonymized market data, as described in Part III, Item 15 and Part III, Item 19.<br><br>The CCO or qualified designee review employees of the BDO, the parent company, and third-party service providers who have access to hardware and network systems. Systems access to the ATS matching engine and servers are controlled by VPN access and secure logins. Third parties who provide technology support have limited access to specific IP addresses and are subject to contractual prohibitions. Access is restricted to physical hardware, including the data center as outlined in Part III, Item 6(a).<br><br>Employees of the BDO and parent company undergo annual CTI and cybersecurity training and complete an annual attestation of safeguarding CTI.<span> </span></div></td></tr><tr><td class="label">
+	                  b. Can a Subscriber consent to the disclosure of its confidential trading information to any Person (not including those employees of the NMS Stock ATS who are operating the system or responsible for its compliance with applicable rules)? 
+	            </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        d. Provide a summary of the roles and responsibilities of any Persons that have access to confidential trading information, the confidential trading information that is accessible by them, and the basis for the access.
+				  </td><td><div class="fakeBox3">Employees of the BDO, the parent company, and shared personnel as outlined in Part II, Item 6(a), are responsible for the supervision and operations of the ATS and require real time and post trade to BOATS confidential trading information. Employees of the BDO, the parent company, and shared personnel include the Firm's Compliance, Technology, and Trade Operations teams.<br><br>MEMX technology and operations personnel have access to the ATS matching engine including BOATS real time and post trade CTI to support the day-to-day operations of the ATS, as described in Part III, Items 5, 6, 11, 15, 20, 21, and 23.<br><br>MEMX technology and operations personnel provide hardware and technology support to the Firm's matching engine. Only MEMX technology and operations personnel have access to BOATS CTI, and are prohibited from discussing or sharing BOATS or Subscriber CTI with unauthorized MEMX personnel.<br><br>BOATS clearing Firm RQD* Clearing LLC (NSCC #4305), has access to post-trade CTI to perform the functions as described in Part III, Item 22(a). Eventus Validus has access to post-trade CTI to provide T+1 trade surveillance tools used by BDO to review activity in the Blue Ocean ATS.<span> </span></div></td></tr></table><br></div><a name="partIII"><h1>ATS-N/MA: Part III: Manner of Operations</h1></a><div class="form1"><br><a name="partIIIitem1"><h4>Item 1: <u>Types of ATS Subscribers</u></h4></a><table role="presentation"><tr><td class="label">
+						 Select the type(s) of Subscribers that can use the NMS Stock ATS services:
+				  </td><td><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					                    Investment Companies   <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					                   Retail Investors   <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					                  Issuers  <br><img src="/Images/box-checked.jpg" alt="Checkbox checked">
+					                  Brokers  <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					                NMS Stock ATSs   <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					               Asset Managers  <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					               Principal Trading Firms  <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					               Hedge Funds  <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					               Market Makers  <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					               Banks  <br><img src="/Images/box-checked.jpg" alt="Checkbox checked">
+					               Dealers  <br><img src="/Images/box-unchecked.jpg" alt="Checkbox not checked">
+					               Other  <br></td></tr></table><br><a name="partIIIitem2"><h4>Item 2: <u>Eligibility for ATS Services</u></h4></a><table role="presentation"><tr><td class="label">
+				     a. Does the NMS Stock ATS require Subscribers to be registered broker-dealers?
+				</td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   b. Are there any other conditions that the NMS Stock ATS requires a Person to satisfy before accessing the ATS services?
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, list and provide a summary of the conditions.
+				  </td><td><div class="fakeBox3">Blue Ocean ATS has written standards for granting applicants equal access and services of the ATS. Specifically, Subscribers must meet the following requirements:<br><br>1. It is a U.S. Securities and Exchange Commission ("SEC") registered broker-dealer and a member in good standing of at least one self-regulatory organization.<br><br>2. All Subscribers must satisfy the same technical or systems requirements as prescribed by BOATS, including but not limited to connectivity certification, the ability to send orders and cancellations, and to receive trades, cancellations, rejects and trade breaks from the ATS.<br><br>3. Have clearing and settlement systems and/or arrangements in place to support participation on the ATS, which would include clearing or accepting clearing of securities through RQD* Clearing, LLC (NSCC # 4305), BOATS' clearing firm, and has in place relevant documentation to establish this clearing relationship.<br><br>4. All Subscribers must execute the uniform Blue Ocean ATS Subscriber Agreement, which has the same terms applicable to all Subscribers. BOATS onboarding process, which is identical to all Subscribers, includes an OFAC check (i.e. not be OFAC sanctioned), and disciplinary review (i.e. no repeated monetary fines exceeding $1million for manipulative activity).<br><br>5. Execute an appropriate "give-up" agreement to establish an "on behalf of" reporting relationship (e.g., an executed Uniform Trade Reporting Facility Service Bureau/Executing Broker Agreement or Nasdaq AGU/Attachment 2 Agreement).<br><br>6. Comply with risk controls, as described in Part III, Item 7.<br><br>SPONSORED ACCESS<br><br>BOATS permits its Subscribers to provide sponsored access to the ATS to their underlying customers (each such sponsoring Subscriber, a "Sponsoring Subscriber"). Specifically, a Sponsoring Subscriber may authorize its underlying customers (each such sponsored underlying customer, a "Sponsored Participant") to access the ATS directly using the Sponsoring Subscriber's credentials or connectivity. Sponsored Participants' access to the ATS is subject to approval by both BOATS (as described below) and the relevant Sponsoring Subscriber.<br><br>Sponsored Participants are customers of the Sponsoring Subscriber and are not customers or clients of BOATS. Accordingly, the Sponsoring Subscriber is responsible for all orders entered on, and transactions effected in, the ATS on which it is designated as Sponsoring Subscriber. While BOATS does not otherwise restrict the type of underlying customers a Sponsoring Subscriber may authorize as a Sponsored Participant, BOATS will not permit prospective Sponsored Participants who are natural persons to access the ATS.<span> </span></div></td></tr><tr><td class="label">
+					  c. If yes to Item 2(b), are the conditions required to be identified in Item 2(b) the same for all Persons?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				     d. Does the NMS Stock ATS require Subscribers to enter a written agreement to use the ATS services?
+				 </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem3"><h4>Item 3: <u>Exclusion from ATS Services</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Can the NMS Stock ATS exclude, in whole or in part, any Subscriber from the ATS services?    	
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, list and provide a summary of the conditions for excluding, in whole or in part, a Subscriber from the ATS services.  
+				  </td><td><div class="fakeBox3">BOATS can exclude a Subscriber from participating on the ATS, in a non-discriminatory manner, if a Subscriber no longer satisfy the eligibility requirements, or breaches Subscriber Agreement and the written standards as outlined in Part III, Item2(b). BOT can suspend delivery of market data, in a non-discriminatory manner, as described in Part III, Item 15(b).<br><br>Examples of why BOATS will exclude a Subscriber from participating on the ATS, include:<br><br>i. A Subscriber loses their FINRA (or other SRO) membership<br>ii. A Subscriber fails to meet their clearing or settlement obligations.<br>Examples of why BOATS can exclude a Subscriber from participating on the ATS, include:<br><br>i. A Subscriber violates the material terms of the Subscriber Agreement (i.e. no longer satisfies system requirements)<br><br>ii. A Subscriber is repeatedly delinquent on payments for services<br><br>iii. A Subscriber engages in repeated disruptive trading activity (e.g. excessive cancelations, wash sales), including, for clarity, where such activity is effected by a Sponsored Participant for which the relevant Subscriber has agreed to provide sponsored access.<br><br>iv. A Subscriber repeatedly breaches their assigned risk limits, as described in Part III, Item 7(a).<br><br>In the event BOATS determines to terminate or otherwise restrict a Subscriber's access to the ATS, its Sponsored Participants (in their capacities as such) would also be subject to such termination or restriction.<br><br>Without limiting the foregoing, BOATS may terminate or otherwise restrict a Sponsored Participant's access to the ATS without otherwise restricting the relevant Sponsoring Subscriber, where the Sponsored Participant engages in repeated disruptive trading activity.<span> </span></div></td></tr><tr><td class="label">
+					  b. If yes to Item 3(a), are the conditions required to be identified in Item 3(a) the same for all Subscribers?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem4"><h4>Item 4: <u>Hours of Operation</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Provide the days and hours of operation of the NMS Stock ATS, including the times when orders or trading interest can be entered on the ATS, and any hours of operation outside of regular trading hours.  
+	              </td><td><div class="fakeBox3">BOATS operating session is overnight from 8:00 p.m. ET to 4:00 a.m. ET, dependent on the availability of the NYSE Trade Reporting Facility ("TRF") to report trades the following trading day. For example, the ATS operates on Sunday evening from 8:00 p.m. ET until 4:00 a.m. ET on Monday. However, BOATS does not conduct a trading session on Fridays from 8:00 p.m.ET to 4:00 a.m. ET Saturdays because the TRF is not available to report trades on Saturday. Likewise, there is no trading session on Christmas Eve because the TRF is not open on Christmas, but BOATS may operate in its overnight trading session beginning on Christmas night if the TRF is open and available for trade reporting on the following day.<br><br>On the days of operation, Subscribers and Sponsored Participants may submit test orders to the ATS at 6:15 p.m. ET, and bona-fide orders are accepted at 8:00 p.m. ET. Matching occurs on a price-time priority basis, for all Subscribers and Sponsored Participants, during BOATS operating hours from 8:00p.m. ET to 4:00 a.m. ET. At 4:00 a.m. ET, BOATS no longer accepts orders, however matching may still occur for less than one minute after 4:00 a.m. ET while BOATS clears any resting orders in the order book. Trades executed during BOATS overnight session are reported to the TRF by 4:15 a.m. ET following the end of the relevant trading session.<span> </span></div></td></tr><tr><td class="label">
+					   b. Are the hours of operations the same for all Subscribers and the Broker-Dealer Operator?    
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem5"><h4>Item 5: <u>Means of Entry</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Does the NMS Stock ATS permit orders and trading interest to be entered directly into the ATS (<u>e.g.,</u> via Financial Information eXchange ("FIX") protocol, Binary)?
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, explain the protocol that can be used to directly enter orders and trading interest into the ATS.
+				  </td><td><div class="fakeBox3">General Operation of the ATS<br><br>Subscribers and their Sponsored Participants access BOATS via a Financial Information Exchange ("FIX") connection. Such access is available to Subscribers and Sponsored Participants through an internet protocol address via communications that are compliant with the FIX API provided by the ATS. BOATS and MEMX support FIX 5.0 and Simple Binary Encoding.<br><br>BOATS only accepts orders via FIX. It does not accept orders via telephone, email, instant message, or other form of communication.   BOATS does not route orders away from the ATS;<br><br>BOATS does not support the routing of orders to any other venue.<span> </span></div></td></tr><tr><td class="label">
+				 	 b. If yes to Item 5(a), are the protocols required to be identified in Item 5(a) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   c. Are there any other means for entering orders and trading interest into the NMS Stock ATS (<u>e.g.,</u> smart order router, algorithm, order management system, sales desk)?
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem6"><h4>Item 6: <u>Connectivity and Co-location</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Does the NMS Stock ATS offer co-location and related services (e.g., cabinets and equipment, cross-connects)?
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, provide a summary of the terms and conditions for co-location and related services, including the speed and connection (e.g., fiber, copper) options offered.  
+				  </td><td><div class="fakeBox3">Subscribers who want to cross-connect to the BOATS need to establish a cross-connect within the Equinix NY4 data center. Technology of the third-party MEMX is located in the Equinix NY4 data center but is segregated and does not comingle with BOATS technology.<br><br>Cross connects are managed (i.e. monitoring software) by BOT via Equinix or by other authorized service providers within the Equinix data center. MEMX technology and operations personnel are not involved with facilitating BOATS cross connects.<br><br>Standard Equinix NY4 cross-connects are Single mode (1 Gbps). The ATS supports Multi Mode (10 Gbps) upon Subscriber request. BOATS does not assess a fee for this service, but notes that Equinix may charge a Subscriber a fee for cross-connect services. Single mode (1 Gbps) and Multi Mode (10 Gbps) are available to all Subscribers and offer the same connectivity directly to the ATS.<span> </span></div></td></tr><tr><td class="label">
+					   b. If yes to Item (6)(a), are the terms and conditions required to be identified in Item 6(a) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+					  c. Does the NMS Stock ATS offer any other means besides co-location and related services required to be explained in this Item 6(a) to increase the speed of communication with the ATS?   
+				  </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   e. Does the NMS Stock ATS offer any means to reduce the speed of communication with the ATS (<u>e.g.,</u> speed bumps)?
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem7"><h4>Item 7: <u>Order Types and Attributes</u></h4></a><table role="presentation"><tr><td class="label">
+	                a. Identify and explain each order type offered by the NMS Stock ATS.  In your explanation, include the following:<br><br>
+	                i. priority, including the order type's priority upon order entry and any subsequent change to priority (if applicable); whether and when the order type can receive a new time stamp; the order type's priority vis-à-vis other orders on the book due to changes in the NBBO or other reference price; and any instance in which the order type could lose execution priority to a later arriving order at the same price;<br><br>
+	                ii. conditions, including any price conditions (<u>e.g.,</u> how price conditions affect the rank and price at which it can be executed; conditions on the display or non-display of an order; or conditions on executability and routability);<br><br>   
+	                iii. order types designed not to remove liquidity (<u>e.g.,</u> post-only orders), including what occurs when such order is marketable against trading interest on the NMS Stock ATS when received;<br><br>
+	                iv. order types that adjust their price as changes to the order book occur (e.g., price sliding orders or pegged orders) or have a discretionary range, including an order's rank and price upon order entry and whether such prices or rank may change based on the NBBO or other market conditions when using such order type; when the order type is executable and at what price the execution would occur; whether the price at which the order type can be executed ever changes; and if the order type can operate in different ways, the default operation of the order type;<br><br>
+	                v. whether an order type is eligible for routing to other Trading Centers;<br><br>
+	                vi. the time-in-force instructions that can be used or not used with each order type;<br><br>
+	                vii. the circumstances under which order types may be combined with another order type, modified, replaced, canceled, rejected, or removed from the NMS Stock ATS; and<br><br>
+	                viii. the availability of order types across all forms of connectivity to the NMS Stock ATS and differences, if any, in the availability of an order type across those forms of connectivity.
+	           
+	             </td><td><div class="fakeBox3">ORDER TYPES AND ORDER INSTRUCTIONS:<br><br>BOATS supports only a single order type, LIMIT. Orders may be entered with Time-in-Force ("TIF") instructions of "DAY," or Immediate-or-Cancel ("IOC"). An order with "DAY," TIF instructions refers to the BOATS operating session of 8:00 p.m. ET to 4:00 a.m. ET. Orders may be designated with a "DISPLAYED," or "NON-DISPLAYED," direction, as further described in Part III, Item 15. Subscribers submitting orders with a "DISPLAYED" or "NON-DISPLAYED" direction, must submit the entire order with the direction. "DISPLAYED," or "NON-DISPLAYED" orders are matched based on the ATS' price/time priority rules.<br><br>"MARKET" or "PEGGED" orders are not supported. Supported order types are available to all Subscribers and Sponsored Participants.<br><br>By default, orders submitted to the BOATS ATS may add or remove liquidity.  However, Subscribers and Sponsored Participants may designate orders as "POST-ONLY."  Where, upon receipt, an order designated as POST-ONLY is marketable against an order resting on the ATS, including, for clarity, a resting "NON-DISPLAYED ORDER," the POST-ONLY order will be cancelled back to the Subscriber and no execution will occur; provided, however, that POST-ONLY instructions will be disregarded (such that the POST-ONLY may remove liquidity from the BOATS ATS) in the following instances:<br><br>1. Where the limit price of the POST-ONLY order is less than $1.00 per share; or<br><br>2. Where the price improvement that would be received by the POST-ONLY order exceeds the relevant Subscriber's commission rate for removing liquidity.<br><br>Regarding instance no. 2, assume a Subscriber who is charged $0.002/share to remove liquidity submits a POST-ONLY buy order with a limit price of $10.01 and there is a sell order resting in the BOATS ATS with a limit price of $10.00.  Here, based on the BOATS ATS' execution logic, the orders would execute at $10.00/share.  As the price improvement to the POST-ONLY order in this scenario ($0.01/share) would exceed the commission payable on such order for removing liquidity ($0.002/share), the BOATS ATS will disregard the POST-ONLY instruction and allow the orders to execute (with the POST-ONLY order deemed to remove liquidity and, as such, being assessed a taker fee).<br><br>POST-ONLY orders that are not, in accordance with the above, rejected or executed upon receipt by the BOATS ATS rest on the BOATS ATS as passive liquidity and are prioritized on the same basis as all other orders. Where a POST-ONLY order receives a partial execution, any remaining shares will rest on the ATS and will be eligible for matching based on the ATS standard matching and execution logic. The POST-ONLY instruction may only be used with the "DAY" TIF instruction.  POST-ONLY orders may be designated as "DISPLAYED" or "NON-DISPLAYED" orders.<br><br>REFERENCE PRICE<br><br>As detailed in response to Part III, Item 4, because the BOATS ATS does not operate during hours in which the SIPs are available to collect and disseminate market data, the ATS does not consider the NBBO for NMS Stocks enabled for trading on the ATS.<br><br>The BOATS ATS employs a 20% price band for each NMS Stock enabled for trading on the BOATS ATS (each, a "Reference Price Band"). The applicable Reference Price Band for each symbol enabled for trading is determined prior to the open of the relevant BOATS ATS trading session. The Reference Price Band for a given security is static throughout the relevant BOATS ATS trading session.<br><br>For the purpose of the Reference Price Bands, the "Reference Price" is the last national securities exchange print reported to the SIP, as of 7:30 p.m. ET (each, a "Last Sale Print").  Where, due to market data or other issues, the BOATS ATS' systems have not identified a Last Sale Print for a given security, such security will not be eligible for trading in the BOATS ATS and the BOATS ATS will reject all orders in the security for the relevant BOATS ATS trading session.<br><br>The Reference Price Band for each symbol consists of an upper and lower limit, specific to the relevant ATS trading session, and, based on such limits, the ATS will accept any order, regardless of side, priced at or inside the applicable Reference Price Band. The BOATS ATS rejects all aggressive orders priced outside the applicable Reference Price (i.e., buy orders priced above the upper Reference Price Band and sell orders priced below the lower Reference Price Band, such orders, "Aggressive Orders").<br><br>Passive orders priced outside the applicable Reference Price Band (i.e., buy orders priced below the lower Reference Price Band and sell orders priced above the upper Reference Price Band, such orders, "Passive Orders") are not rejected by the BOATS ATS and will, in accordance with their specified TIF instructions, rest on the BOATS ATS' order book. Notwithstanding the foregoing, Passive Orders are not eligible for execution and are not disseminated through the BOATS ATS Market Data feeds (further described above and in Part III, Item 15(b)). Passive Orders that remain on the BOATS ATS order at the end of the applicable trading session will be cancelled back to the relevant Subscriber or Sponsored Participant.<br><br>Only orders priced within the applicable Reference Price Band are eligible for execution in the ordinary course in the BOATS ATS. In the event BOATS determines a transaction occurred outside the applicable Reference Price Band, BOATS will break the transaction and notify the affected Subscribers and Sponsored Participants. Additionally, where BOATS determines that the BOATS ATS effected a transaction in a security without a Reference Price Band, BOATS will break the transaction and notify the affected Subscribers and Sponsored Participants.<br><br>ORDER HANDLING AND PRIORITY<br><br>BOATS looks to match orders with IOC TIF instructions upon receipt in the matching engine and will execute the order if a marketable contra interest exists. If there is no matching opportunity upon receipt or the order is not fully executed, the unexecuted quantity will automatically be cancelled back to the Subscriber and Sponsored Participant.<br><br>Orders, along with cancel/replaces, are time-stamped to the millisecond. Orders are matched by the ATS on a price/time priority basis. Once an order has been submitted the ATS matches it with a matching contra order rested on the ATS. Incoming orders and related messages (e.g., cancellations) are processed in the order in which they are received by the ATS.<br><br>Change instructions reducing an order's size through a cancel/replace do not affect the order's original time priority. Change instructions which increase an order's size result in the order losing priority to existing orders at the same price. Change instructions to an order's price result in a new priority being assigned.<br><br>All orders entered into BOATS are considered firm orders. An order is actionable and eligible for execution at any time until: (i.) the order has expired by its terms, (ii.) the order is canceled, or (iii.) the order is executed. Executed orders are binding to the Subscriber placing the order, including, for orders submitted by a Sponsored Participant, to the relevant Sponsoring Subscriber. Subscribers and Sponsored Participants may cancel their pending eligible orders at any time before execution at their discretion.<br><br>Orders with "IOC" TIF instructions cannot be modified, canceled, or replaced. Orders with "DISPLAYED," or "NON-DISPLAYED," direction can be modified, canceled, or replaced.<br><br>Orders are rejected if they contain instructions or order attributes that are not supported by the ATS, such as an invalid stock symbol (but see above regarding the treatment of Passive Orders). Subscribers are also subject to pre-trade risk controls to prevent certain orders from reaching the ATS. Each Subscriber is subject to a daily notional value limit, a maximum notional value per order, a maximum quantity per order, a maximum number of orders per second, and a maximum number of duplicate orders (same ticker symbol, size, side, order type and price).<br><br>All Subscribers are assigned the same risk limits (i.e. daily notional limit, maximum notional value per order, maximum order quantity, maximum orders per second) when onboarded onto the ATS. Subscribers can request lower or higher risk settings than those assigned to all Subscribers when onboarded, and BOATS will approve or reject such requests in its discretion. As described in Part III, Item 3(a), Subscribers who breach their assigned risk limits may be excluded from participating on the ATS.<br><br>Trading Operations monitors Subscribers' and Sponsored Participants' assigned risk limits, including whether Subscribers and Sponsored Participants are sending orders in excess of 100 orders-per-second or a single order with a notional value exceeding $5 million. Subscriber and Sponsored Participant orders violating these risk limits will be rejected.  As the Sponsoring Subscriber is responsible for all orders entered on, and transactions effected in, the ATS on which it is designated as Sponsoring Subscriber, Sponsored Participants' orders will be subject to the Sponsoring Subscriber's overall risk limits set by BOATS.<br><br>All orders on the ATS order book are canceled at the end of the operating session.<span> </span></div></td></tr><tr><td class="label">
+					  b. Are the terms and conditions for each order type and attribute the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem8"><h4>Item 8: <u>Order Sizes</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Does the NMS Stock ATS require minimum or maximum sizes for orders or trading interest?    	
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, specify any minimum or maximum order or trading interest size requirements and any related handling procedures.
+				  </td><td><div class="fakeBox3">The minimum order size is one (1) share.  BOATS rejects orders that exceed a Subscriber's assigned risk limits.<span> </span></div></td></tr><tr><td class="label">
+					  b. If yes to Item 8(a), are the requirements and procedures required to be identified in Item 8(a) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   c. Does the NMS Stock ATS accept or execute odd-lot orders?   	
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, specify any odd-lot order requirements and related handling procedures (<u>e.g.,</u> odd-lot treated the same as round lot).  
+				  </td><td><div class="fakeBox3">Odd lot orders are handled in the same manner as round lot orders and have the same priority treatment.<span> </span></div></td></tr><tr><td class="label">
+					  d. If yes to Item 8(c), are the requirements and procedures required to be identified in Item 8(c) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   e. Does the NMS Stock ATS accept or execute mixed-lot orders?    	
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, specify any mixed lot order requirements and related handling procedures (e.g., mixed lot treated the same as round lot).  
+				  </td><td><div class="fakeBox3">Mixed lot orders are treated the same as round lot and odd-lot orders and have the same priority treatment.<span> </span></div></td></tr><tr><td class="label">
+					  f. If yes, to Item 8(e), are the requirements and procedures required to be identified in 8(e) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem9"><h4>Item 9: <u>Conditional Orders and Indications of Interest</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Does the NMS Stock ATS send or receive any messages indicating trading interest (e.g., IOIs, actionable IOIs, or conditional orders)?  	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem10"><h4>Item 10: <u>Opening and Reopening</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Explain how the NMS Stock ATS opens or re-opens for trading, including when and how orders and trading interest are priced, prioritized, matched, and executed, and identify any order types allowed prior to the start of regular trading hours or following a stoppage of trading in a security during regular trading hours.
+	              </td><td><div class="fakeBox3">On the days of operation, Subscribers and their Sponsored Participants may submit test orders to the ATS at 6:15 p.m. ET, and bona-fide orders are accepted at 8:00 p.m. ET. Matching occurs on a price-time priority basis during BOATS operating hours from 8:00 p.m. ET to 4:00 a.m. ET. BOATS begins matching orders, based on the terms of the orders in its order book, at 8:00 p.m. ET.<br><br>Orders are prioritized based on the price and time of entry of such orders into the ATS. Once an order has been submitted, the ATS matches it with a matching contra order submitted to the ATS, generally on a price/time priority basis.<br><br>Because the ATS does not operate during Core Market Hours, it is not impacted by trading halts in an NMS Stock during Core Market Hours. If trading in an NMS Stock that trades on BOATS is halted as of the close of the exchange trading day, the ATS does not trade that NMS Stock during its immediately following trading session.<br><br>If trading in an NMS Stock is halted on BOATS during the ATS's trading session, the ATS notifies its Subscribers and Sponsored Participants  of the halt. The ATS cancels all orders for the effected NMS Stock pending on the ATS's order book at the time the ATS halts trading. Such orders are automatically cancelled based on a configuration in Subscribers' and Sponsored Participants' FIX connections. Once the ATS lifts the halt, BOATS sends a notification to Subscribers and Sponsored Participants that trading is once again available on the ATS and that they may enter orders. Those orders are matched based on the price/time priority rules of BOATS.<span> </span></div></td></tr><tr><td class="label">
+					  b. Are the processes and procedures governing opening and re-opening the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   c. Explain how unexecuted orders and trading interest are handled at the time the NMS Stock  ATS begins regular trading at the start of regular trading hours or following a stoppage of trading in a security during regular trading hours.  
+	              </td><td><div class="fakeBox3">All orders on the ATS order book are canceled at the end the trading session. Thus, there are no unexecuted orders from the close of the ATS's prior trading session when BOATS begins its regular trading at 8:00 p.m. ET.<br><br>Because BOATS does not operate during Core Market Hours, exchange trading halts do not impact trading on the ATS unless such a trading halt remains in effect upon the close of Core Market Hours. If trading in a particular NMS stock is halted on an exchange as of the close of trading, the ATS does not trade that NMS Stock during its immediately following overnight trading session, as discussed in Part III, Item 7.<br><br>If trading in an NMS Stock is halted on BOATS during its Operating Hours, the ATS notifies its Subscribers of the halt. The ATS cancels all orders for the effected NMS Stock pending on the ATS's order book at the time the ATS halts trading.<br><br>Once the ATS lifts the halt, BOATS sends a notification to Subscribers and Sponsored Participants that trading is once again available on the ATS and that they may enter orders. Those orders are matched based on the price/time priority rules of BOATS.<span> </span></div></td></tr><tr><td class="label">
+					  d. Are the processes or procedures governing unexecuted orders and trading at the time the NMS Stock ATS begins regular trading at the start of regular trading hours, or following a stoppage of trading in a security during regular trading hours, the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   e. Are there any differences between pre-opening executions, executions following a stoppage of trading in a security during regular trading hours, and/or executions during regular trading hours?  	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem11"><h4>Item 11: <u>Trading Services, Facilities and Rules</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Provide a summary of the structure of the NMS Stock ATS marketplace (<u>e.g.,</u> crossing system, auction market, limit order matching book) and explain the means and facilities for bringing together the orders of multiple buyers and sellers on the NMS Stock ATS.
+	              </td><td><div class="fakeBox3">BOATS operates a fully automated electronic limit order book that continuously matches orders to buy or sell NMS Stocks. All NMS stocks are eligible to trade on the ATS, unless otherwise notified on the Blue Ocean ATS website, https://blueocean-tech.io/blue-ocean-ats-service-status/. All orders submitted to the ATS are firm, and are eligible for automatic execution by the system, consistent with the instructions and conditions indicated on the order as submitted by Subscribers and Sponsored Participants. Matching occurs on a price-time priority basis. BOATS operating hours are 8:00 p.m. ET to 4:00 a.m. ET, as discussed in Part III, Item 4(a).<br><br>Subscribers and their Sponsored Participants generate orders in securities eligible for trading on the ATS and send these orders electronically to the BOATS FIX order gateway ("Gateway"). The Gateway directs all orders to the BOATS matching engine. The BOATS matching engine operates on a server in Equinix NY4 data center. Equinix maintains the server in a locked "cage" that is accessible only by such personnel as indicated in Part II, Item 7.<br><br>The MEMX licensing agreement is with BOT. BOT then provides all technology or software, including technology from MEMX, used to operate the ATS to BOATS, including the matching engine. Shared employees of the parent company and BDO, as outlined in Part II, Item 6(a), work with MEMX technology and operations personnel to maintain these systems, pursuant to the licensing agreement.<span> </span></div></td></tr><tr><td class="label">
+					  b. Are the means and facilities required to be identified in Item 11(a) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   c. Explain the established, non-discretionary rules and procedures of the NMS Stock ATS, including order interaction rules for the priority, pricing methodologies, allocation, matching, and execution of orders and trading interest, and other procedures governing trading, such as price improvement functionality, price protection mechanisms, short sales, locked-crossed markets, the handling of execution errors, and the time-stamping of orders and executions.
+	              </td><td><div class="fakeBox3">Matching - The ATS accepts only orders from Subscribers and their Sponsored Participants. The ATS matches orders solely in accordance with the terms of those orders; BOATS does not have any discretion to change the terms of an order that a Subscriber or its Sponsored Participant enters. During its Operating Hours, the ATS matches orders in its order book on price-time priority basis. Orders retain their priority after partial fills. Orders submitted to the ATS are time-stamped to the millisecond upon receipt for prioritization purposes and for OATS and CAT reporting purposes.<br><br>For example:<br><br>ORDER A: tagged with identifier CLIENT1, a LIMIT DAY buy order to buy 500 shares of ABC @ $10 is entered in the system at 11:00 p.m.;<br><br>ORDER B: tagged with identifier CLIENT2, a LIMIT DAY sell order to sell 500 shares of ABC @ $11 is entered in the system at 11:01 p.m.;<br><br>ORDER C: tagged with identifier CLIENT3, a LIMIT DAY sell order to sell 1000 shares of ABC @ $10 is entered in the system at 11:02 p.m.;<br><br>ORDER C is immediately executed (matched with a contra interest) for 500 shares of ABC @ $10 at 11:02 p.m. against resting ORDER A;<br><br>The remaining (unexecuted) 500 shares of ORDER C remain on the ATS offered @ $10 at 11:02 p.m., and ORDER B's sell order to sell 500 shares of ABC @ $11 remains on the ATS at 11:02 p.m.;<br><br>Both ORDER C and ORDER B are resting orders on the ATS at 11:02 p.m.<br><br>Locked or Crossed Markets - All orders entered during the Operating Hours reside only on the BOATS order book. A buy order priced at or above the best offer, or sell order priced at or below the best bid, therefore result in executions, not locked or crossed markets.<br><br>For example:<br><br>ORDER A: tagged with identifier CLIENT1, a LIMIT DAY buy order to buy 500 shares of ABC @ $10 is entered in the system at 11:00 p.m.;<br><br>ORDER B: tagged with identifier CLIENT2, a LIMIT DAY sell order to sell 500 shares of ABC @ $11 is entered in the system at 11:01 p.m.;<br><br>ORDER C: tagged with identifier CLIENT3, a LIMIT DAY sell order to sell 1000 shares of ABC @ $9 is entered in the system at 11:02 p.m.;<br><br>ORDER C is immediately executed (matched with a contra interest) for 500 shares of ABC @ $10 at 11:02 p.m. against resting ORDER A;<br><br>The remaining (unexecuted) 500 shares of ORDER C remain on the ATS offered @ $9 at 11:02 p.m., and ORDER B's sell order to sell 500 shares of ABC @ $11 remains on the ATS at 11:02 p.m.;<br><br>Both ORDER C and ORDER B are resting orders on the ATS at 11:02 p.m.<br><br>Reference Price Bands - As detailed in Part III, Item 7, the ATS will reject aggressive orders priced more than 20% away from the applicable Reference Price (i.e., Aggressive Orders, as defined in Part III Item 7); passive orders priced more than 20% away from the applicable Reference Price (i.e., Passive Orders, as defined in Part III Item 7) are not rejected, but are accepted by the ATS with their display suppressed. Passive Orders are not eligible for execution and are not disseminated through the BOATS ATS Market Data feeds (see Part III Items 7 and 15(b) for further discussion). In the event BOATS determines a transaction occurred outside the applicable Reference Price Band, BOATS will break the resulting transaction.<br><br>Price Improvement - Orders deemed to be removing liquidity from the ATS receive all available price improvement. For two given orders, the order received by the ATS second is deemed to remove liquidity.  For instance, at 9:00 PM the ATS receives an order to buy 100 shares of ABC with a limit price of $10.05.  At 9:01 PM, the ATS receives an order to sell 100 shares of ABC with a limit price of $10.00.  Here, the two orders will execute at $10.05, with the sell order receiving all available price improvement.<br><br>Post-Only Orders - As detailed in Part III, Item 7, Subscribers and Sponsored Participants may designate orders as "POST-ONLY."  Where, upon receipt, an order designated as POST-ONLY is marketable against an order resting on the ATS, including, for clarity, a resting "NON-DISPLAYED ORDER," the POST-ONLY order will be cancelled back to the Subscriber and no execution will occur; provided, however, that POST-ONLY instructions will be disregarded (such that the POST-ONLY may remove liquidity from the BOATS ATS) in the following instances:<br><br>1. Where the limit price of the POST-ONLY order is less than $1.00 per share; or<br><br>2. Where the price improvement that would be received by the POST-ONLY order exceeds the relevant Subscriber's commission rate for removing liquidity.<br><br>Regarding instance no. 2, assume a Subscriber who is charged $0.002/share to remove liquidity submits a POST-ONLY buy order with a limit price of $10.01 and there is a sell order resting in the BOATS ATS with a limit price of $10.00.  Here, based on the BOATS ATS' execution logic, the orders would execute at $10.00/share.  As the price improvement to the POST-ONLY order in this scenario ($0.01/share) would exceed the commission payable on such order for removing liquidity ($0.002/share), the BOATS ATS will disregard the POST-ONLY instruction and allow the orders to execute (with the POST-ONLY order deemed to remove liquidity and, as such, being assessed a taker fee).<br><br>POST-ONLY orders that are not, in accordance with the above, rejected or executed upon receipt by the BOATS ATS rest on the BOATS ATS as passive liquidity and are prioritized on the same basis as all other orders. Where a POST-ONLY order receives a partial execution, any remaining shares will rest on the ATS and will be eligible for matching based on the ATS standard matching and execution logic. The POST-ONLY instruction may only be used with the "DAY" TIF instruction.  POST-ONLY orders may be designated as "DISPLAYED" or "NON-DISPLAYED" orders..<br><br>Execution Errors - Blue Ocean ATS, LLC has written supervisory policies and procedures in place to handle trade execution errors and "clearly erroneous trades" and handles Subscriber, including Sponsored Participant, and ATS errors in the same manner. Each potential error situation is evaluated by the Managing Director and/or CCO or designated Trading Operations personnel on a case-by-case basis to determine whether a trade execution should be busted. A transaction executed on the ATS shall be found to be clearly erroneous if the price of the transaction to buy (sell) that is the subject of the inquiry is greater than (less than) the reference price by 26% for NMS Stocks priced greater than $50; 30% for NMS Stocks priced greater than $25 and up to and including $50; and 40% for NMS Stocks priced greater than $0 and up to and including $25. The reference price for the clearly erroneous policy is determined by referencing the price of the last trade reported to the SIP from a primary exchange in each symbol that occurred at/before 7:30PM EST, as described in Part III, Item 23.<br><br>Order Entry Restrictions - The ATS does not accept orders that reference a symbol not authorized for trading (e.g., if there is a trading halt). Consistent with Rule 612 of Regulation NMS under the Exchange Act, the minimum price increment for orders received by the ATS shall be $0.01 for orders priced $1.00 or greater, and $0.0001 for orders priced below $1.00. Orders received with price increments below the preceding are rejected. Sell orders must be designated as long, short or short exempt in the event there is a short sale restriction in place. Subscribers are responsible for the compliance of their trades, including the trades of their Sponsored Participants, with all short sale locate and delivery rules and regulations.<span> </span></div></td></tr><tr><td class="label">
+					  d. Are the established, non-discretionary rules and procedures required to be identified in Item 11(c) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem12"><h4>Item 12: <u>Liquidity Providers</u></h4></a><table role="presentation"><tr><td class="label">
+	                   Are there any formal or informal arrangements with any Subscriber or the Broker-Dealer Operator to provide orders, or trading interest to the NMS Stock ATS (<u>e.g.,</u> undertaking to buy or sell continuously, or to meet specified thresholds of trading or quoting activity)?  	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem13"><h4>Item 13: <u>Segmentation; Notice</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Are orders and trading interest in the NMS Stock ATS segmented into categories, classifications, tiers, or levels (<u>e.g.,</u> segmented by type of participant, order size, duration, source, or nature of trading activity)?     	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+				     c. Does the NMS Stock ATS identify orders or trading interest entered by a customer of a broker-dealer on the NMS Stock ATS as a customer order?
+				</td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem14"><h4>Item 14: <u>Counter-Party Selection</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Can orders or trading interest be designated to interact or not interact with certain orders or trading interest in the NMS Stock ATS (<u>e.g.,</u> designated to execute against a specific Subscriber's orders or trading interest or prevent a Subscriber's order from executing against itself)?  	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem15"><h4>Item 15: <u>Display</u></h4></a><table role="presentation"><tr><td class="label">
+				     a. Does the NMS Stock ATS operate as an Electronic Communication Network as defined in Rule 600(b)(23) of Regulation NMS?
+				</td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+	                   b. Are Subscriber orders and trading interest bound for or resting in the NMS Stock ATS displayed or made known to any Person (not including those employees of the NMS Stock ATS who are operating the system)?
+	              </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr><tr><td class="label">
+				        If yes, explain the display procedures, including how and when Subscriber orders and trading interest are displayed, how long orders and trading interest are displayed, what information about orders and trading interest is displayed, and the functionality of the Broker-Dealer Operator and types of market participants that receive the displayed information.  
+				  </td><td><div class="fakeBox3">As described in Part II, Item 5(a), BOATS provides market data to its affiliate, BOT, which distributes BOATS ATS market data to various third parties, including subscribers, third-party distributors, and other market participants (such market data, as distributed by BOT, the "BOATS ATS Market Data").  Except as otherwise described herein, all orders accepted by the BOATS ATS are included in the BOATS ATS Market Data. The BOATS ATS Market Data includes the following information: (i) highest resting bid price, lowest resting offer price, including timestamp and order size ("Top of Book Data"), (ii) all matched trades published per security including time stamp, price, and quantity ("Last Sale Data") and (iii) pending buy and sell orders at every price level, including time stamp, price, and quantity ("Depth of Book Data").<br><br>As described in Part III, Item 7, Subscribers and Sponsored Participants may designate their orders as "Displayed" or "Non-Displayed." Pending orders designated as "Non-Displayed" that have been received by the ATS, as well as Passive Orders (as further described in Part III, Item 7), are not included in the BOATS ATS Market Data;  however,  execution reports relating to non-displayed orders are included in the BOATS ATS Market Data.  All other pending orders and related executions (that is, orders specifically designated as "Displayed" orders and orders without a specific display instruction) are included in the BOATS ATS Market Data.<br><br>Recipients of the BOATS ATS Market Data can integrate the market data feed directly into their order or execution management systems.  The BOATS ATS Market Data is delivered during the operating hours of the ATS. As described in Part III Item 11(a), BOT utilizes MEMX technology to transmit direct market data feeds from the BOATS data center in EquinixNY4.<br><br>BOT, as distributor of the BOATS ATS Market Data, does not limit, delay, or restrict delivery of the BOATS ATS Market Data feeds among recipients who comply with the terms of the Master Data Agreement. BOT can suspend delivery of BOATS ATS Market Data to recipients in a non-discriminatory manner.  Examples of why BOT can suspend delivery of BOATS ATS Market Data in a non-discriminatory manner include:<br><br>i.   Violations of the material terms of the Master Data Agreement;<br><br>ii.  Breach of the IP rights; and<br><br>iii. Delinquency on payments for services.<span> </span></div></td></tr><tr><td class="label">
+				 	  c. If yes to Item 15(b), are the display procedures required to be identified in 15(b) the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem16"><h4>Item 16: <u>Routing</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Can orders and trading interest in the NMS Stock ATS be routed to a destination outside the NMS Stock ATS?	
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem17"><h4>Item 17: <u>Closing</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Are there any differences between how orders and trading interest are treated on the NMS Stock ATS during the close and how orders and trading interest are treated during regular trading hours?   
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr><tr><td class="label">
+				 	  b. Is the treatment of orders and trading interest during the close the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem18"><h4>Item 18: <u>Trading Outside of Regular Trading Hours</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Does the NMS Stock ATS conduct trading outside of its regular trading hours?
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem19"><h4>Item 19: <u>Fees</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Identify and describe any fees or charges for use of the NMS Stock ATS services, including the type of fees (<u>e.g.,</u> subscription, connectivity), the structure of the fees (<u>e.g.,</u> fixed, volume-based, transaction-based), variables that impact the fees (<u>e.g.,</u> types of securities traded, block orders, form of connectivity to the ATS), differentiation among types of Subscribers (<u>e.g.,</u> broker-dealers, institutional investors, retail) and range of fees (<u>e.g.,</u> high and low).
+	              </td><td><div class="fakeBox3">Subscribers are not charged fees to access the ATS (e.g., access fees, port fees, or connection fees).  However, BOATS charges or credits Subscribers, as applicable, a per-share commission or rebate for executions in the ATS.  BOATS considers a number of factors when negotiating a subscriber's commission and rebate rates, including, among other variables, (i) BOATS' history with the relevant subscriber (e.g., whether the subscriber was a participant on the ATS as of the ATS' first operating session), (ii) the subscriber's historical and/or expected future trading activity, and (iii) order characteristics (e.g., display instructions).  BOATS may consider such factors as they apply to a subscriber's current or anticipated Sponsored Participants.<br><br>Subscribers may negotiate per share commission and rebate rates within the following ranges:<br><br>o For transactions in stocks priced greater than or equal to $1.00, subscribers are (i) charged a commission in the range of $0.00 to $0.0020 per share when removing liquidity and (ii) credited a rebate of $0.00 to $0.0060 per share when adding liquidity; and<br><br>o For transactions in stocks priced below $1.00, subscribers are (i) charged a commission of $0.00 to 0.3% (30 basis points) of the relevant order's total notional dollar volume when removing liquidity and (ii) not subject to any fee or rebate when adding liquidity.<br><br>Other Fees:<br><br>All Subscribers are charged applicable pass-through fees, such as CAT and regulatory fees, which are tied to the side of each transaction. Since BOATS is the executing broker for all trades on the ATS, the BDO reports a cross trade as the buyer and seller for trade reporting purposes (i.e., "Alternative #1" method under FINRA guidance), and is charged CAT fees accordingly. BOATS incurs these fees and passes all allocated regulatory or applicable fees back to the Subscriber without any additional mark-up.<br><br>As described in Part II, Item 5(a) and Part III, Item 15(b) BOATS is responsible for the creation and anonymization of market data, and BOT manages and distributes market data. BOT incurs costs to fully integrate its market data feed into Third-Party Distributors platform, for recipients who receive market data from a Third-Party.<br><br>Any Receiver who elects to take market data from a Third-Party Distributor may be subject to additional fees (i.e. technology configuration fees), which are not remitted to the BDO or parent company.<br><br>There is no initial set-up fee for market data. Market data fees are outlined in the Master Data Agreements, and are assessed monthly:<br><br>Market Data Fees:<br><br>For top-of-book or depth-of-book market data, BOT charges a monthly fee ranging between $8 to $14,000, for display user licenses. The display user licenses fee range is determined by how a financial institution uses market data (i.e. a financial institution may have multiple $8 licenses which allow market data to be displayed on a single screen or terminal to $14,000license for enterprise-wide display which allows market data to be displayed to an online brokerage userbase). Non-display license fees are $5,000. Non-display licensing allows market data to be used by systems or devices but not displayed to end-users. Display and non-display licenses are charged separately and are additive.<br><br>A single financial institution may be able to combine a non-display fee with a display fee such that it exceeds $14,000. For example, a financial institution may have a single agreement with global affiliates. Under that agreement, the financial institution's market making group accepts a non-display fee of $5,000. A completely separated subsidiary of the financial institution elects a $12,500 display user license. Collectively the financial institution accrues monthly fees of $17,500.<br><br>Historical recorded copies of real-time market data is separately made available via file server for convenience at a cost of $200-$1000 dependent if used for internal or external redistribution purposes.<span> </span></div></td></tr><tr><td class="label">
+	                   b. Identify and describe any fees or charges for use of the NMS Stock ATS services that are bundled with the Subscriber's use of non-ATS services or products offered by the Broker-Dealer Operator or its Affiliates, including a summary of the bundled services and products, the structure of the fee, variables that impact the fee, differentiation among types of Subscribers, and range of fees.
+	              </td><td><div class="fakeBox3">N/A<span> </span></div></td></tr><tr><td class="label">
+	                   c. Identify and describe any rebate or discount of fees or charges required to be identified in Items 19(a) and 19(b), including the type of rebate or discount, structure of the rebate or discount, variables that impact the rebate or discount, differentiation among types of Subscribers, and range of rebate or discount.
+	              </td><td><div class="fakeBox3">As detailed in Part III, Item 19(a), when adding liquidity to the ATS, subscribers are either not assessed a fee or are credited a rebate, depending on the subscriber's negotiated fee schedule.<span> </span></div></td></tr></table><br><a name="partIIIitem20"><h4>Item 20: <u>Suspension of Trading</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Explain any procedures for suspending or stopping trading on the NMS Stock ATS, including the suspension of trading in individual NMS stocks.  
+	                </td><td><div class="fakeBox3">Reasons the firm may suspend trading in an NMS Stock include halts (as described in Part III, Item (10), internal system issues, technology or operational issues from service provider MEMX, and regulatory or exchange issues. BOATS may suspend trading in an NMS Stock for SSR restrictions. BOATS may suspend trading on a symbol-by-symbol basis for approaching or exceeding Fair Access thresholds and all symbols for approaching or exceeding Reg SCI thresholds.<br><br>In addition, as detailed in Part III, Item 7(a), where the BOATS ATS' systems have not identified a Last Sale Print for a given security, such security will not be eligible for trading in the BOATS ATS and the BOATS ATS will reject all orders in the security for the relevant BOATS ATS trading session.<br><br>When BOATS suspends trading in an NMS Stock, the ATS cancels all orders for the effected NMS stock in the order book and notifies subscribers. Orders are cancelled based on a configuration in FIX connection. Once trading for a suspended position resumes, BOATS notifies Subscribers and orders are matched on a price/time priority in the ATS matching engine, as described in Part III, Item 5(a).<span> </span></div></td></tr><tr><td class="label">
+				 	  b. Are the procedures for suspending or stopping trading the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem21"><h4>Item 21: <u>Trade Reporting</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Explain any procedures and material arrangements for reporting transactions on the NMS Stock ATS, including where an ATS reports transactions and under what circumstances.  
+	              </td><td><div class="fakeBox3">BOATS maintains daily summaries of trading and time-sequenced records of order information, including the date and time the order was received, the date, time, and price at which the order was executed, and the identity of the parties to the transaction.<br><br>Trades executed in the ATS are reported by 4:15 a.m. ET following the end of the relevant trading session (that is, for a trading session that operates from 8:00 p.m. ET Sunday through 4:00 a.m. ET Monday, trades effected during that trading session are reported by 4:15 a.m. ET Monday). ATS trades in NMS Stocks are reported to the NYSE TRF and printed with BOATS' Market Participant Identifier (BLUE) as executing broker.<span> </span></div></td></tr><tr><td class="label">
+				 	  b. Are the procedures and material arrangements for reporting transactions on the NMS Stock ATS the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem22"><h4>Item 22: <u>Clearance and Settlement</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Describe any procedures and material arrangements undertaken to facilitate the clearance and settlement of transactions on the NMS Stock ATS (<u>e.g.,</u> whether the ATS becomes a counterparty, whether it submits trades to a registered clearing agency, or whether it requires Subscribers to have arrangements with a clearing firm).
+	              </td><td><div class="fakeBox3">BOATS' clearing firm is RQD* Clearing, LLC (NSCC # 4305). RQD* Clearing, LLC is a participant in the National Securities Clearing Corporation, which clears equity transactions, and The Depository Trust Company ("DTC"), which facilitates settlement of equity and other types of securities. BOATS provides trade information to RQD* in an end-of-day format for clearing purposes. RQD* submits the trade information to NSCC to facilitate settlement. Settlement of trades executed on the ATS occurs through the Continuous Net Settlement (CNS) system operated by DTC and generally settle on the second day after the trade.<br><br>A Subscriber must execute appropriate "give-up" agreements to establish an "on behalf of" reporting relationship (e.g., an executed Uniform Trade Reporting Facility Service Bureau/Executing Broker Agreement or Nasdaq AGU/Attachment 2 Agreement).<br><br>BOATS executes trades solely in an agency cross capacity. It does not become counterparty to any Subscriber's or Sponsored Participant's trades.<span> </span></div></td></tr><tr><td class="label">
+				 	  b. Are the procedures and material arrangements undertaken to facilitate the clearance and settlement of transactions on the NMS Stock ATS the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem23"><h4>Item 23: <u>Market Data</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Identify the sources of market data used by the NMS Stock ATS (<u>e.g.,</u> proprietary feed from a national securities exchange, feed from the securities information processor ("SIP")), and how the ATS uses market data from these sources to provide the services that it offers, including how the ATS uses market data to determine the NBBO and protected quotes, and display, price, prioritize, execute, and remove orders and trading interest on the ATS.    
+	              </td><td><div class="fakeBox3">BOATS obtains last print data from MEMX that provides a reference price as of 7:30 p.m. ET on each trading day for each NMS Stock that trades on the ATS. The 7:30 Reference Price is determined by referencing the price of the last trade reported to the SIP from a primary exchange in each symbol that occurred at/before 7:30PM EST.<span> </span></div></td></tr><tr><td class="label">
+				 	  b. Are the sources of market data and how the NMS Stock ATS uses market data for the services that it offers the same for all Subscribers and the Broker-Dealer Operator?
+				  </td><td><span class="yesNo"><img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										Yes
+										<img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem24"><h4>Item 24: <u>Order Display and Execution Access</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Has the NMS Stock ATS displayed Subscriber orders to any Person (other than NMS Stock ATS employees) and had an average daily share volume of 5% or more in that NMS stock as reported by an effective transaction reporting plan or disseminated through an automated quotation system during four of the preceding six calendar months?
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem25"><h4>Item 25: <u>Fair Access</u></h4></a><table role="presentation"><tr><td class="label">
+	                   a. Has the NMS Stock ATS executed 5% or more of the average daily trading volume in an NMS stock as reported by an effective transaction reporting plan or disseminated through an automated quotation system during four of the preceding six calendar months?
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><br><a name="partIIIitem26"><h4>Item 26: <u>Aggregate Platform Data</u></h4></a><table role="presentation"><tr><td class="label">
+	                   Does the NMS Stock ATS publish or otherwise provide to one or more Subscribers aggregate platform-wide order flow and execution statistics of the ATS that are not otherwise required disclosures under Rule 605 of Regulation NMS?
+	              </td><td><span class="yesNo"><img src="/Images/radio-unchecked.jpg" alt="Radio button not checked">
+										Yes
+										<img src="/Images/radio-checked.jpg" alt="Radio button checked">
+										No
+									</span></td></tr></table><table role="presentation"></table><br></div><a name="partIV"><h1>ATS-N/MA: Part IV: Contact Information, Signature Block, and Consent to Service</h1></a><div class="form1"><h4>
+			    Provide the following information of the Person at BOATS<span> </span> prepared to respond to questions for this submission: 
+		   </h4><table role="presentation"><tr><td class="label">First Name:
+				 </td><td><p><div class="fakeBox"><span> </span></div></p></td></tr><tr><td class="label">Last Name:
+				 </td><td><p><div class="fakeBox"><span> </span></div></p></td></tr><tr><td class="label">Title:
+				 </td><td><p><div class="fakeBox"><span> </span></div></p></td></tr><tr><td class="label">E-Mail:
+				 </td><td><p><div class="fakeBox"><span> </span></div></p></td></tr><tr><td class="label">Telephone:
+				 </td><td><p><div class="fakeBox2"><span> </span></div></p></td></tr></table><br><h4>
+			    Primary Street Address of the NMS Stock ATS:
+		   </h4><table role="presentation"><tr><td class="label">Street 1 </td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">Street 2 </td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">City </td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">Zip
+					</td><td><div align="left"><div class="fakeBox2"><span> </span></div></div></td></tr><tr><td class="label">State</td><td><div class="fakeBox"><span> </span></div></td></tr></table><br><h4>
+		      	Mailing Address of the NMS Stock ATS (if different):
+		   </h4><table role="presentation"><tr><td class="label">Street 1 </td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">Street 2 </td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">City </td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">Zip
+					</td><td><div align="left"><div class="fakeBox2"><span> </span></div></div></td></tr><tr><td class="label">State</td><td><div class="fakeBox"><span> </span></div></td></tr></table><br><table role="presentation"><tr><div class="information"><p>
+	      
+                 The 
+                 BOATS<span> </span> consents that service of any civil action brought by, or notice of any proceeding before, 
+                  the SEC or a self-regulatory organization in connection with the alternative trading system's activities may be given by
+                  registered or certified mail to the contact employee at the primary street address or mailing address (if different) of the NMS Stock ATS,
+                  or via email,
+                  and the addresses provided on this Form ATS-N. 
+                  The undersigned, being first duly sworn, 
+                  deposes and says that he/she has executed this form on behalf of, 
+                  and with the authority of, said alternative trading system. 
+                  The undersigned and  BOATS<span> </span> represent that the information and statements contained herein,
+                  including exhibits, schedules, or other documents attached hereto, 
+                  and other information filed herewith, all of which are made a part hereof, 
+                   are current, true, and complete. 
+	       
+	              </p></div></tr><tr><td class="label">Date:</td><td><div class="fakeBox2"><span> </span></div></td></tr><tr><td class="label">BOATS<span> </span>:</td><td><div class="fakeBox">BOATS<span> </span></div></td></tr><tr><td class="label">By:</td><td><div class="fakeBox"><span> </span></div></td></tr><tr><td class="label">Title:</td><td><div class="fakeBox"><span> </span></div></td></tr></table><br></div></div></div>
+<script type="text/javascript"  src="/QQpw/SBxk/Vaws3/_e/ukQ/ahaE2chLLGzQfS/Ji1MAQ/Zg9QCV/p9Knc"></script></body></html>

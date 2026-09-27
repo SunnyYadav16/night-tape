@@ -1,0 +1,5 @@
+.venv/
+data/
+site/
+.env
+.envrc

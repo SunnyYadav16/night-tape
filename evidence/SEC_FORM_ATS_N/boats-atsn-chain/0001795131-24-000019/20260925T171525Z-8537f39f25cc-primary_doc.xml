@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edgarSubmission xmlns="http://www.sec.gov/edgar/atsn" xmlns:com="http://www.sec.gov/edgar/common" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <headerData>
+    <submissionType>ATS-N/UA</submissionType>
+    <accessionNumber>0001795131-24-000012</accessionNumber>
+    <filerInfo>
+      <liveTestFlag>LIVE</liveTestFlag>
+      <filer>
+        <filerCredentials>
+          <com:cik>0001795131</com:cik>
+          <com:ccc>XXXXXXXX</com:ccc>
+        </filerCredentials>
+        <fileNumber>013-00180</fileNumber>
+      </filer>
+      <flags>
+        <ats:overrideInternetFlag>false</ats:overrideInternetFlag>
+        <ats:confirmingCopyFlag>false</ats:confirmingCopyFlag>
+      </flags>
+    </filerInfo>
+  </headerData>
+  <formData>
+    <cover>
+      <txNMSStockATSName>BLUE OCEAN ATS, LLC</txNMSStockATSName>
+      <taStatementAboutAmendment>This is an Updating Amendment to the Material Amendments relating to the technology and operations services provided by MEMX Technologies, LLC "MEMX", including:
+
+1.	Part II, Item 6 (adding MEMX as a service provider to the BDO)
+2.	Part II, Item 7 (supplementing the protections on how the BDO and MEMX protect Subscriber CTI)
+3.	Part III, Item 5 (BOATS and MEMX support FIX 5.0 and Simple Binary Encoding)
+4.	Part III, Item 6 (MEMX and BOATS technology are co-located but segregated)
+5.	Part III, Item 11 (BOT licensing agreement with MEMX, technology shared with BOATS)
+6.	Part III. Item 11 (Confirming BOATS operating hours are 8:00 p.m. ET to 4:00 a.m. ET)
+7.	Part III, Item 15 (Updating the data feeds BOT and MEMX make available to recipients)
+8.	Part III, Item 20 (supplemental reasons for suspended trading, including MEMX issues)
+9.	Part III, Item 21 (MEMX reports ATS trades and establishes connection to trade reporting facility)
+10.	Part III, Item 23 (MEMX provides last print data)
+
+The changes apply to all Subscribers and the Broker Dealer Operator.
+</taStatementAboutAmendment>
+    </cover>
+    <partOne>
+      <rbPart1Item1IsBd>Y</rbPart1Item1IsBd>
+      <txPart1Item2ATSName>BLUE OCEAN ATS, LLC</txPart1Item2ATSName>
+      <atsNames>
+        <atsName txPart1Item3ATSName="BOATS"/>
+      </atsNames>
+      <txPart1Item4aBdFileNumber>008-70452</txPart1Item4aBdFileNumber>
+      <txPart1Item4aBdCrdNumber>000306512</txPart1Item4aBdCrdNumber>
+      <txPart1Item5aNsaFullName>Financial Industry Regulatory Authority, Inc. "FINRA"</txPart1Item5aNsaFullName>
+      <part1Item5bEffectiveMembershipDate>10/13/2020</part1Item5bEffectiveMembershipDate>
+      <txtPart1Item5cNmsStockMPID>BLUE</txtPart1Item5cNmsStockMPID>
+      <txtPart1Item6uwebsite>www.blueoceanats.com</txtPart1Item6uwebsite>
+      <part1Item7PrimarySite>
+        <ats:street1>Equinix NY4</ats:street1>
+        <ats:street2>755 Secaucus Rd.</ats:street2>
+        <ats:city>Secaucus</ats:city>
+        <ats:zip>07094</ats:zip>
+        <ats:state>US-NJ</ats:state>
+      </part1Item7PrimarySite>
+      <cbPart1Item8Exhibit1atWebsite>false</cbPart1Item8Exhibit1atWebsite>
+      <cbPart1Item9Exhibit2atWebsite>false</cbPart1Item9Exhibit2atWebsite>
+    </partOne>
+    <partTwo>
+      <rbPart2Item1aArePermittedToEnterInterest>N</rbPart2Item1aArePermittedToEnterInterest>
+      <rbPart2Item1dCanOATInterestBeRouted>N</rbPart2Item1dCanOATInterestBeRouted>
+      <rbPart2Item2aAreAfflPermittedToEnterInterest>N</rbPart2Item2aAreAfflPermittedToEnterInterest>
+      <rbPart2Item2dCanOATIBeRoutedByAffl>N</rbPart2Item2dCanOATIBeRoutedByAffl>
+      <rbPart2Item3aCanSubscrOptOutWithOATIOfBD>N</rbPart2Item3aCanSubscrOptOutWithOATIOfBD>
+      <rbPart2Item3aCanSubscrOptOutWithOATIOfAffl>N</rbPart2Item3aCanSubscrOptOutWithOATIOfAffl>
+      <rbPart2Item4aAreThereArrangementsBtwBDAndTC>N</rbPart2Item4aAreThereArrangementsBtwBDAndTC>
+      <part2Item5aDoesOfferProductsAndServices rbPart2Item5aDoesOfferProductsAndServices="Y">
+        <taPart2Item5aProductsAndServices>BOATS provides all market data to Blue Ocean Technologies, LLC ("BOT") - the parent company of the ATS operator.
+
+BOT manages and distributes all BOATS market data that Subscribers, Sponsored Access Clients, and Third-Party Distributors receive. Third-Party Distributors include vendors, service bureaus or service providers that consume or redistribute market data, Subscribers and non-Subscribers can receive the market data feed. Non-Subscribers that receive the market data feed include Third-Party Distributors.
+
+BOT distributes and disseminates real-time market data and does not offer any delayed market data services. Market data content that is disseminated to Subscribers, Sponsored Access Clients, and Third-Party Distributors does not contain any CTI. Any CTI contained in the creation of market data is anonymized by BOATS before being dissemination by BOT to Subscribers, Sponsored Access Clients, and Third-Party Distributors. For more information, please see Part III, Item 15 and Part III, Item 19.</taPart2Item5aProductsAndServices>
+        <rbPart2Item5bAreSevicesSametoAllSubscribersAndBD>Y</rbPart2Item5bAreSevicesSametoAllSubscribersAndBD>
+      </part2Item5aDoesOfferProductsAndServices>
+      <rbPart2Item5cDoesAfflOfferProductsAndServices>N</rbPart2Item5cDoesAfflOfferProductsAndServices>
+      <part2Item6aDoesEmployeeAccessConfidentialInfo rbPart2Item6aDoesEmployeeAccessConfidentialInfo="Y">
+        <taPart2Item6aUnitAfflEmployeeServices>Blue Ocean ATS, LLC ("BOATS") is the broker-dealer operator of the Blue Ocean ATS. Blue Ocean Technologies, LLC ("BOT") is the parent company of BOATS.
+
+BOATS and BOT share personnel, including the Compliance, Technology, and Trade Operations teams. These shared personnel will have access to BOATS real-time and post-trade confidential trading information ("CTI"), including Subscriber order and execution related information and analytics. BOATS CTI does not include aggregated data resulting from the combination of historical data associated with BOATS Subscribers.
+
+The Head of Strategy and Market Data of the parent company, BOT, has access to post-trade CTI for the approved distribution of anonymized market data, as described in Part III, Item 15 and Part III, Item 19, but does not have access to the ATS matching engine.  </taPart2Item6aUnitAfflEmployeeServices>
+      </part2Item6aDoesEmployeeAccessConfidentialInfo>
+      <part2Item6bDoesAnyEntitySupportServices rbPart2Item6bDoesAnyEntitySupportServices="Y">
+        <taPart2Item6bServiceProvider>Equinix NY4 is the outsourced data center for BOATS' matching engines. Equinix provides a secure space for the BOATS servers, as well as cross-connects, power, space, and professional services. Further information on Equinix is contained in Part III, Item 6.
+
+MEMX Technologies, LLC ("MEMX") is a technology and service provider to BOATS who provides technology and operations support. MEMX technology and operations personnel will have access to real-time and post-trade CTI to support the ATS, including support to the ATS matching technology, as described in Part III, Item 11(a). MEMX technology and operations personnel provide services to the ATS as described in Part III, Items 5, 6, 11, 15, 20, 21, and 23.
+
+As described in Part III, Item 22, BOATS has entered into a clearing agreement with RQD* Clearing, LLC (NSCC # 4305), a FINRA member firm and a member of the National Securities Clearing Corporation, to provide for clearance and settlement of transactions executed on the ATS.</taPart2Item6bServiceProvider>
+        <rbPart2Item6cDoesServiceProviderUseATSServices>N</rbPart2Item6cDoesServiceProviderUseATSServices>
+      </part2Item6bDoesAnyEntitySupportServices>
+      <taPart2Item7aDescrOfSafeGaurdsAndProcedures>BOATS considers Subscribers" order and execution-related information and data or analytics related to a Subscriber's transactions to be confidential trading information.
+
+Access to CTI:
+The CCO authorizes access to the BOATS real-time CTI when it is necessary to support the ATS. Authorized individuals include employees of the BDO, the parent company, and third-party service providers. Those seeking access to CTI must submit a request including which technology, system, or database along with justification to the CCO and senior management. The CCO and senior management review the level of access requested along with the roles and responsibilities prior to approval. Authorized individuals access CTI only in manner of the roles and responsibilities to support the ATS. All authorized individuals and access requests are subject to annual, or additionally necessary, review by the CCO and senior management, with authorized individual's CTI access being terminated if no longer necessary.
+
+
+Employee Trading:
+BOATS has detailed WSPs to monitor to supervise employee personal trading. The Firm's trading policy requires: (i) employees to obtain approval prior to established personal trading accounts, (ii) attend an annual training, including on the Firm's trading policy, (iii) annually attest to all personal trading accounts are disclosed and abide by the Firm's trading policy, (iv) Employees are prohibited from participating on the Blue Ocean ATS. Additionally, the CCO or qualified designee review duplicate trade confirms and statements for manipulative activity which include insider trading and anti-money laundering violations.
+
+Service Providers:
+MEMX is a technology and operations service provider to BOATS, as described in Part II, Item 6(b). MEMX technology and operations personnel have access to Subscriber CTI, including real-time and post-trade information, which can include details regarding individual orders and executions, and the names of Subscribers. MEMX has policies and procedures to permission access to the Blue Ocean ATS; including (i) MEMX personnel who support BOATS must complete CTI training specific to the Blue Ocean ATS, (ii) MEMX technology and operational personnel must request and receive approval from MEMX management before receiving access to the BOATS managed platform, (iii) BOATS systems access is based on the MEMX personnel designated role and responsibilities, (iv) MEMX personnel with approved access must complete annual compliance CTI trainings. BOATS requires MEMX to also perform annual, or additionally necessary, reviews to confirm system access or entitlements remain accurate and terminate systems access or entitlements that are no longer necessary. Additionally, MEMX personnel are subject to the MEMX Personal Dealings Policy, which includes personal trading, and are prohibited from sharing BOATS CTI in any unauthorized fashion.
+
+MEMX also conducts electronic communications reviews annually, or additionally necessary, for potential policy violations, including non-compliance with the referenced policies and procedure and will promptly notify BOATS senior management of any actual or suspected unauthorized disclosure of Subscriber CTI. BOATS has the right to audit MEMX's operation of the ATS matching engine, including access to and use of Subscriber CTI, either through audits by BOATS or a third-party auditor.
+
+Separation of Systems and Personnel:
+The Blue Ocean ATS matching engine is hosted and operated by MEMX, whose technology is located in the Equinix NY4 data center but is segregated and does not comingle with BOATS technology, as described in Part III, Item 6(a).
+
+MEMX technology and operations personnel assigned to support the Blue Ocean ATS are prohibited from discussing or sharing BOATS or Subscriber CTI with unauthorized MEMX personnel.
+
+Additional Protections:
+Shared personnel between the BDO and the parent company, as outlined in Part II, Item 6(a) have access to real-time and post-trade CTI according to their roles and responsibilities to support the operations of the ATS. During annual, or additionally necessary, CTI access reviews, the CCO and senior management confirm personnel of the parent company only have access to post-trade CTI for the approved distribution of anonymized market data, as described in Part III, Item 15 and Part III, Item 19.
+
+The CCO or qualified designee review employees of the BDO, the parent company, and third-party service providers who have access to hardware and network systems. Systems access to the ATS matching engine and servers are controlled by VPN access and secure logins. Third parties who provide technology support have limited access to specific IP addresses and are subject to contractual prohibitions. Access is restricted to physical hardware, including the data center as outlined in Part III, Item 6(a).
+
+Employees of the BDO and parent company undergo annual CTI and cybersecurity training and complete an annual attestation of safeguarding CTI.
+</taPart2Item7aDescrOfSafeGaurdsAndProcedures>
+      <rbPart2Item7bCanSubscriberConsentToDisclosure>N</rbPart2Item7bCanSubscriberConsentToDisclosure>
+      <taPart2Item7dSummaryOfRolesRespOfPersons>Employees of the BDO, the parent company, and shared personnel as outlined in Part II, Item 6(a), are responsible for the supervision and operations of the ATS and require real time and post trade to BOATS confidential trading information. Employees of the BDO, the parent company, and shared personnel include the Firm's Compliance, Technology, and Trade Operations teams.
+
+MEMX technology and operations personnel have access to the ATS matching engine including BOATS real time and post trade CTI to support the day-to-day operations of the ATS, as described in Part III, Items 5, 6, 11, 15, 20, 21, and 23.
+
+MEMX technology and operations personnel provide hardware and technology support to the Firm's matching engine. Only MEMX technology and operations personnel have access to BOATS CTI, and are prohibited from discussing or sharing BOATS or Subscriber CTI with unauthorized MEMX personnel.
+
+BOATS clearing Firm RQD* Clearing LLC (NSCC #4305), has access to post-trade CTI to perform the functions as described in Part III, Item 22(a).
+</taPart2Item7dSummaryOfRolesRespOfPersons>
+    </partTwo>
+    <partThree>
+      <taPart3Item1SubscriberType>Brokers</taPart3Item1SubscriberType>
+      <taPart3Item1SubscriberType>Dealers</taPart3Item1SubscriberType>
+      <rbPart3Item2aRegisteredBD>Y</rbPart3Item2aRegisteredBD>
+      <part3Item2bSummaryOfConditions rbPart3Item2bIsThereOtherConditions="Y">
+        <taPart3Item2bSummaryOfCndtns>The ATS allows as Subscribers those applicants who satisfy certain eligibility requirements. Specifically, Subscribers must meet the following requirements:
+
+1. It is a U.S. Securities and Exchange Commission ("SEC") registered broker-dealer and a member in good standing of at least one self-regulatory organization.
+
+2. Satisfy such technical or systems requirements as may be prescribed by BOATS, including but not limited to connectivity certification, the ability to send orders and cancellations, and to receive trades, cancellations, rejects and trade breaks from the ATS.
+
+3. Have clearing and settlement systems and/or arrangements in place to support participation on the ATS, which would include clearing or accepting clearing of securities through RQD* Clearing, LLC (NSCC # 4305), BOATS' clearing firm, and has in place relevant documentation to establish this clearing relationship.
+
+4. Execute the Subscriber Agreement.
+
+5. Execute an appropriate "give-up" agreement to establish an "on behalf of" reporting relationship (e.g., an executed Uniform Trade Reporting Facility Service Bureau/Executing Broker Agreement or Nasdaq AGU/Attachment 2 Agreement).
+
+6. It has completed that ATS's onboarding process (e.g., satisfied BOATS' KYC/AML review, passed OFAC checks, passed a disciplinary review, executed all pertinent agreements).
+
+BOATS shall, after receiving a completed Subscriber Agreement and any additional documentation requested, in its discretion, approve or reject such application, or approve such application subject to such conditions and/or restrictions as it considers appropriate (e.g., potentially limiting the number of orders a Subscriber may send). It processes all applications and completes its review and approval/denial process within a timely manner of receipt of each completed Subscriber application. Each approval or denial must be authorized by the BOATS Managing Director/CCO. Trading Operations shall then promptly notify the applicant of the decision.
+
+BOATS creates and maintains records of all such decisions granting access, denying access, and granting limited or restricted access, for each applicant, and the reasons for so doing.
+
+7. Comply with credit risk controls, as described in Part III, Item 7.</taPart3Item2bSummaryOfCndtns>
+        <rbPart3Item2cIsConditionsSameForAll>Y</rbPart3Item2cIsConditionsSameForAll>
+      </part3Item2bSummaryOfConditions>
+      <rbPart3Item2dIsThereWrittenAgreement>Y</rbPart3Item2dIsThereWrittenAgreement>
+      <part3Item3aSumryOfExcludngCondtns rbPart3Item3aIsExcludeSubscriber="Y">
+        <taPart3Item3aExcludngSumryDtls>A Subscriber can be excluded from the ATS if the Subscriber no longer satisfies the eligibility requirements for acceptance as a Subscriber.
+
+Additionally, the operation of the ATS is continuously monitored by the ATS's trading operations team ("Trading Operations") to ensure the smooth and correct functioning of the system as well as adherence to the ATS's operating procedures and the applicable securities rules and regulations. Trading Operations can monitor order entry port status, order acknowledgement latency, and market data quality, in addition to detailed metrics on order entry rates, open and executed exposures, and executed volumes.
+Trading Operations monitors to determine whether Subscribers are  sending orders in excess of 100 orders per second or a single order with notional value greater than $5 million. Any orders entered in excess of these limits is rejected by the ATS, and Subscribers/Sponsored Access Clients are reminded of the limits.
+
+In addition to real-time monitoring, Trading Operations reviews any  anomalies in the activities of the ATS using end-of-day reports. These reports include T+1 clearing breaks and same entity crosses. In the event one of the preceding occurs, Trading Operations may, among other actions, halt the activity of a Subscriber or set of Subscribers and/or an NMS Stock or set of NMS Stocks in order to contain the impact of a problem while pursuing a resolution.
+
+BOATS may also exclude a Subscriber from trading on the ATS if, in the sole discretion of BOATS, the Subscriber may cause a breach of the Subscriber Agreement or if such exclusion is necessary to comply with applicable law. BOATS may also exclude a Subscriber's Sponsored Access Client(s) from trading on the ATS through the Subscriber if, in the sole discretion of BOATS, the Sponsored Access Client(s) may cause a breach of the Subscriber Agreement or if such exclusion is necessary to comply with applicable law.</taPart3Item3aExcludngSumryDtls>
+        <rbPart3Item3bIsCondtnsSameForAll>Y</rbPart3Item3bIsCondtnsSameForAll>
+      </part3Item3aSumryOfExcludngCondtns>
+      <taPart3Item4aHrsOfOperation>Dates and Hours of Operation
+
+BOATS operates each evening before the NYSE Trade Reporting Facility ("TRF") is open so that trades executed on the ATS can be reported.
+
+Subscribers/sponsored access clients may submit orders to the ATS at 6:15 p.m. ET on the days of operation of the ATS. Matching in NMS Stocks on the ATS occurs from 8:00 p.m. to 4:00 a.m. ET the following day, i.e., during Operating Hours, if the TRF is open for trade reporting on that following day. For example, the ATS operates from Sunday evening at 8:00 p.m. until 4:00 a.m. ET on Monday, and trades executed during that session are reported to the TRF before 8:15 a.m. ET on that Monday. However, the ATS does not conduct a trading session beginning at 8:00 p.m. ET on Friday, because the TRF is not available for the reporting of trades on Saturday. Likewise, there is no trading session on Christmas Eve because the TRF is not open on Christmas, but there could be an overnight trading session beginning on Christmas night if the TRF is open and available for trade reporting on the following day.</taPart3Item4aHrsOfOperation>
+      <rbPart3Item4bIsHrsOfOperationsame>Y</rbPart3Item4bIsHrsOfOperationsame>
+      <part3Item5aProtocolDetails rbPart3Item5aIsPermitOrdrTradng="Y">
+        <taPart3Item5aProtocolused>General Operation of the ATS
+
+Subscribers access BOATS via a Financial Information Exchange ("FIX") connection. Such access is available to Subscribers through an internet protocol address via communications that are compliant with the FIX API provided by the ATS. BOATS and MEMX support FIX 5.0 and Simple Binary Encoding.
+
+Sponsored Access Clients access BOATS through their sponsoring Subscriber.
+
+BOATS only accepts orders via FIX. It does not accept orders via telephone, email, instant message, or other form of communication.
+
+BOATS does not route orders away from the ATS; BOATS does not support the routing of orders to any other venue.</taPart3Item5aProtocolused>
+        <rbPart3Item5bIsProtclsameForAll>Y</rbPart3Item5bIsProtclsameForAll>
+      </part3Item5aProtocolDetails>
+      <rbPart3Item5cIsAnyOtherMeans>N</rbPart3Item5cIsAnyOtherMeans>
+      <part3Item6aProtocolDetails rbPart3Item6aIsCoLocRltdSrvcsOfrd="Y">
+        <taPart3Item6aCoLocRltdSrvcsDtls>Subscribers who want to cross-connect to the BOATS need to establish a cross-connect within the Equinix NY4 data center. Technology of the third-party MEMX is located in the Equinix NY4 data center but is segregated and does not comingle with BOATS technology.
+
+Cross connects are managed (i.e. monitoring software) by BOT via Equinix or by other authorized service providers within the Equinix data center. MEMX technology and operations personnel are not involved with facilitating BOATS cross connects.
+
+Standard Equinix NY4 cross-connects are Single mode (1 Gbps). The ATS supports Multi Mode (10 Gbps) upon Subscriber request. BOATS notes that Equinix may charge a Subscriber a fee for cross- connect services. </taPart3Item6aCoLocRltdSrvcsDtls>
+        <rbPart3Item6bIsTNCsameForAll>Y</rbPart3Item6bIsTNCsameForAll>
+      </part3Item6aProtocolDetails>
+      <rbPart3Item6cIsAnyOtherMeans>N</rbPart3Item6cIsAnyOtherMeans>
+      <rbPart3Item6eIsAnyRducdSpOfCom>N</rbPart3Item6eIsAnyRducdSpOfCom>
+      <taPart3Item7AOrdrTypExplain>Because the ATS's Operating Hours (8 p.m. ET to 4 a.m. ET) are after the Core Market Hours (9:30 a.m. ET to 4 p.m. ET, Monday through Friday), trades executed on the ATS are not priced according to, and do not relate to the NBBO, which is not available during the Operating Hours.</taPart3Item7AOrdrTypExplain>
+      <rbPart3Item7bIsTnCSameForAll>Y</rbPart3Item7bIsTnCSameForAll>
+      <part3Item8aSizeReqrmnts rbPart3Item8aIsMinOrMaxSizeReqd="Y">
+        <taPart3Item8aOtiSizeReqrmns>BOATS rejects orders with a notional value greater than $5 million. The minimum order size is one (1) share.</taPart3Item8aOtiSizeReqrmns>
+        <rbPart3Item8bIsReqProcSameForAll>Y</rbPart3Item8bIsReqProcSameForAll>
+      </part3Item8aSizeReqrmnts>
+      <part3Item8cOddltOrdrReqs rbPart3Item8cIsOddLotsAcptdExecutd="Y">
+        <taPart3Item8cOddLtOrdrReqsnProcdurs>Odd lot orders are handled in the same manner as round lot orders and have the same priority treatment</taPart3Item8cOddLtOrdrReqsnProcdurs>
+        <rbPart3Item8dIsReqsProcdurSameForAll>Y</rbPart3Item8dIsReqsProcdurSameForAll>
+      </part3Item8cOddltOrdrReqs>
+      <part3Item8eMixltOrdrDetails rbPart3Item8eIsMixLotOrdrsAcptdExecutd="Y">
+        <taPart3Item8eMixltOrdrReqsProcDtls>Mixed lot orders are treated the same as round lot and odd-lot orders and have the same priority treatment.</taPart3Item8eMixltOrdrReqsProcDtls>
+        <rbPart3Item8fIsRecProcSameForAll>Y</rbPart3Item8fIsRecProcSameForAll>
+      </part3Item8eMixltOrdrDetails>
+      <rbPart3Item9aIsAnyMsgToIndicTI>N</rbPart3Item9aIsAnyMsgToIndicTI>
+      <taPart3Item10aOpenReOpenDtls>Subscribers/Sponsored Access Clients may enter orders beginning at 6:15 p.m. ET on the days that the ATS is open for business.
+
+BOATS begins matching orders, based on the terms of the orders in its order book, at 8:00 p.m. ET.
+
+BOATS employs a 20% price band during its trading session. Orders entered into the ATS prior to the beginning of, and during the trading session that are priced at more than 20% away from the reference price for that NMS Stock, the ATS rejects the order.
+Orders are prioritized based on the price and time of entry of such orders into the ATS. Once an order has been submitted, the ATS matches it with a matching contra order submitted to the ATS, generally on a price/time priority basis.
+
+Because the ATS does not operate during Core Market Hours, it is not impacted by trading halts in an NMS Stock during Core Market Hours. If trading in an NMS Stock that trades on BOATS is halted as of the close of the exchange trading day, the ATS does not trade that NMS Stock during its immediately following trading session.
+
+If trading in an NMS Stock is halted on BOATS during the ATS's trading session, the ATS notifies its Subscribers of the halt (Subscribers must inform their Sponsored Access Clients of the halt). The ATS cancels all orders for the effected NMS Stock pending on the ATS's order book at the time the ATS halts trading. Such orders are automatically cancelled based on a configuration in Subscribers' FIX connections. Once the ATS lifts the halt, BOATS sends a notification to Subscribers that trading is once again available on the ATS and that they may enter orders (Subscribers must provide this notification to Sponsored Access Clients). Those orders are matched based on the price/time priority rules of BOATS.</taPart3Item10aOpenReOpenDtls>
+      <rbPart3Item10bIsOpnReopnSameForAll>Y</rbPart3Item10bIsOpnReopnSameForAll>
+      <taPart3Item10cUnexeOrdrTIDtls>All orders on the ATS order book are canceled at the end the trading session. Thus, there are no unexecuted orders from the close of the ATS's prior trading session when BOATS begins its regular trading at 8:00 p.m. ET.
+Because BOATS does not operate during Core Market Hours, exchange trading halts do not impact trading on the ATS unless such a trading halt remains in effect upon the close of Core Market Hours. If trading in a particular NMS stock is halted on an exchange as of the close of trading, the ATS does not trade that NMS Stock during its immediately following overnight trading session, as discussed in Part III, Item 7.
+
+If trading in an NMS Stock is halted on BOATS during its Operating Hours, the ATS notifies its Subscribers of the halt (Subscribers must inform Sponsored Access Clients of the halt). The ATS cancels all orders for the effected NMS Stock pending on the ATS's order book at the time the ATS halts trading.
+Once the ATS lifts the halt, BOATS sends a notification to Subscribers that trading is once again available on the ATS and that they may enter orders (Subscribers must provide this notification to Sponsored Access Clients). Those orders are matched based on the price/time priority rules of BOATS.</taPart3Item10cUnexeOrdrTIDtls>
+      <rbPart3Item10dIsAnyDifBtwnExeProcTrdHrs>Y</rbPart3Item10dIsAnyDifBtwnExeProcTrdHrs>
+      <rbPart3Item10eIsAnyDifBtwnPreOpExecFlwngStpg>N</rbPart3Item10eIsAnyDifBtwnPreOpExecFlwngStpg>
+      <taPart3Item11aStrucOfNmsStk>BOATS operates a fully automated electronic limit order book that continuously matches orders to buy or sell NMS Stocks. All NMS stocks are eligible to trade on the ATS, unless otherwise notified on the Blue Ocean ATS website, https://blueocean-tech.io/blue-ocean-ats-service-status/. All orders submitted to the ATS are firm, and are eligible for automatic execution by the system, consistent with the instructions and conditions indicated on the order as submitted by Subscribers/Sponsored Access Clients. Matching occurs on a price-time priority basis. BOATS operating hours are 8:00 p.m. ET to 4:00 a.m. ET, as discussed in Part III, Item 4(a).
+
+Subscribers/Sponsored Access Clients generate orders in securities eligible for trading on the ATS and send these orders electronically to the BOATS FIX order gateway ("Gateway"). The Gateway directs all orders to the BOATS matching engine. The BOATS matching engine operates on a server in Equinix NY4 data center. Equinix maintains the server in a locked "cage" that is accessible only by such personnel as indicated in Part II, Item 7.
+
+The MEMX licensing agreement is with BOT. BOT then provides all technology or software, including technology from MEMX, used to operate the ATS to BOATS, including the matching engine. Shared employees of the parent company and BDO, as outlined in Part II, Item 6(a), work with MEMX technology and operations personnel to maintain these systems, pursuant to the licensing agreement.  </taPart3Item11aStrucOfNmsStk>
+      <rbPart3Item11bIsMeansFeciltsSameForAll>Y</rbPart3Item11bIsMeansFeciltsSameForAll>
+      <taPart3Item11cRulsProcsOfNmsStk>The reference price for the trading session is the last national securities exchange print, post session, as of 7:30 p.m. ET.
+
+Execution Errors - Blue Ocean ATS, LLC has written supervisory policies and procedures in place to handle trade execution errors and "clearly erroneous trades" and handles Subscriber and ATS errors in the same manner. Each potential error situation is evaluated by the Managing Director and/or CCO or designated Trading Operations personnel on a case-by-case basis to determine whether a trade execution should be busted. A transaction executed on the ATS shall be found to be clearly erroneous if the price of the transaction to buy (sell) that is the subject of the inquiry is greater than (less than) the reference price by 26% for NMS Stocks priced greater than $50; 30% for NMS Stocks priced greater than $25 and up to and including $50; and 40% for NMS Stocks priced greater than $0 and up to and including $25. The reference price for the clearly erroneous policy is the most recent transaction effected on the ATS.</taPart3Item11cRulsProcsOfNmsStk>
+      <rbPart3Item11dIsProcsRulsSameForAll>Y</rbPart3Item11dIsProcsRulsSameForAll>
+      <rbPart3Item12aIsAnyFrmlInfrmlArngmnts>N</rbPart3Item12aIsAnyFrmlInfrmlArngmnts>
+      <rbPart3Item13aIsOrdrTiSegmntd>N</rbPart3Item13aIsOrdrTiSegmntd>
+      <rbPart3Item13cIsCustmrOrdr>N</rbPart3Item13cIsCustmrOrdr>
+      <rbPart3Item14aIsDsgToIntrctOrNot>N</rbPart3Item14aIsDsgToIntrctOrNot>
+      <rbPart3Item15aIsElectrncCommu>N</rbPart3Item15aIsElectrncCommu>
+      <part3Item15bSubSctbDtls rbPart3Item15bIsSubScrbOrdBnd="Y">
+        <taPart3Item15bSubscrBndDtls>The direct market data feeds deliver market data during the operating hours of the ATS (8:00 p.m.- 4:00 a.m. EDT).
+
+Recipients of the BOT direct market data feed, including Subscribers and Third-Party Distributors, are able to integrate the market data feed directly into their order or execution management systems. Third-Party Distributors include vendors or service providers that consume or redistribute market data. BOT provides market data that includes Top of Book, Last Sale, and Full Depth of Book feeds for all symbols traded on the ATS during the operating hours of the ATS. Recipients of the market data receive all the feeds.
+
+Recipients of direct market data feeds are NOT required to be a Subscriber or Sponsored Access Client of BOATS. BOT also utilizes MEMX Technology, as described in Part III Item 11(a), to transmit direct market data feeds from the BOATS data center in Equinix NY4.</taPart3Item15bSubscrBndDtls>
+        <rbPart3Item15cIsDsplyProcSameForAll>Y</rbPart3Item15cIsDsplyProcSameForAll>
+      </part3Item15bSubSctbDtls>
+      <rbPart3Item16aIsInstRoutd>N</rbPart3Item16aIsInstRoutd>
+      <rbPart3Item17aIsDiffBtwnOrdTITrtmnt>N</rbPart3Item17aIsDiffBtwnOrdTITrtmnt>
+      <rbPart3Item17bIsTrtmntSameForAll>Y</rbPart3Item17bIsTrtmntSameForAll>
+      <rbPart3Item18aIsOutsdeTrdingHrs>N</rbPart3Item18aIsOutsdeTrdingHrs>
+      <taPart3Item19aSrvcUsgFees>BOATS charges Subscribers a negotiated per-executed-share-fee for shares executed on the NMS Stock ATS regardless of whether the Subscriber or its Sponsored Access Client enters the orders underlying the transactions. That is, BOATS only charges Subscribers. This fee may be in the form of a rebate (for adding liquidity to the ATS i.e., posting orders to the ATS which are not immediately executed against trading interest already on the ATS) or a charge (for taking liquidity i.e., posting orders to the ATS which are immediately executed against trading interest already on the ATS). For stocks above $1.00, negotiated per-executed share fees range from ($.0027) for adding liquidity to $.0030 for taking liquidity. For stocks below $1.00, negotiated fees are (0.10%-0.50% i.e., 10-50 basis points of total dollar volume) to take liquidity. All Subscribers are charged appropriate pass through fees which are permitted under the rules promulgated by the SEC and FINRA.
+
+BOT leverages Third-Party Distributors to deliver market data to recipients. BOT charges Subscribers and Sponsored Access Clients for market data. Depending on setup costs, recurring fees, and technology integration costs, BOT incurs costs to fully integrate its direct market data feed into the Third-Party Distributors platform. BOT charges $12,500 for the Third-Party Distributors and charges $5,000 for receiving market data directly from BOT (i.e., Subscribers and Sponsored Access Clients) (see Part II, Item 5 and Part III, Item 15).</taPart3Item19aSrvcUsgFees>
+      <taPart3Item19bBundldSrvcUsgFees>N/A</taPart3Item19bBundldSrvcUsgFees>
+      <taPart3Item19cRbtDiscOfFees>Early adoption of BOATS, historical trading volume, and expected future trading volume are all factors in determining the negotiated per-executed share fees for Subscribers described in Item 19(a). For stocks above $1.00, rebates (for adding liquidity) range from ($.0001) to ($.0027). For stocks below $1.00, the rebate for adding liquidity is $0.00.</taPart3Item19cRbtDiscOfFees>
+      <taPart3Item20aSuspndProcdur>Reasons the firm may suspend trading in an NMS Stock include halts (as described in Part III, Item (10), internal system issues, technology or operational issues from service provider MEMX, and regulatory or exchange issues. BOATS also reserves the right to suspend trading in NMS Stocks at their own discretion, including for reasons including SSR restrictions, or approaching fair access or Reg SCI thresholds. When BOATS suspends trading in an NMS Stock, the ATS cancels all orders for the effected NMS stock in the order book and notifies subscribers. Orders are cancelled based on a configuration in FIX connection. Once trading for a suspended position resumes, BOATS notifies Subscribers and orders are matched on a price/time priority in the ATS matching engine, as described in Part III, Item 5(a). </taPart3Item20aSuspndProcdur>
+      <rbPart3Item20bIsSuspndProcdurSameFrAll>Y</rbPart3Item20bIsSuspndProcdurSameFrAll>
+      <taPart3Item21aMtrlArngmntDtls>BOATS maintains daily summaries of trading and time-sequenced records of order information, including the date and time the order was received, the date, time, and price at which the order was executed, and the identity of the parties to the transaction.
+
+Trades executed by the ATS are reported by MEMX by 8:05 a.m. ET on the next business day, when MEMX establishes a connection to the trade reporting facility. ATS trades in NMS Stocks are reported to the NYSE TRF and printed with BOATS' Market Participant Identifier (BLUE) as executing broker.</taPart3Item21aMtrlArngmntDtls>
+      <rbPart3Item21bIsMtrlArngmtSameFrAll>Y</rbPart3Item21bIsMtrlArngmtSameFrAll>
+      <taPart3Item22aMtrlArngmntDtls>BOATS' clearing firm is RQD* Clearing, LLC (NSCC # 4305). RQD* Clearing, LLC is a participant in the National Securities Clearing Corporation, which clears equity transactions, and The Depository Trust Company ("DTC"), which facilitates settlement of equity and other types of securities. BOATS provides trade information to RQD* in an end-of-day format for clearing purposes. RQD* submits the trade information to NSCC to facilitate settlement. Settlement of trades executed on the ATS occurs through the Continuous Net Settlement (CNS) system operated by DTC and generally settle on the second day after the trade.
+
+A Subscriber must execute appropriate "give-up" agreements to establish an "on behalf of" reporting relationship (e.g., an executed Uniform Trade Reporting Facility Service Bureau/Executing Broker Agreement or Nasdaq AGU/Attachment 2 Agreement).
+
+BOATS executes trades solely in an agency cross capacity. It does not become counterparty to any Subscriber trades.</taPart3Item22aMtrlArngmntDtls>
+      <rbPart3Item22bIsMtrlArngmtSameFrAll>Y</rbPart3Item22bIsMtrlArngmtSameFrAll>
+      <taPart3Item23aMrktDatSrc>BOATS obtains last print data from MEMX that provides a reference price as of 7:30 p.m. ET on each trading day for each NMS Stock that trades on the ATS. That reference price is the last sale price for each security printed on a national securities exchange. BOATS receives halt information from exchange member alerts.</taPart3Item23aMrktDatSrc>
+      <rbPart3Item23bIsSrcSameFrAll>Y</rbPart3Item23bIsSrcSameFrAll>
+      <rbPart3Item24aIsSubScrbrOrdr>N</rbPart3Item24aIsSubScrbrOrdr>
+      <rbPart3Item25aIsAvgDlyTradinVolExcd>N</rbPart3Item25aIsAvgDlyTradinVolExcd>
+      <rbPart3Item26IsOrdrFloExecStatsPublshd>N</rbPart3Item26IsOrdrFloExecStatsPublshd>
+    </partThree>
+  </formData>
+</edgarSubmission>

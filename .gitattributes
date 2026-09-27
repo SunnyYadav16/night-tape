@@ -1,0 +1,2 @@
+# Archived evidence is byte-exact (SHA-256 in evidence/manifest.jsonl): no EOL conversion, no text diffs.
+evidence/** -text -diff

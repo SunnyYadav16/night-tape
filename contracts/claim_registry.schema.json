@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://night-tape.invalid/contracts/claim_registry.schema.json",
+  "title": "Claim register (r2.1 §6.2)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claims"],
+  "properties": {"claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}}},
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "claim_text", "claim_type", "load_bearing", "affects", "status"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^C-[A-Z0-9-]+$"},
+        "claim_text": {"type": "string", "minLength": 1},
+        "claim_type": {"enum": ["venue_mechanics", "schedule", "regulatory_status", "data_semantics", "statistic", "citation"]},
+        "load_bearing": {"type": "boolean"},
+        "affects": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": [
+            "primary_endpoint", "identification", "sample", "session_logic", "date_logic",
+            "metric_semantics", "data_quality", "cost", "publication", "context_only"
+          ]}
+        },
+        "status": {"enum": ["UNVERIFIED", "VERIFIED", "CONFLICTED", "CONTINGENCY", "PENDING", "REFUTED"]},
+        "source_class": {"$ref": "#/$defs/source_class"},
+        "source_id": {"type": ["string", "null"], "description": "A config/monitoring.yaml source_id"},
+        "source_version_or_accession": {"type": ["string", "null"]},
+        "effective_from": {"type": ["string", "null"], "format": "date"},
+        "effective_to": {"type": ["string", "null"], "format": "date"},
+        "retrieved_at": {"type": ["string", "null"], "format": "date-time"},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "recheck_trigger": {"type": ["string", "null"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "VERIFIED"}}},
+          "then": {
+            "required": ["source_class", "source_id", "retrieved_at", "sha256"],
+            "properties": {"source_id": {"type": "string"}, "retrieved_at": {"type": "string"}, "sha256": {"type": "string"}}
+          }
+        },
+        {
+          "if": {"properties": {"affects": {"contains": {"const": "context_only"}}}},
+          "then": {"properties": {"load_bearing": {"const": false}}}
+        }
+      ]
+    },
+    "source_class": {"enum": [
+      "SEC_FORM_ATS_N", "SEC_RULE", "SEC_ORDER", "SEC_STAFF", "EXCHANGE_RULE", "EXCHANGE_NOTICE",
+      "ATS_SERVICE_ALERT", "SIP_NOTICE", "NSCC_NOTICE", "FINRA", "VENDOR_DOC", "PAPER", "SECONDARY"
+    ]}
+  }
+}

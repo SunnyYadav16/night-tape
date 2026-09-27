@@ -1,0 +1,272 @@
+"""night-tape command line. Each command group is registered by one _add_* function."""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from collections.abc import Callable, Iterable, Sequence
+from importlib.metadata import version
+from pathlib import Path
+from typing import TYPE_CHECKING
+
+from night_tape import contracts, cost
+from night_tape.contracts import ContractError
+from night_tape.evidence import edgar, fetch, manifest, sources, verify
+from night_tape.evidence import render as render_mod
+from night_tape.evidence.manifest import Entry
+from night_tape.registry import claims as registry_claims
+from night_tape.registry.load import Registry, RegistryError
+from night_tape.registry.load import load as load_registry
+
+if TYPE_CHECKING:
+    Subparsers = argparse._SubParsersAction[argparse.ArgumentParser]
+
+Handler = Callable[[argparse.Namespace], int]
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="night-tape", description="night-tape research pipeline")
+    parser.add_argument("--version", action="version", version=version("night-tape"))
+    sub = parser.add_subparsers(dest="command", required=True, metavar="COMMAND")
+    _add_evidence(sub)
+    _add_cost(sub)
+    _add_registry(sub)
+    return parser
+
+
+def _source_args(p: argparse.ArgumentParser) -> None:
+    p.add_argument("--source-id", required=True)
+    p.add_argument("--source-class", required=True, choices=contracts.source_classes())
+
+
+def _add_evidence(sub: Subparsers) -> None:
+    ev = sub.add_parser("evidence", help="archive-on-fetch and verify primary sources")
+    ev.add_argument("--evidence-dir", type=Path, default=Path("evidence"))
+    ev.add_argument("--sources", type=Path, default=Path("config/monitoring.yaml"))
+    evs = ev.add_subparsers(dest="evidence_command", required=True, metavar="ACTION")
+
+    p = evs.add_parser("fetch", help="archive the raw HTTP response for one URL")
+    p.add_argument("url")
+    _source_args(p)
+    p.add_argument("--supersedes")
+    p.add_argument("--notes")
+    p.set_defaults(handler=_evidence_fetch)
+
+    p = evs.add_parser("add", help="register a file downloaded by hand (e.g. an SSRN PDF)")
+    p.add_argument("path", type=Path)
+    p.add_argument("--url", required=True, help="where the file was downloaded from")
+    _source_args(p)
+    p.add_argument("--content-type")
+    p.add_argument("--notes")
+    p.set_defaults(handler=_evidence_add)
+
+    p = evs.add_parser("render", help="archive a JS-rendered page as DOM HTML + printed PDF")
+    p.add_argument("url")
+    _source_args(p)
+    p.add_argument("--notes")
+    p.set_defaults(handler=_evidence_render)
+
+    p = evs.add_parser(
+        "edgar", help="archive every file of every filing in a form family for one CIK"
+    )
+    p.add_argument("--cik", required=True)
+    p.add_argument(
+        "--form-prefix", required=True, help="e.g. ATS-N (matches ATS-N, ATS-N/MA, ATS-N/CA ...)"
+    )
+    _source_args(p)
+    p.set_defaults(handler=_evidence_edgar)
+
+    p = evs.add_parser("sync", help="archive every source in --sources (weekly re-fetch)")
+    p.set_defaults(handler=_evidence_sync)
+
+    p = evs.add_parser("verify", help="re-hash every snapshot; report missing files and orphans")
+    p.set_defaults(handler=_evidence_verify)
+
+
+def _add_cost(sub: Subparsers) -> None:
+    c = sub.add_parser("cost", help="Databento cost quotes (metadata only; never downloads data)")
+    cs = c.add_subparsers(dest="cost_command", required=True, metavar="ACTION")
+    p = cs.add_parser("quote", help="save cost/size/count quotes as JSON, one file per schema")
+    p.add_argument("--dataset", required=True)
+    p.add_argument("--schemas", required=True, help="comma-separated, e.g. tbbo,mbp-1")
+    p.add_argument("--symbols", required=True, help="comma-separated raw symbols")
+    p.add_argument("--start", required=True, help="UTC ISO-8601, inclusive")
+    p.add_argument("--end", required=True, help="UTC ISO-8601, exclusive")
+    p.add_argument("--stype-in", default="raw_symbol")
+    p.add_argument("--out", type=Path, default=Path("benchmarks/cost"))
+    p.set_defaults(handler=_cost_quote)
+
+
+def _cost_quote(args: argparse.Namespace) -> int:
+    import databento as db  # imported here: only this command touches the paid API
+
+    client = db.Historical()  # reads DATABENTO_API_KEY from the environment
+    for schema in args.schemas.split(","):
+        doc = cost.quote(
+            client.metadata,
+            dataset=args.dataset,
+            schema=schema,
+            symbols=args.symbols.split(","),
+            start=args.start,
+            end=args.end,
+            stype_in=args.stype_in,
+            sdk_version=db.__version__,
+        )
+        print(f"{cost.save(doc, args.out)}  ${doc['cost_usd']:.4f}  {doc['billable_bytes']} B")
+    return 0
+
+
+def _print_stored(results: Iterable[tuple[Entry, bool]]) -> None:
+    for entry, created in results:
+        print(f"{'archived ' if created else 'unchanged'} {entry.local_path}")
+
+
+def _evidence_fetch(args: argparse.Namespace) -> int:
+    with fetch.make_client() as client:
+        _print_stored(
+            [
+                fetch.fetch(
+                    args.evidence_dir,
+                    client,
+                    args.url,
+                    source_id=args.source_id,
+                    source_class=args.source_class,
+                    supersedes=args.supersedes,
+                    notes=args.notes,
+                )
+            ]
+        )
+    return 0
+
+
+def _evidence_add(args: argparse.Namespace) -> int:
+    _print_stored(
+        [
+            fetch.add_file(
+                args.evidence_dir,
+                args.path,
+                url=args.url,
+                source_id=args.source_id,
+                source_class=args.source_class,
+                content_type=args.content_type,
+                notes=args.notes,
+            )
+        ]
+    )
+    return 0
+
+
+def _evidence_render(args: argparse.Namespace) -> int:
+    _print_stored(
+        render_mod.render(
+            args.evidence_dir,
+            args.url,
+            source_id=args.source_id,
+            source_class=args.source_class,
+            notes=args.notes,
+        )
+    )
+    return 0
+
+
+def _evidence_edgar(args: argparse.Namespace) -> int:
+    with fetch.make_client() as client:
+        _print_stored(
+            edgar.archive_chain(
+                args.evidence_dir,
+                client,
+                cik=args.cik,
+                form_prefix=args.form_prefix,
+                source_id=args.source_id,
+                source_class=args.source_class,
+            )
+        )
+    return 0
+
+
+def _report_verify(report: verify.Report) -> int:
+    for label, items in (
+        ("missing", report.missing),
+        ("hash mismatch", report.mismatched),
+        ("orphan", report.orphans),
+        ("never archived", report.unarchived_sources),
+    ):
+        for item in items:
+            print(f"{label}: {item}")
+    print("evidence ok" if report.ok else "evidence FAILED", file=sys.stderr)
+    return 0 if report.ok else 1
+
+
+def _evidence_sync(args: argparse.Namespace) -> int:
+    srcs = sources.load_sources(args.sources)
+    with fetch.make_client() as client:
+        report = sources.sync(args.evidence_dir, srcs, client)
+    _print_stored(report.stored)
+    for source_id in report.manual_missing:
+        print(f"manual: {source_id} not archived yet — download it, then `night-tape evidence add`")
+    for source_id, error in report.failed:
+        print(f"FAILED {source_id}: {error}", file=sys.stderr)
+    return 1 if report.failed else 0
+
+
+def _evidence_verify(args: argparse.Namespace) -> int:
+    required = (
+        [s.source_id for s in sources.load_sources(args.sources)] if args.sources.exists() else []
+    )
+    return _report_verify(verify.verify(args.evidence_dir, required))
+
+
+def _add_registry(sub: Subparsers) -> None:
+    rg = sub.add_parser("registry", help="claim register and event registry")
+    rg.add_argument("--claims", type=Path, default=Path("registry/claims.yaml"))
+    rg.add_argument("--events", type=Path, default=Path("registry/events.yaml"))
+    rgs = rg.add_subparsers(dest="registry_command", required=True, metavar="ACTION")
+
+    p = rgs.add_parser("check", help="validate both registries and their cross-references")
+    p.set_defaults(handler=_registry_check)
+
+    p = rgs.add_parser("load-bearing", help="list load-bearing claims that block the freeze")
+    p.add_argument("--evidence-dir", type=Path, default=Path("evidence"))
+    p.set_defaults(handler=_registry_load_bearing)
+
+
+def _registry_or_none(args: argparse.Namespace) -> Registry | None:
+    try:
+        return load_registry(args.claims, args.events)
+    except (ContractError, RegistryError) as exc:
+        print(exc, file=sys.stderr)
+        return None
+
+
+def _registry_check(args: argparse.Namespace) -> int:
+    reg = _registry_or_none(args)
+    if reg is None:
+        return 1
+    print(
+        f"ok: {len(reg.claims)} claims, {len(reg.events)} events, "
+        f"{len(reg.rule_versions)} rule versions"
+    )
+    return 0
+
+
+def _registry_load_bearing(args: argparse.Namespace) -> int:
+    reg = _registry_or_none(args)
+    if reg is None:
+        return 1
+    archived = {e.sha256 for e in manifest.read(args.evidence_dir)}
+    gaps = registry_claims.load_bearing_gaps(reg, archived)
+    for gap in gaps:
+        print(gap)
+    total = sum(1 for c in reg.claims.values() if c["load_bearing"])
+    print(f"{total} load-bearing claims, {len(gaps)} block the freeze", file=sys.stderr)
+    return 1 if gaps else 0
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    handler: Handler = args.handler
+    return handler(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

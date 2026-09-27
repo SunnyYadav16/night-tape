@@ -1,0 +1,69 @@
+<SEC-DOCUMENT>0001539497-23-001083.txt : 20230614
+<SEC-HEADER>0001539497-23-001083.hdr.sgml : 20230614
+<ACCEPTANCE-DATETIME>20230614151013
+<PRIVATE-TO-PUBLIC>
+ACCESSION NUMBER:		0001539497-23-001083
+CONFORMED SUBMISSION TYPE:	ATS-N/MA
+PUBLIC DOCUMENT COUNT:		1
+<PREVIOUS-ACCESSION-NUMBER>0001539497-23-000091
+FILED AS OF DATE:		20230612
+DATE AS OF CHANGE:		20230614
+
+FILER:
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			BLUE OCEAN ATS, LLC
+		CENTRAL INDEX KEY:			0001795131
+		IRS NUMBER:				843711786
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		ATS-N/MA
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	013-00180
+		FILM NUMBER:		231013917
+
+	BUSINESS ADDRESS:	
+		STREET 1:		BROOK 35 PLAZA//SUITE 250
+		STREET 2:		2150 ROUTE 35
+		CITY:			SEA GIRT
+		STATE:			NJ
+		ZIP:			08750
+		BUSINESS PHONE:		516-302-5111
+
+	MAIL ADDRESS:	
+		STREET 1:		BROOK 35 PLAZA//SUITE 250
+		STREET 2:		2150 ROUTE 35
+		CITY:			SEA GIRT
+		STATE:			NJ
+		ZIP:			08750
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>COVER PAGE
+<SEQUENCE>5
+<FILENAME>coverpage.xml
+<TEXT>
+<XML>
+<?xml version="1.0" encoding="UTF-8"?>
+<cov:edgarSubmission xmlns:cov="http://www.sec.gov/edgar/atsn/cover" xmlns:ats="http://www.sec.gov/edgar/atsncommon">
+  <cov:submissionType>ATS-N/MA</cov:submissionType>
+  <cov:rbOperatesPursuantToFormATS>N</cov:rbOperatesPursuantToFormATS>
+  <cov:accessionNumber>0001539497-23-000091</cov:accessionNumber>
+  <cov:filerCredentials>
+    <cov:filerCik>0001795131</cov:filerCik>
+    <cov:filerCcc>XXXXXXXX</cov:filerCcc>
+  </cov:filerCredentials>
+  <cov:fileNumber>013-00180</cov:fileNumber>
+  <cov:txNMSStockATSName>BLUE OCEAN ATS, LLC</cov:txNMSStockATSName>
+  <cov:taStatementAboutAmendment>This is a material amendment to the ATS-N filed for Blue Ocean ATS("BOATS") in relation to the change in and this  one Order Type, Broker Priority. The material amendment reflects changes to Part III Item 4a, Part III Item 7, Part III Item 10, Part III Item 11, Part III Item 14, Part III Item 20. The material amendment also notes changes in fees for stocks that trade below $1.00. The material amendment reflects changes in Part III Item 19. These changes apply to all subscribers and to the broker-dealer operator.</cov:taStatementAboutAmendment>
+  <cov:liveTestFlag>LIVE</cov:liveTestFlag>
+  <cov:flags>
+    <cov:overrideInternetFlag>false</cov:overrideInternetFlag>
+    <cov:confirmingCopyFlag>false</cov:confirmingCopyFlag>
+  </cov:flags>
+</cov:edgarSubmission>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

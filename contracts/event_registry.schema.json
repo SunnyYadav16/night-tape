@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://night-tape.invalid/contracts/event_registry.schema.json",
+  "title": "Market-structure event registry (v2.2 §8.3, r2.1 §7, §23.3-23.4). One registry for research and tracker",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["events", "rule_versions"],
+  "properties": {
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event", "unevaluatedProperties": false}},
+    "rule_versions": {"type": "array", "items": {"$ref": "#/$defs/rule_version"}}
+  },
+  "$defs": {
+    "entity": {"enum": ["NASDAQ", "NYSE_ARCA", "CBOE_EDGX", "24X", "MEMX", "BOATS", "SIP", "LULD", "NSCC", "REG_NMS"]},
+    "field": {"enum": [
+      "session_hours", "go_live_target", "go_live_actual", "order_types", "time_in_force",
+      "trade_date_rule", "price_band_rule", "halt_rule", "clearing_hours", "market_data_status", "reg_status"
+    ]},
+    "status": {"enum": [
+      "PROPOSED", "APPROVED_NOT_EFFECTIVE", "CURRENT", "SUPERSEDED", "WITHDRAWN",
+      "ERRONEOUS_DISCLOSURE", "CONFLICTED", "PENDING_VERIFICATION"
+    ]},
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "sha256", "retrieved_at", "supports"],
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "source_version_or_accession": {"type": ["string", "null"]},
+        "span_id": {"type": ["string", "null"]},
+        "span_excerpt": {"type": ["string", "null"], "maxLength": 500},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "supports": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["value", "effective_from", "effective_to", "status"]}
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id", "entity", "field", "value", "status", "effective_granularity",
+        "effective_from", "effective_to", "claim_ids", "load_bearing"
+      ],
+      "properties": {
+        "event_id": {"type": "string", "pattern": "^E-[A-Z0-9-]+$"},
+        "entity": {"$ref": "#/$defs/entity"},
+        "field": {"$ref": "#/$defs/field"},
+        "value": {"description": "Typed per field: object, date string or enum"},
+        "status": {"$ref": "#/$defs/status"},
+        "effective_granularity": {"enum": ["timestamp", "day", "unknown", "never"]},
+        "effective_from": {"type": ["string", "null"]},
+        "effective_to": {"type": ["string", "null"], "description": "Exclusive: the next regime's effective_from"},
+        "first_session_applies": {"type": ["string", "null"], "description": "session_id; set in Week 2 when a source gives only a day"},
+        "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/evidence_ref"}},
+        "claim_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^C-[A-Z0-9-]+$"}},
+        "supersedes": {"type": ["string", "null"]},
+        "conflicts_with": {"type": ["array", "null"], "items": {"type": "string"}},
+        "correction_of": {"type": ["string", "null"]},
+        "load_bearing": {"type": "boolean"},
+        "notes": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"effective_granularity": {"const": "timestamp"}}},
+          "then": {"properties": {
+            "effective_from": {"type": "string", "format": "date-time"},
+            "effective_to": {"anyOf": [{"type": "null"}, {"type": "string", "format": "date-time"}]}
+          }}
+        },
+        {
+          "if": {"properties": {"effective_granularity": {"const": "day"}}},
+          "then": {"properties": {
+            "effective_from": {"type": "string", "format": "date"},
+            "effective_to": {"anyOf": [{"type": "null"}, {"type": "string", "format": "date"}]}
+          }}
+        },
+        {
+          "if": {"properties": {"effective_granularity": {"enum": ["unknown", "never"]}}},
+          "then": {"properties": {"effective_from": {"type": "null"}, "effective_to": {"type": "null"}}}
+        },
+        {
+          "if": {"properties": {"status": {"enum": ["ERRONEOUS_DISCLOSURE", "WITHDRAWN"]}}},
+          "then": {"properties": {"effective_granularity": {"const": "never"}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "CONFLICTED"}}},
+          "then": {"required": ["conflicts_with"], "properties": {"conflicts_with": {"type": "array", "minItems": 1}}}
+        }
+      ]
+    },
+    "rule_version": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_version", "venue", "effective_granularity", "effective_from", "effective_to", "basis_event_ids", "provisional"],
+      "properties": {
+        "rule_version": {"type": "string", "pattern": "^[A-Z0-9_]+$"},
+        "venue": {"$ref": "#/$defs/entity"},
+        "effective_granularity": {"enum": ["timestamp", "day", "unknown"]},
+        "effective_from": {"anyOf": [{"type": "null"}, {"type": "string", "format": "date"}, {"type": "string", "format": "date-time"}], "description": "null = unbounded below"},
+        "effective_to": {"anyOf": [{"type": "null"}, {"type": "string", "format": "date"}, {"type": "string", "format": "date-time"}], "description": "Exclusive; null = open"},
+        "basis_event_ids": {"type": "array", "items": {"type": "string"}},
+        "provisional": {"type": "boolean"},
+        "notes": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
